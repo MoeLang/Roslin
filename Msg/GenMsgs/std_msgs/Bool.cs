@@ -1,6 +1,6 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/Bool", "8b94c1b53db61fb6aed406028ad6332a", "bool data")]
+    [MsgInfo("std_msgs/Bool", "8b94c1b53db61fb6aed406028ad6332a", @"bool data")]
     public partial class Bool : RosMsg
     {
         public System.Boolean data

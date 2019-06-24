@@ -1,6 +1,13 @@
 namespace Roslin.Msg.nav_msgs
 {
-    [MsgInfo("nav_msgs/Odometry", "cd5e73d190d741a2f92e81eda573aca7", "# This represents an estimate of a position and velocity in free space.  \n# The pose in this message should be specified in the coordinate frame given by header.frame_id.\n# The twist in this message should be specified in the coordinate frame given by the child_frame_id\nHeader header\nstring child_frame_id\ngeometry_msgs/PoseWithCovariance pose\ngeometry_msgs/TwistWithCovariance twist\n")]
+    [MsgInfo("nav_msgs/Odometry", "cd5e73d190d741a2f92e81eda573aca7", @"# This represents an estimate of a position and velocity in free space.  
+# The pose in this message should be specified in the coordinate frame given by header.frame_id.
+# The twist in this message should be specified in the coordinate frame given by the child_frame_id
+Header header
+string child_frame_id
+geometry_msgs/PoseWithCovariance pose
+geometry_msgs/TwistWithCovariance twist
+")]
     public partial class Odometry : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,10 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/ColorRGBA", "a29a96539573343b1310c73607334b00", "float32 r\nfloat32 g\nfloat32 b\nfloat32 a\n")]
+    [MsgInfo("std_msgs/ColorRGBA", "a29a96539573343b1310c73607334b00", @"float32 r
+float32 g
+float32 b
+float32 a
+")]
     public partial class ColorRGBA : RosMsg
     {
         public System.Single r

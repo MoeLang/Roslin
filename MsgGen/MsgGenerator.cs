@@ -39,7 +39,7 @@ namespace Roslin.MsgGen
             => SyntaxFactory.ClassDeclaration(msgParser.Name)
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
             .AddAttributeLists(SyntaxFactory.AttributeList(new SeparatedSyntaxList<AttributeSyntax>().Add(SyntaxFactory.Attribute(SyntaxFactory.ParseName(typeof(MsgInfo).Name), 
-                SyntaxFactory.ParseAttributeArgumentList($"(\"{ msgParser.RosType}\",\"{ msgParser.MD5Sum}\",\"{ msgParser.Content.Replace("\"", "\\\"").Replace("\n", "\\n")}\")")))))
+                SyntaxFactory.ParseAttributeArgumentList($"(\"{ msgParser.RosType}\",\"{ msgParser.MD5Sum}\",@\"{ msgParser.Content.Replace("\"", "\"\"")}\")")))))
             .AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName(typeof(RosMsg).Name)));
         private MemberDeclarationSyntax[] GenConsts(MsgParser msgParser)
             => msgParser.Constants.Select(_ => SyntaxFactory.PropertyDeclaration(SyntaxFactory.ParseTypeName(_.Type), _.Name)

@@ -1,6 +1,6 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/Int32", "da5909fbe378aeaf85e547e830cc1bb7", "int32 data")]
+    [MsgInfo("std_msgs/Int32", "da5909fbe378aeaf85e547e830cc1bb7", @"int32 data")]
     public partial class Int32 : RosMsg
     {
         public System.Int32 data

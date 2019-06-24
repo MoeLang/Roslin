@@ -1,6 +1,6 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/Char", "1bf77f25acecdedba0e224b162199717", "char data")]
+    [MsgInfo("std_msgs/Char", "1bf77f25acecdedba0e224b162199717", @"char data")]
     public partial class Char : RosMsg
     {
         public System.Char data

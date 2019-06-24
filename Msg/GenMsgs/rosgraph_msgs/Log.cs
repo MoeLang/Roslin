@@ -1,6 +1,25 @@
 namespace Roslin.Msg.rosgraph_msgs
 {
-    [MsgInfo("rosgraph_msgs/Log", "acffd30cd6b6de30f120938c17c593fb", "##\n## Severity level constants\n##\nbyte DEBUG=1 #debug level\nbyte INFO=2  #general level\nbyte WARN=4  #warning level\nbyte ERROR=8 #error level\nbyte FATAL=16 #fatal/critical level\n##\n## Fields\n##\nHeader header\nbyte level\nstring name # name of the node\nstring msg # message \nstring file # file the message came from\nstring function # function the message came from\nuint32 line # line the message came from\nstring[] topics # topic names that the node publishes\n")]
+    [MsgInfo("rosgraph_msgs/Log", "acffd30cd6b6de30f120938c17c593fb", @"##
+## Severity level constants
+##
+byte DEBUG=1 #debug level
+byte INFO=2  #general level
+byte WARN=4  #warning level
+byte ERROR=8 #error level
+byte FATAL=16 #fatal/critical level
+##
+## Fields
+##
+Header header
+byte level
+string name # name of the node
+string msg # message 
+string file # file the message came from
+string function # function the message came from
+uint32 line # line the message came from
+string[] topics # topic names that the node publishes
+")]
     public partial class Log : RosMsg
     {
         public System.Byte DEBUG => 1;

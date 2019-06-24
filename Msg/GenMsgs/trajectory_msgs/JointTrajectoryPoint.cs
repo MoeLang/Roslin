@@ -1,6 +1,15 @@
 namespace Roslin.Msg.trajectory_msgs
 {
-    [MsgInfo("trajectory_msgs/JointTrajectoryPoint", "f3cd1e1c4d320c79d6985c904ae5dcd3", "# Each trajectory point specifies either positions[, velocities[, accelerations]]\n# or positions[, effort] for the trajectory to be executed.\n# All specified values are in the same order as the joint names in JointTrajectory.msg\n\nfloat64[] positions\nfloat64[] velocities\nfloat64[] accelerations\nfloat64[] effort\nduration time_from_start\n")]
+    [MsgInfo("trajectory_msgs/JointTrajectoryPoint", "f3cd1e1c4d320c79d6985c904ae5dcd3", @"# Each trajectory point specifies either positions[, velocities[, accelerations]]
+# or positions[, effort] for the trajectory to be executed.
+# All specified values are in the same order as the joint names in JointTrajectory.msg
+
+float64[] positions
+float64[] velocities
+float64[] accelerations
+float64[] effort
+duration time_from_start
+")]
     public partial class JointTrajectoryPoint : RosMsg
     {
         public System.Double[] positions

@@ -1,6 +1,12 @@
 namespace Roslin.Msg.jsk_gui_msgs
 {
-    [MsgInfo("jsk_gui_msgs/Tablet", "0bab196c7b214826d8c27d7bd5f924f6", "Header header\n# hardware_namel: iPad, Android, other mobile\nstring hardware_name\nstring hardware_id\nAction action\nDeviceSensor sensor\nTouch[] touches")]
+    [MsgInfo("jsk_gui_msgs/Tablet", "0bab196c7b214826d8c27d7bd5f924f6", @"Header header
+# hardware_namel: iPad, Android, other mobile
+string hardware_name
+string hardware_id
+Action action
+DeviceSensor sensor
+Touch[] touches")]
     public partial class Tablet : RosMsg
     {
         public std_msgs.Header header

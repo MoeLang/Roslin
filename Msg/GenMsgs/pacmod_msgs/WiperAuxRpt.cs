@@ -1,6 +1,20 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/WiperAuxRpt", "663ea0989c9628effd21f08690caa7d1", "Header header\n\nbool front_wiping\nbool front_wiping_is_valid\nbool front_spraying\nbool front_spraying_is_valid\nbool rear_wiping\nbool rear_wiping_is_valid\nbool rear_spraying\nbool rear_spraying_is_valid\nbool spray_near_empty\nbool spray_near_empty_is_valid\nbool spray_empty\nbool spray_empty_is_valid\n")]
+    [MsgInfo("pacmod_msgs/WiperAuxRpt", "663ea0989c9628effd21f08690caa7d1", @"Header header
+
+bool front_wiping
+bool front_wiping_is_valid
+bool front_spraying
+bool front_spraying_is_valid
+bool rear_wiping
+bool rear_wiping_is_valid
+bool rear_spraying
+bool rear_spraying_is_valid
+bool spray_near_empty
+bool spray_near_empty_is_valid
+bool spray_empty
+bool spray_empty_is_valid
+")]
     public partial class WiperAuxRpt : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,12 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/TurnAuxRpt", "c04dad80913279be4de094443dc50dca", "Header header\n\nbool driver_blinker_bulb_on\nbool driver_blinker_bulb_on_is_valid\nbool passenger_blinker_bulb_on\nbool passenger_blinker_bulb_on_is_valid\n")]
+    [MsgInfo("pacmod_msgs/TurnAuxRpt", "c04dad80913279be4de094443dc50dca", @"Header header
+
+bool driver_blinker_bulb_on
+bool driver_blinker_bulb_on_is_valid
+bool passenger_blinker_bulb_on
+bool passenger_blinker_bulb_on_is_valid
+")]
     public partial class TurnAuxRpt : RosMsg
     {
         public std_msgs.Header header

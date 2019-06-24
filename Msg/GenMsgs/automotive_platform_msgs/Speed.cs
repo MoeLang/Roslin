@@ -1,6 +1,17 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/Speed", "19e5d1450bb352242868b04367a49847", "# Speed Control Message\n# Contains speed commands\n\nstd_msgs/Header header\n\nstring module_name # module name of the source node of this message\n\nfloat32 speed                # Desired speed (m/sec)\nfloat32 acceleration_limit   # Max acceleration limit (m/sec^2)\nfloat32 deceleration_limit   # Max deceleration limit (m/sec^2)\n\n")]
+    [MsgInfo("automotive_platform_msgs/Speed", "19e5d1450bb352242868b04367a49847", @"# Speed Control Message
+# Contains speed commands
+
+std_msgs/Header header
+
+string module_name # module name of the source node of this message
+
+float32 speed                # Desired speed (m/sec)
+float32 acceleration_limit   # Max acceleration limit (m/sec^2)
+float32 deceleration_limit   # Max deceleration limit (m/sec^2)
+
+")]
     public partial class Speed : RosMsg
     {
         public std_msgs.Header header

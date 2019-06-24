@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_rviz_plugins
 {
-    [MsgInfo("jsk_rviz_plugins/StringStamped", "c99a9440709e4d4a9716d55b8270d5e7", "Header header\nstring data\n\n")]
+    [MsgInfo("jsk_rviz_plugins/StringStamped", "c99a9440709e4d4a9716d55b8270d5e7", @"Header header
+string data
+
+")]
     public partial class StringStamped : RosMsg
     {
         public std_msgs.Header header

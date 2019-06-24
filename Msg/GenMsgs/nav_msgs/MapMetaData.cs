@@ -1,6 +1,18 @@
 namespace Roslin.Msg.nav_msgs
 {
-    [MsgInfo("nav_msgs/MapMetaData", "10cfc8a2818024d3248802c00c95f11b", "# This hold basic information about the characterists of the OccupancyGrid\n\n# The time at which the map was loaded\ntime map_load_time\n# The map resolution [m/cell]\nfloat32 resolution\n# Map width [cells]\nuint32 width\n# Map height [cells]\nuint32 height\n# The origin of the map [m, m, rad].  This is the real-world pose of the\n# cell (0,0) in the map.\ngeometry_msgs/Pose origin")]
+    [MsgInfo("nav_msgs/MapMetaData", "10cfc8a2818024d3248802c00c95f11b", @"# This hold basic information about the characterists of the OccupancyGrid
+
+# The time at which the map was loaded
+time map_load_time
+# The map resolution [m/cell]
+float32 resolution
+# Map width [cells]
+uint32 width
+# Map height [cells]
+uint32 height
+# The origin of the map [m, m, rad].  This is the real-world pose of the
+# cell (0,0) in the map.
+geometry_msgs/Pose origin")]
     public partial class MapMetaData : RosMsg
     {
         public System.DateTime map_load_time

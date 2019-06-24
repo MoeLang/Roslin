@@ -1,6 +1,12 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/PolygonArray", "709b37d39871cfdbbfbd5c41cf9bc2be", "# PolygonArray is a list of PolygonStamped.\n# You can use jsk_rviz_plugins to visualize PolygonArray on rviz.\nHeader header\ngeometry_msgs/PolygonStamped[] polygons\nuint32[] labels\nfloat32[] likelihood\n")]
+    [MsgInfo("jsk_recognition_msgs/PolygonArray", "709b37d39871cfdbbfbd5c41cf9bc2be", @"# PolygonArray is a list of PolygonStamped.
+# You can use jsk_rviz_plugins to visualize PolygonArray on rviz.
+Header header
+geometry_msgs/PolygonStamped[] polygons
+uint32[] labels
+float32[] likelihood
+")]
     public partial class PolygonArray : RosMsg
     {
         public std_msgs.Header header

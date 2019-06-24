@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/Histogram", "376372f016c22c39ab7ee6b6bdd0f10a", "Header header\nfloat64[] histogram\n")]
+    [MsgInfo("jsk_recognition_msgs/Histogram", "376372f016c22c39ab7ee6b6bdd0f10a", @"Header header
+float64[] histogram
+")]
     public partial class Histogram : RosMsg
     {
         public std_msgs.Header header

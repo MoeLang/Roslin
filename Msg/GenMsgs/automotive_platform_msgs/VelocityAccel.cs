@@ -1,6 +1,13 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/VelocityAccel", "f9f86d6cc8bf87a22c9bcce69cd571b2", "# Vehicle Lateral Velocity and Acceleration Message\n\nstd_msgs/Header header\n\nfloat32 velocity     # meters/sec\nfloat32 accleration  # meters/sec^2\n\n")]
+    [MsgInfo("automotive_platform_msgs/VelocityAccel", "f9f86d6cc8bf87a22c9bcce69cd571b2", @"# Vehicle Lateral Velocity and Acceleration Message
+
+std_msgs/Header header
+
+float32 velocity     # meters/sec
+float32 accleration  # meters/sec^2
+
+")]
     public partial class VelocityAccel : RosMsg
     {
         public std_msgs.Header header

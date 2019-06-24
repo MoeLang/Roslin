@@ -1,6 +1,7 @@
 namespace Roslin.Msg.visualization_msgs
 {
-    [MsgInfo("visualization_msgs/MarkerArray", "d155b9ce5188fbaf89745847fd5882d7", "Marker[] markers\n")]
+    [MsgInfo("visualization_msgs/MarkerArray", "d155b9ce5188fbaf89745847fd5882d7", @"Marker[] markers
+")]
     public partial class MarkerArray : RosMsg
     {
         public Marker[] markers

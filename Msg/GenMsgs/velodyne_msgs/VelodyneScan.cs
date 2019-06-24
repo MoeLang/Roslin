@@ -1,6 +1,10 @@
 namespace Roslin.Msg.velodyne_msgs
 {
-    [MsgInfo("velodyne_msgs/VelodyneScan", "50804fc9533a0e579e6322c04ae70566", "# Velodyne LIDAR scan packets.\n\nHeader           header         # standard ROS message header\nVelodynePacket[] packets        # vector of raw packets\n")]
+    [MsgInfo("velodyne_msgs/VelodyneScan", "50804fc9533a0e579e6322c04ae70566", @"# Velodyne LIDAR scan packets.
+
+Header           header         # standard ROS message header
+VelodynePacket[] packets        # vector of raw packets
+")]
     public partial class VelodyneScan : RosMsg
     {
         public std_msgs.Header header

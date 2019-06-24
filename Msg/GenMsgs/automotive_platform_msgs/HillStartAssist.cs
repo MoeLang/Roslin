@@ -1,6 +1,13 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/HillStartAssist", "c17028b064a3857c9cf5363ecb14febb", "# Hill Start Assist Active\n\nstd_msgs/Header header\n\nbool active\n\n\n")]
+    [MsgInfo("automotive_platform_msgs/HillStartAssist", "c17028b064a3857c9cf5363ecb14febb", @"# Hill Start Assist Active
+
+std_msgs/Header header
+
+bool active
+
+
+")]
     public partial class HillStartAssist : RosMsg
     {
         public std_msgs.Header header

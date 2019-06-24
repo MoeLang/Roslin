@@ -1,6 +1,26 @@
 namespace Roslin.Msg.control_msgs
 {
-    [MsgInfo("control_msgs/JointJog", "1685da700c8c2e1254afc92a5fb89c96", "# Used in time-stamping the message.\nHeader header\n\n# Name list of the joints. You don't need to specify all joints of the\n# robot. Joint names are case-sensitive.\nstring[] joint_names\n\n# A position command to the joints listed in joint_names.\n# The order must be identical.\n# Units are meters or radians.\n# If displacements and velocities are filled, a profiled motion is requested.\nfloat64[] displacements # or position_deltas\n\n# A velocity command to the joints listed in joint_names.\n# The order must be identical.\n# Units are m/s or rad/s.\n# If displacements and velocities are filled, a profiled motion is requested.\nfloat64[] velocities\n\nfloat64 duration\n")]
+    [MsgInfo("control_msgs/JointJog", "1685da700c8c2e1254afc92a5fb89c96", @"# Used in time-stamping the message.
+Header header
+
+# Name list of the joints. You don't need to specify all joints of the
+# robot. Joint names are case-sensitive.
+string[] joint_names
+
+# A position command to the joints listed in joint_names.
+# The order must be identical.
+# Units are meters or radians.
+# If displacements and velocities are filled, a profiled motion is requested.
+float64[] displacements # or position_deltas
+
+# A velocity command to the joints listed in joint_names.
+# The order must be identical.
+# Units are m/s or rad/s.
+# If displacements and velocities are filled, a profiled motion is requested.
+float64[] velocities
+
+float64 duration
+")]
     public partial class JointJog : RosMsg
     {
         public std_msgs.Header header

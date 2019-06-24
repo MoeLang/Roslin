@@ -1,6 +1,14 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/PlotDataArray", "e83e9378b374b8436f955a6cd212770a", "Header header\njsk_recognition_msgs/PlotData[] data\nbool no_legend\nfloat32 legend_font_size\nfloat32 max_x\nfloat32 min_x\nfloat32 min_y\nfloat32 max_y\n")]
+    [MsgInfo("jsk_recognition_msgs/PlotDataArray", "e83e9378b374b8436f955a6cd212770a", @"Header header
+jsk_recognition_msgs/PlotData[] data
+bool no_legend
+float32 legend_font_size
+float32 max_x
+float32 min_x
+float32 min_y
+float32 max_y
+")]
     public partial class PlotDataArray : RosMsg
     {
         public std_msgs.Header header

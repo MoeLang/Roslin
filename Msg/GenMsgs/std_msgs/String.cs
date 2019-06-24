@@ -1,6 +1,7 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/String", "992ce8a1687cec8c8bd883ec73ca41d1", "string data\n")]
+    [MsgInfo("std_msgs/String", "992ce8a1687cec8c8bd883ec73ca41d1", @"string data
+")]
     public partial class String : RosMsg
     {
         public System.String data

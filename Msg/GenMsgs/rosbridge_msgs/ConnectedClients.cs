@@ -1,6 +1,7 @@
 namespace Roslin.Msg.rosbridge_msgs
 {
-    [MsgInfo("rosbridge_msgs/ConnectedClients", "d0d53b0c0aa23aa7e4cf52f49bca4b69", "ConnectedClient[] clients\n")]
+    [MsgInfo("rosbridge_msgs/ConnectedClients", "d0d53b0c0aa23aa7e4cf52f49bca4b69", @"ConnectedClient[] clients
+")]
     public partial class ConnectedClients : RosMsg
     {
         public ConnectedClient[] clients

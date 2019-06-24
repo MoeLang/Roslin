@@ -1,6 +1,8 @@
 namespace Roslin.Msg.map_msgs
 {
-    [MsgInfo("map_msgs/ProjectedMap", "7bbe8f96e45089681dc1ea7d023cbfca", "nav_msgs/OccupancyGrid map\nfloat64 min_z\nfloat64 max_z")]
+    [MsgInfo("map_msgs/ProjectedMap", "7bbe8f96e45089681dc1ea7d023cbfca", @"nav_msgs/OccupancyGrid map
+float64 min_z
+float64 max_z")]
     public partial class ProjectedMap : RosMsg
     {
         public nav_msgs.OccupancyGrid map

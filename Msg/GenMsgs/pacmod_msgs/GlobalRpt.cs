@@ -1,6 +1,18 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/GlobalRpt", "e844957facaf4f6bfdea20a3ffdb048f", "Header header\n\nbool enabled                # Indicates whether any system on the PACMod is enabled or disabled.\nbool override_active        # Indicates whether an override has been triggered on any system.\nbool fault_active           # Indicates whether a fault is active on any system.\nbool config_fault_active    # Indicates whether the CONFIG.TXT file was read correctly\nbool user_can_timeout       # Indicates a timeout has been exceeded on the user CAN interface.\nbool brake_can_timeout      # Indicates a timeout has been exceeded on the brake CAN interface.\nbool steering_can_timeout   # Indicates a timeout has been exceeded on the steering CAN interface.\nbool vehicle_can_timeout    # Indicates a timeout has been exceeded on a vehicle CAN interface.\nbool subsystem_can_timeout  # Indicates a timeout has been exceeded when communicating with a PACMod subsystem.\nbool user_can_read_errors   # The number of read errors encoutered by the PACMod on the user CAN interface.\n")]
+    [MsgInfo("pacmod_msgs/GlobalRpt", "e844957facaf4f6bfdea20a3ffdb048f", @"Header header
+
+bool enabled                # Indicates whether any system on the PACMod is enabled or disabled.
+bool override_active        # Indicates whether an override has been triggered on any system.
+bool fault_active           # Indicates whether a fault is active on any system.
+bool config_fault_active    # Indicates whether the CONFIG.TXT file was read correctly
+bool user_can_timeout       # Indicates a timeout has been exceeded on the user CAN interface.
+bool brake_can_timeout      # Indicates a timeout has been exceeded on the brake CAN interface.
+bool steering_can_timeout   # Indicates a timeout has been exceeded on the steering CAN interface.
+bool vehicle_can_timeout    # Indicates a timeout has been exceeded on a vehicle CAN interface.
+bool subsystem_can_timeout  # Indicates a timeout has been exceeded when communicating with a PACMod subsystem.
+bool user_can_read_errors   # The number of read errors encoutered by the PACMod on the user CAN interface.
+")]
     public partial class GlobalRpt : RosMsg
     {
         public std_msgs.Header header

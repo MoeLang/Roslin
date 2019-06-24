@@ -1,6 +1,11 @@
 namespace Roslin.Msg.turtlesim
 {
-    [MsgInfo("turtlesim/Pose", "863b248d5016ca62ea2e895ae5265cf9", "float32 x\nfloat32 y\nfloat32 theta\n\nfloat32 linear_velocity\nfloat32 angular_velocity")]
+    [MsgInfo("turtlesim/Pose", "863b248d5016ca62ea2e895ae5265cf9", @"float32 x
+float32 y
+float32 theta
+
+float32 linear_velocity
+float32 angular_velocity")]
     public partial class Pose : RosMsg
     {
         public System.Single x

@@ -1,6 +1,10 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/TrackingStatus", "2e374cd736cf06cc3e69b0c76b8cb117", "Header header\n\n# if true, it means the tracker abandon to track the object.\nbool is_lost\n")]
+    [MsgInfo("jsk_recognition_msgs/TrackingStatus", "2e374cd736cf06cc3e69b0c76b8cb117", @"Header header
+
+# if true, it means the tracker abandon to track the object.
+bool is_lost
+")]
     public partial class TrackingStatus : RosMsg
     {
         public std_msgs.Header header

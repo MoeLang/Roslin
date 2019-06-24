@@ -1,6 +1,9 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/Accel", "9f195f881246fdfa2798d1d3eebca84a", "# This expresses acceleration in free space broken into its linear and angular parts.\nVector3  linear\nVector3  angular\n")]
+    [MsgInfo("geometry_msgs/Accel", "9f195f881246fdfa2798d1d3eebca84a", @"# This expresses acceleration in free space broken into its linear and angular parts.
+Vector3  linear
+Vector3  angular
+")]
     public partial class Accel : RosMsg
     {
         public Vector3 linear

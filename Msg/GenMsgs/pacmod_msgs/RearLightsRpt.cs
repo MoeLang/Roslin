@@ -1,6 +1,12 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/RearLightsRpt", "5adfcaa5d9423963ef8c117009d03bbe", "Header header\n\nbool brake_lights_on\nbool brake_lights_on_is_valid\nbool reverse_lights_on\nbool reverse_lights_on_is_valid\n")]
+    [MsgInfo("pacmod_msgs/RearLightsRpt", "5adfcaa5d9423963ef8c117009d03bbe", @"Header header
+
+bool brake_lights_on
+bool brake_lights_on_is_valid
+bool reverse_lights_on
+bool reverse_lights_on_is_valid
+")]
     public partial class RearLightsRpt : RosMsg
     {
         public std_msgs.Header header

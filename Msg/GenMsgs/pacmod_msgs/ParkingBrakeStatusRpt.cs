@@ -1,6 +1,9 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/ParkingBrakeStatusRpt", "28531874ceb48a58d4faa42b130fc228", "Header header\n\nbool parking_brake_engaged\n")]
+    [MsgInfo("pacmod_msgs/ParkingBrakeStatusRpt", "28531874ceb48a58d4faa42b130fc228", @"Header header
+
+bool parking_brake_engaged
+")]
     public partial class ParkingBrakeStatusRpt : RosMsg
     {
         public std_msgs.Header header

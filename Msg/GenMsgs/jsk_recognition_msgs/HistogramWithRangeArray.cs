@@ -1,6 +1,10 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/HistogramWithRangeArray", "2622b1b7ae84f154677cf4c0d3a398c7", "Header header\nHistogramWithRange[] histograms\n\n\n")]
+    [MsgInfo("jsk_recognition_msgs/HistogramWithRangeArray", "2622b1b7ae84f154677cf4c0d3a398c7", @"Header header
+HistogramWithRange[] histograms
+
+
+")]
     public partial class HistogramWithRangeArray : RosMsg
     {
         public std_msgs.Header header

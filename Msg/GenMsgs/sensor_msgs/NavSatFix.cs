@@ -1,6 +1,52 @@
 namespace Roslin.Msg.sensor_msgs
 {
-    [MsgInfo("sensor_msgs/NavSatFix", "2d3a8cd499b9b4a0249fb98fd05cfa48", "# Navigation Satellite fix for any Global Navigation Satellite System\n#\n# Specified using the WGS 84 reference ellipsoid\n\n# header.stamp specifies the ROS time for this measurement (the\n#        corresponding satellite time may be reported using the\n#        sensor_msgs/TimeReference message).\n#\n# header.frame_id is the frame of reference reported by the satellite\n#        receiver, usually the location of the antenna.  This is a\n#        Euclidean frame relative to the vehicle, not a reference\n#        ellipsoid.\nHeader header\n\n# satellite fix status information\nNavSatStatus status\n\n# Latitude [degrees]. Positive is north of equator; negative is south.\nfloat64 latitude\n\n# Longitude [degrees]. Positive is east of prime meridian; negative is west.\nfloat64 longitude\n\n# Altitude [m]. Positive is above the WGS 84 ellipsoid\n# (quiet NaN if no altitude is available).\nfloat64 altitude\n\n# Position covariance [m^2] defined relative to a tangential plane\n# through the reported position. The components are East, North, and\n# Up (ENU), in row-major order.\n#\n# Beware: this coordinate system exhibits singularities at the poles.\n\nfloat64[9] position_covariance\n\n# If the covariance of the fix is known, fill it in completely. If the\n# GPS receiver provides the variance of each measurement, put them\n# along the diagonal. If only Dilution of Precision is available,\n# estimate an approximate covariance from that.\n\nuint8 COVARIANCE_TYPE_UNKNOWN = 0\nuint8 COVARIANCE_TYPE_APPROXIMATED = 1\nuint8 COVARIANCE_TYPE_DIAGONAL_KNOWN = 2\nuint8 COVARIANCE_TYPE_KNOWN = 3\n\nuint8 position_covariance_type\n")]
+    [MsgInfo("sensor_msgs/NavSatFix", "2d3a8cd499b9b4a0249fb98fd05cfa48", @"# Navigation Satellite fix for any Global Navigation Satellite System
+#
+# Specified using the WGS 84 reference ellipsoid
+
+# header.stamp specifies the ROS time for this measurement (the
+#        corresponding satellite time may be reported using the
+#        sensor_msgs/TimeReference message).
+#
+# header.frame_id is the frame of reference reported by the satellite
+#        receiver, usually the location of the antenna.  This is a
+#        Euclidean frame relative to the vehicle, not a reference
+#        ellipsoid.
+Header header
+
+# satellite fix status information
+NavSatStatus status
+
+# Latitude [degrees]. Positive is north of equator; negative is south.
+float64 latitude
+
+# Longitude [degrees]. Positive is east of prime meridian; negative is west.
+float64 longitude
+
+# Altitude [m]. Positive is above the WGS 84 ellipsoid
+# (quiet NaN if no altitude is available).
+float64 altitude
+
+# Position covariance [m^2] defined relative to a tangential plane
+# through the reported position. The components are East, North, and
+# Up (ENU), in row-major order.
+#
+# Beware: this coordinate system exhibits singularities at the poles.
+
+float64[9] position_covariance
+
+# If the covariance of the fix is known, fill it in completely. If the
+# GPS receiver provides the variance of each measurement, put them
+# along the diagonal. If only Dilution of Precision is available,
+# estimate an approximate covariance from that.
+
+uint8 COVARIANCE_TYPE_UNKNOWN = 0
+uint8 COVARIANCE_TYPE_APPROXIMATED = 1
+uint8 COVARIANCE_TYPE_DIAGONAL_KNOWN = 2
+uint8 COVARIANCE_TYPE_KNOWN = 3
+
+uint8 position_covariance_type
+")]
     public partial class NavSatFix : RosMsg
     {
         public System.Byte COVARIANCE_TYPE_UNKNOWN => 0;

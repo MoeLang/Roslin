@@ -1,6 +1,11 @@
 namespace Roslin.Msg.dynamic_reconfigure
 {
-    [MsgInfo("dynamic_reconfigure/Group", "9e8cd9e9423c94823db3614dd8b1cf7a", "string name\nstring type\nParamDescription[] parameters\nint32 parent \nint32 id\n")]
+    [MsgInfo("dynamic_reconfigure/Group", "9e8cd9e9423c94823db3614dd8b1cf7a", @"string name
+string type
+ParamDescription[] parameters
+int32 parent 
+int32 id
+")]
     public partial class Group : RosMsg
     {
         public System.String name

@@ -1,6 +1,10 @@
 namespace Roslin.Msg.sensor_msgs
 {
-    [MsgInfo("sensor_msgs/Joy", "5a9ea5f83505693b71e785041e67a8bb", "# Reports the state of a joysticks axes and buttons.\nHeader header           # timestamp in the header is the time the data is received from the joystick\nfloat32[] axes          # the axes measurements from a joystick\nint32[] buttons         # the buttons measurements from a joystick \n")]
+    [MsgInfo("sensor_msgs/Joy", "5a9ea5f83505693b71e785041e67a8bb", @"# Reports the state of a joysticks axes and buttons.
+Header header           # timestamp in the header is the time the data is received from the joystick
+float32[] axes          # the axes measurements from a joystick
+int32[] buttons         # the buttons measurements from a joystick 
+")]
     public partial class Joy : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/SegmentStamped", "1f2fbdf9b9a242110bee5312e7718d1f", "Header header\nSegment segment\n")]
+    [MsgInfo("jsk_recognition_msgs/SegmentStamped", "1f2fbdf9b9a242110bee5312e7718d1f", @"Header header
+Segment segment
+")]
     public partial class SegmentStamped : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,7 @@
 namespace Roslin.Msg.audio_common_msgs
 {
-    [MsgInfo("audio_common_msgs/AudioData", "f43a8e1b362b75baa741461b46adc7e0", "uint8[] data\n")]
+    [MsgInfo("audio_common_msgs/AudioData", "f43a8e1b362b75baa741461b46adc7e0", @"uint8[] data
+")]
     public partial class AudioData : RosMsg
     {
         public System.Byte[] data

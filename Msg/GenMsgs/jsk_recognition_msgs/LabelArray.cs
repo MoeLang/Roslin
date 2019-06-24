@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/LabelArray", "8cdb9aed89bee725ff5ad76b2986927d", "Header header\nLabel[] labels\n")]
+    [MsgInfo("jsk_recognition_msgs/LabelArray", "8cdb9aed89bee725ff5ad76b2986927d", @"Header header
+Label[] labels
+")]
     public partial class LabelArray : RosMsg
     {
         public std_msgs.Header header

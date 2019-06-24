@@ -1,6 +1,9 @@
 namespace Roslin.Msg.pcl_msgs
 {
-    [MsgInfo("pcl_msgs/PointIndices", "458c7998b7eaf99908256472e273b3d4", "Header header\nint32[] indices\n\n")]
+    [MsgInfo("pcl_msgs/PointIndices", "458c7998b7eaf99908256472e273b3d4", @"Header header
+int32[] indices
+
+")]
     public partial class PointIndices : RosMsg
     {
         public std_msgs.Header header

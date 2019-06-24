@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/ICPResult", "2d0f1279ba6f378fd67c4a0324acf2d7", "Header header\ngeometry_msgs/Pose pose\nstring name\nfloat64 score")]
+    [MsgInfo("jsk_recognition_msgs/ICPResult", "2d0f1279ba6f378fd67c4a0324acf2d7", @"Header header
+geometry_msgs/Pose pose
+string name
+float64 score")]
     public partial class ICPResult : RosMsg
     {
         public std_msgs.Header header

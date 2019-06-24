@@ -1,6 +1,7 @@
 namespace Roslin.Msg.jsk_footstep_msgs
 {
-    [MsgInfo("jsk_footstep_msgs/FootstepArray", "385bc396845a4680214262a4679d83b3", "Header header\nFootstep[] footsteps")]
+    [MsgInfo("jsk_footstep_msgs/FootstepArray", "385bc396845a4680214262a4679d83b3", @"Header header
+Footstep[] footsteps")]
     public partial class FootstepArray : RosMsg
     {
         public std_msgs.Header header

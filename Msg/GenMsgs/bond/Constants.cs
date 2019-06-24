@@ -1,6 +1,12 @@
 namespace Roslin.Msg.bond
 {
-    [MsgInfo("bond/Constants", "6fc594dc1d7bd7919077042712f8c8b0", "float32 DEAD_PUBLISH_PERIOD = 0.05\nfloat32 DEFAULT_CONNECT_TIMEOUT = 10.0\nfloat32 DEFAULT_HEARTBEAT_TIMEOUT = 4.0\nfloat32 DEFAULT_DISCONNECT_TIMEOUT = 2.0\nfloat32 DEFAULT_HEARTBEAT_PERIOD = 1.0\n\nstring DISABLE_HEARTBEAT_TIMEOUT_PARAM=/bond_disable_heartbeat_timeout")]
+    [MsgInfo("bond/Constants", "6fc594dc1d7bd7919077042712f8c8b0", @"float32 DEAD_PUBLISH_PERIOD = 0.05
+float32 DEFAULT_CONNECT_TIMEOUT = 10.0
+float32 DEFAULT_HEARTBEAT_TIMEOUT = 4.0
+float32 DEFAULT_DISCONNECT_TIMEOUT = 2.0
+float32 DEFAULT_HEARTBEAT_PERIOD = 1.0
+
+string DISABLE_HEARTBEAT_TIMEOUT_PARAM=/bond_disable_heartbeat_timeout")]
     public partial class Constants : RosMsg
     {
         public System.Single DEAD_PUBLISH_PERIOD => 0.05f;

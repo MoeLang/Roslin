@@ -1,6 +1,11 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/SteeringPIDRpt4", "2bc4404ec9df7da4ed993a2081a68002", "Header header\n\nfloat64 angular_velocity         \nfloat64 angular_acceleration\n\n")]
+    [MsgInfo("pacmod_msgs/SteeringPIDRpt4", "2bc4404ec9df7da4ed993a2081a68002", @"Header header
+
+float64 angular_velocity         
+float64 angular_acceleration
+
+")]
     public partial class SteeringPIDRpt4 : RosMsg
     {
         public std_msgs.Header header

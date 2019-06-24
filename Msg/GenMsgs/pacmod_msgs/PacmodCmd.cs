@@ -1,6 +1,24 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/PacmodCmd", "c4197651090f1dbf0dfef39c46c42bea", "Header header\n\nfloat64 f64_cmd\nuint16 ui16_cmd\nbool enable\nbool clear\nbool ignore\n\nuint16 TURN_RIGHT = 0\nuint16 TURN_NONE = 1\nuint16 TURN_LEFT = 2\n\nuint16 SHIFT_PARK = 0\nuint16 SHIFT_REVERSE = 1\nuint16 SHIFT_NEUTRAL = 2\nuint16 SHIFT_FORWARD = 3\nuint16 SHIFT_HIGH = 3 # For Polaris Ranger\nuint16 SHIFT_LOW = 4\n")]
+    [MsgInfo("pacmod_msgs/PacmodCmd", "c4197651090f1dbf0dfef39c46c42bea", @"Header header
+
+float64 f64_cmd
+uint16 ui16_cmd
+bool enable
+bool clear
+bool ignore
+
+uint16 TURN_RIGHT = 0
+uint16 TURN_NONE = 1
+uint16 TURN_LEFT = 2
+
+uint16 SHIFT_PARK = 0
+uint16 SHIFT_REVERSE = 1
+uint16 SHIFT_NEUTRAL = 2
+uint16 SHIFT_FORWARD = 3
+uint16 SHIFT_HIGH = 3 # For Polaris Ranger
+uint16 SHIFT_LOW = 4
+")]
     public partial class PacmodCmd : RosMsg
     {
         public System.UInt16 TURN_RIGHT => 0;

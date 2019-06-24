@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/SlicedPointCloud", "37376a48b034bf543f8cfd86844487c7", "sensor_msgs/PointCloud2 point_cloud\nuint8 slice_index\nuint8 sequence_id\n")]
+    [MsgInfo("jsk_recognition_msgs/SlicedPointCloud", "37376a48b034bf543f8cfd86844487c7", @"sensor_msgs/PointCloud2 point_cloud
+uint8 slice_index
+uint8 sequence_id
+")]
     public partial class SlicedPointCloud : RosMsg
     {
         public sensor_msgs.PointCloud2 point_cloud

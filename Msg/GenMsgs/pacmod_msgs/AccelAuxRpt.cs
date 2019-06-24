@@ -1,6 +1,16 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/AccelAuxRpt", "2f644f02020323fdb0afab1a11b54b70", "Header header\n\nfloat64 raw_pedal_pos\nbool raw_pedal_pos_is_valid\nfloat64 raw_pedal_force\nbool raw_pedal_force_is_valid\nbool user_interaction\nbool user_interaction_is_valid\nbool brake_interlock_active\nbool brake_interlock_active_is_valid\n")]
+    [MsgInfo("pacmod_msgs/AccelAuxRpt", "2f644f02020323fdb0afab1a11b54b70", @"Header header
+
+float64 raw_pedal_pos
+bool raw_pedal_pos_is_valid
+float64 raw_pedal_force
+bool raw_pedal_force_is_valid
+bool user_interaction
+bool user_interaction_is_valid
+bool brake_interlock_active
+bool brake_interlock_active_is_valid
+")]
     public partial class AccelAuxRpt : RosMsg
     {
         public std_msgs.Header header

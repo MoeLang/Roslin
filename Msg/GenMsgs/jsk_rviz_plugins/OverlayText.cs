@@ -1,6 +1,23 @@
 namespace Roslin.Msg.jsk_rviz_plugins
 {
-    [MsgInfo("jsk_rviz_plugins/OverlayText", "7efc1ed34881f913afcee6ba02aa1242", "uint8 ADD = 0\nuint8 DELETE = 1\n\nuint8 action\n\nint32 width\nint32 height\nint32 left\nint32 top\nstd_msgs/ColorRGBA bg_color\n\nint32 line_width\nfloat32 text_size\nstring font\nstd_msgs/ColorRGBA fg_color\n\nstring text\n")]
+    [MsgInfo("jsk_rviz_plugins/OverlayText", "7efc1ed34881f913afcee6ba02aa1242", @"uint8 ADD = 0
+uint8 DELETE = 1
+
+uint8 action
+
+int32 width
+int32 height
+int32 left
+int32 top
+std_msgs/ColorRGBA bg_color
+
+int32 line_width
+float32 text_size
+string font
+std_msgs/ColorRGBA fg_color
+
+string text
+")]
     public partial class OverlayText : RosMsg
     {
         public System.Byte ADD => 0;

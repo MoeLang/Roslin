@@ -1,6 +1,8 @@
 namespace Roslin.Msg.dynamic_reconfigure
 {
-    [MsgInfo("dynamic_reconfigure/StrParameter", "bc6ccc4a57f61779c8eaae61e9f422e0", "string name\nstring value\n")]
+    [MsgInfo("dynamic_reconfigure/StrParameter", "bc6ccc4a57f61779c8eaae61e9f422e0", @"string name
+string value
+")]
     public partial class StrParameter : RosMsg
     {
         public System.String name

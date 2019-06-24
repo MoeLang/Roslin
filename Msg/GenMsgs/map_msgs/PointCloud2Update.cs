@@ -1,6 +1,11 @@
 namespace Roslin.Msg.map_msgs
 {
-    [MsgInfo("map_msgs/PointCloud2Update", "6c58e4f249ae9cd2b24fb1ee0f99195e", "uint32 ADD=0\nuint32 DELETE=1\nHeader header\nuint32 type          # type of update, one of ADD or DELETE\nsensor_msgs/PointCloud2 points\n")]
+    [MsgInfo("map_msgs/PointCloud2Update", "6c58e4f249ae9cd2b24fb1ee0f99195e", @"uint32 ADD=0
+uint32 DELETE=1
+Header header
+uint32 type          # type of update, one of ADD or DELETE
+sensor_msgs/PointCloud2 points
+")]
     public partial class PointCloud2Update : RosMsg
     {
         public System.UInt32 ADD => 0;

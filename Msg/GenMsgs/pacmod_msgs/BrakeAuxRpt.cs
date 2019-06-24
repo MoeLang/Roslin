@@ -1,6 +1,18 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/BrakeAuxRpt", "1b24f296f5fabbe64603c0988f5aae5b", "Header header\n\nfloat64 raw_pedal_pos\nbool raw_pedal_pos_is_valid\nfloat64 raw_pedal_force\nbool raw_pedal_force_is_valid\nfloat64 raw_brake_pressure\nbool raw_brake_pressure_is_valid\nbool brake_on_off\nbool brake_on_off_is_valid\nbool user_interaction\nbool user_interaction_is_valid\n")]
+    [MsgInfo("pacmod_msgs/BrakeAuxRpt", "1b24f296f5fabbe64603c0988f5aae5b", @"Header header
+
+float64 raw_pedal_pos
+bool raw_pedal_pos_is_valid
+float64 raw_pedal_force
+bool raw_pedal_force_is_valid
+float64 raw_brake_pressure
+bool raw_brake_pressure_is_valid
+bool brake_on_off
+bool brake_on_off_is_valid
+bool user_interaction
+bool user_interaction_is_valid
+")]
     public partial class BrakeAuxRpt : RosMsg
     {
         public std_msgs.Header header

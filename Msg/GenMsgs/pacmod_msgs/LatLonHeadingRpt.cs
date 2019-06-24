@@ -1,6 +1,15 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/LatLonHeadingRpt", "137a7c22b052c703f38a29aa79de4e50", "Header header\n\nint8 latitude_degrees\nuint8 latitude_minutes\nuint8 latitude_seconds\nint8 longitude_degrees\nuint8 longitude_minutes\nuint8 longitude_seconds\nfloat64 heading\n")]
+    [MsgInfo("pacmod_msgs/LatLonHeadingRpt", "137a7c22b052c703f38a29aa79de4e50", @"Header header
+
+int8 latitude_degrees
+uint8 latitude_minutes
+uint8 latitude_seconds
+int8 longitude_degrees
+uint8 longitude_minutes
+uint8 longitude_seconds
+float64 heading
+")]
     public partial class LatLonHeadingRpt : RosMsg
     {
         public std_msgs.Header header

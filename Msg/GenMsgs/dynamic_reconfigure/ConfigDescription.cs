@@ -1,6 +1,10 @@
 namespace Roslin.Msg.dynamic_reconfigure
 {
-    [MsgInfo("dynamic_reconfigure/ConfigDescription", "757ce9d44ba8ddd801bb30bc456f946f", "Group[] groups\nConfig max\nConfig min\nConfig dflt\n")]
+    [MsgInfo("dynamic_reconfigure/ConfigDescription", "757ce9d44ba8ddd801bb30bc456f946f", @"Group[] groups
+Config max
+Config min
+Config dflt
+")]
     public partial class ConfigDescription : RosMsg
     {
         public Group[] groups

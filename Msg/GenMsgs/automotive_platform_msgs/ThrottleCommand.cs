@@ -1,6 +1,13 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/ThrottleCommand", "e5121b671d09b4686521aac007acd4bd", "# Current Throttle Pedal Command\n\nstd_msgs/Header header\n\nfloat32 throttle_pedal     # 0 to 1.0\n\n\n")]
+    [MsgInfo("automotive_platform_msgs/ThrottleCommand", "e5121b671d09b4686521aac007acd4bd", @"# Current Throttle Pedal Command
+
+std_msgs/Header header
+
+float32 throttle_pedal     # 0 to 1.0
+
+
+")]
     public partial class ThrottleCommand : RosMsg
     {
         public std_msgs.Header header

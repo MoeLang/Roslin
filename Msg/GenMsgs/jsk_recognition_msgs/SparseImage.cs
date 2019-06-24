@@ -1,6 +1,15 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/SparseImage", "7c361d829424bc5984fc0a1831f84751", "Header header\n\nuint32 width\nuint32 height\n\n# each uint8 or uint16 contains position of white pixel expressed like: \"(x << 8 or 16) ^ y\"\n# if max(width, height) > 256(=2^8) use data32 array, else use data16 array.\nuint16[] data16\nuint32[] data32\n")]
+    [MsgInfo("jsk_recognition_msgs/SparseImage", "7c361d829424bc5984fc0a1831f84751", @"Header header
+
+uint32 width
+uint32 height
+
+# each uint8 or uint16 contains position of white pixel expressed like: ""(x << 8 or 16) ^ y""
+# if max(width, height) > 256(=2^8) use data32 array, else use data16 array.
+uint16[] data16
+uint32[] data32
+")]
     public partial class SparseImage : RosMsg
     {
         public std_msgs.Header header

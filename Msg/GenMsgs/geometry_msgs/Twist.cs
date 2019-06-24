@@ -1,6 +1,9 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/Twist", "9f195f881246fdfa2798d1d3eebca84a", "# This expresses velocity in free space broken into its linear and angular parts.\nVector3  linear\nVector3  angular\n")]
+    [MsgInfo("geometry_msgs/Twist", "9f195f881246fdfa2798d1d3eebca84a", @"# This expresses velocity in free space broken into its linear and angular parts.
+Vector3  linear
+Vector3  angular
+")]
     public partial class Twist : RosMsg
     {
         public Vector3 linear

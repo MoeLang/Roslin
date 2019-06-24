@@ -1,6 +1,12 @@
 namespace Roslin.Msg.map_msgs
 {
-    [MsgInfo("map_msgs/OccupancyGridUpdate", "b295be292b335c34718bd939deebe1c9", "Header header\nint32 x\nint32 y\nuint32 width\nuint32 height\nint8[] data\n")]
+    [MsgInfo("map_msgs/OccupancyGridUpdate", "b295be292b335c34718bd939deebe1c9", @"Header header
+int32 x
+int32 y
+uint32 width
+uint32 height
+int8[] data
+")]
     public partial class OccupancyGridUpdate : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,15 @@
 namespace Roslin.Msg.visualization_msgs
 {
-    [MsgInfo("visualization_msgs/InteractiveMarkerPose", "a6e6833209a196a38d798dadb02c81f8", "# Time/frame info.\nHeader header\n\n# Initial pose. Also, defines the pivot point for rotations.\ngeometry_msgs/Pose pose\n\n# Identifying string. Must be globally unique in\n# the topic that this message is sent through.\nstring name\n")]
+    [MsgInfo("visualization_msgs/InteractiveMarkerPose", "a6e6833209a196a38d798dadb02c81f8", @"# Time/frame info.
+Header header
+
+# Initial pose. Also, defines the pivot point for rotations.
+geometry_msgs/Pose pose
+
+# Identifying string. Must be globally unique in
+# the topic that this message is sent through.
+string name
+")]
     public partial class InteractiveMarkerPose : RosMsg
     {
         public std_msgs.Header header

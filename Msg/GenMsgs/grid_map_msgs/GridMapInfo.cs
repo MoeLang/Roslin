@@ -1,6 +1,19 @@
 namespace Roslin.Msg.grid_map_msgs
 {
-    [MsgInfo("grid_map_msgs/GridMapInfo", "43ee5430e1c253682111cb6bedac0ef9", "# Header (time and frame)\nHeader header\n\n# Resolution of the grid [m/cell].\nfloat64 resolution\n\n# Length in x-direction [m].\nfloat64 length_x\n\n# Length in y-direction [m].\nfloat64 length_y\n\n# Pose of the grid map center in the frame defined in `header` [m].\ngeometry_msgs/Pose pose")]
+    [MsgInfo("grid_map_msgs/GridMapInfo", "43ee5430e1c253682111cb6bedac0ef9", @"# Header (time and frame)
+Header header
+
+# Resolution of the grid [m/cell].
+float64 resolution
+
+# Length in x-direction [m].
+float64 length_x
+
+# Length in y-direction [m].
+float64 length_y
+
+# Pose of the grid map center in the frame defined in `header` [m].
+geometry_msgs/Pose pose")]
     public partial class GridMapInfo : RosMsg
     {
         public std_msgs.Header header

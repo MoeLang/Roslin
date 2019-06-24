@@ -1,6 +1,8 @@
 namespace Roslin.Msg.diagnostic_msgs
 {
-    [MsgInfo("diagnostic_msgs/DiagnosticArray", "60810da900de1dd6ddd437c3503511da", "# This message is used to send diagnostic information about the state of the robot\nHeader header #for timestamp\nDiagnosticStatus[] status # an array of components being reported on")]
+    [MsgInfo("diagnostic_msgs/DiagnosticArray", "60810da900de1dd6ddd437c3503511da", @"# This message is used to send diagnostic information about the state of the robot
+Header header #for timestamp
+DiagnosticStatus[] status # an array of components being reported on")]
     public partial class DiagnosticArray : RosMsg
     {
         public std_msgs.Header header

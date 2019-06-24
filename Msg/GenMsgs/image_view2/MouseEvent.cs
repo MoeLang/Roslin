@@ -1,6 +1,24 @@
 namespace Roslin.Msg.image_view2
 {
-    [MsgInfo("image_view2/MouseEvent", "7ffa73624c1be385169a9e6e23460224", "Header header\n\n# event type\nint32 KEY_PRESSED=1\nint32 MOUSE_LEFT_UP=2\nint32 MOUSE_LEFT_DOWN=3\nint32 MOUSE_MOVE=4\nint32 MOUSE_RIGHT_DOWN=5\nint32 type\n\nint32 key\n\n# location of mouse\nint32 x\nint32 y\n\n# size of image\nint32 width\nint32 height")]
+    [MsgInfo("image_view2/MouseEvent", "7ffa73624c1be385169a9e6e23460224", @"Header header
+
+# event type
+int32 KEY_PRESSED=1
+int32 MOUSE_LEFT_UP=2
+int32 MOUSE_LEFT_DOWN=3
+int32 MOUSE_MOVE=4
+int32 MOUSE_RIGHT_DOWN=5
+int32 type
+
+int32 key
+
+# location of mouse
+int32 x
+int32 y
+
+# size of image
+int32 width
+int32 height")]
     public partial class MouseEvent : RosMsg
     {
         public System.Int32 KEY_PRESSED => 1;

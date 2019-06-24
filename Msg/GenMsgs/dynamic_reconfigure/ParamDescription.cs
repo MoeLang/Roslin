@@ -1,6 +1,11 @@
 namespace Roslin.Msg.dynamic_reconfigure
 {
-    [MsgInfo("dynamic_reconfigure/ParamDescription", "7434fcb9348c13054e0c3b267c8cb34d", "string name\nstring type\nuint32 level\nstring description\nstring edit_method\n")]
+    [MsgInfo("dynamic_reconfigure/ParamDescription", "7434fcb9348c13054e0c3b267c8cb34d", @"string name
+string type
+uint32 level
+string description
+string edit_method
+")]
     public partial class ParamDescription : RosMsg
     {
         public System.String name

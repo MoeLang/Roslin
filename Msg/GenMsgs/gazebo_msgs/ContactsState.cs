@@ -1,6 +1,8 @@
 namespace Roslin.Msg.gazebo_msgs
 {
-    [MsgInfo("gazebo_msgs/ContactsState", "acbcb1601a8e525bf72509f18e6f668d", "Header header                                   # stamp\ngazebo_msgs/ContactState[] states            # array of geom pairs in contact\n")]
+    [MsgInfo("gazebo_msgs/ContactsState", "acbcb1601a8e525bf72509f18e6f668d", @"Header header                                   # stamp
+gazebo_msgs/ContactState[] states            # array of geom pairs in contact
+")]
     public partial class ContactsState : RosMsg
     {
         public std_msgs.Header header

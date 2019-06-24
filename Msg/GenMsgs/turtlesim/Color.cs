@@ -1,6 +1,9 @@
 namespace Roslin.Msg.turtlesim
 {
-    [MsgInfo("turtlesim/Color", "353891e354491c51aabe32df673fb446", "uint8 r\nuint8 g\nuint8 b\n")]
+    [MsgInfo("turtlesim/Color", "353891e354491c51aabe32df673fb446", @"uint8 r
+uint8 g
+uint8 b
+")]
     public partial class Color : RosMsg
     {
         public System.Byte r

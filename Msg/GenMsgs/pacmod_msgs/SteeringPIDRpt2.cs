@@ -1,6 +1,12 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/SteeringPIDRpt2", "f1f83d8c039cc71a4428f154e85e90eb", "Header header\n\nfloat64 P_term         \nfloat64 I_term  \nfloat64 D_term         \nfloat64 all_terms      # sum of P, I, and D terms\n")]
+    [MsgInfo("pacmod_msgs/SteeringPIDRpt2", "f1f83d8c039cc71a4428f154e85e90eb", @"Header header
+
+float64 P_term         
+float64 I_term  
+float64 D_term         
+float64 all_terms      # sum of P, I, and D terms
+")]
     public partial class SteeringPIDRpt2 : RosMsg
     {
         public std_msgs.Header header

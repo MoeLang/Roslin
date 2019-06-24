@@ -1,6 +1,7 @@
 namespace Roslin.Msg.jsk_rviz_plugins
 {
-    [MsgInfo("jsk_rviz_plugins/PictogramArray", "bfdafbfcdf121aed91dae673b47ae3fe", "Header header\nPictogram[] pictograms")]
+    [MsgInfo("jsk_rviz_plugins/PictogramArray", "bfdafbfcdf121aed91dae673b47ae3fe", @"Header header
+Pictogram[] pictograms")]
     public partial class PictogramArray : RosMsg
     {
         public std_msgs.Header header

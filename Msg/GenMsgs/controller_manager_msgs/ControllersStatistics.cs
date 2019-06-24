@@ -1,6 +1,8 @@
 namespace Roslin.Msg.controller_manager_msgs
 {
-    [MsgInfo("controller_manager_msgs/ControllersStatistics", "a154c347736773e3700d1719105df29d", "std_msgs/Header header\ncontroller_manager_msgs/ControllerStatistics[] controller\n")]
+    [MsgInfo("controller_manager_msgs/ControllersStatistics", "a154c347736773e3700d1719105df29d", @"std_msgs/Header header
+controller_manager_msgs/ControllerStatistics[] controller
+")]
     public partial class ControllersStatistics : RosMsg
     {
         public std_msgs.Header header

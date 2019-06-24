@@ -1,6 +1,16 @@
 namespace Roslin.Msg.trajectory_msgs
 {
-    [MsgInfo("trajectory_msgs/MultiDOFJointTrajectoryPoint", "3ebe08d1abd5b65862d50e09430db776", "# Each multi-dof joint can specify a transform (up to 6 DOF)\ngeometry_msgs/Transform[] transforms\n\n# There can be a velocity specified for the origin of the joint \ngeometry_msgs/Twist[] velocities\n\n# There can be an acceleration specified for the origin of the joint \ngeometry_msgs/Twist[] accelerations\n\nduration time_from_start\n")]
+    [MsgInfo("trajectory_msgs/MultiDOFJointTrajectoryPoint", "3ebe08d1abd5b65862d50e09430db776", @"# Each multi-dof joint can specify a transform (up to 6 DOF)
+geometry_msgs/Transform[] transforms
+
+# There can be a velocity specified for the origin of the joint 
+geometry_msgs/Twist[] velocities
+
+# There can be an acceleration specified for the origin of the joint 
+geometry_msgs/Twist[] accelerations
+
+duration time_from_start
+")]
     public partial class MultiDOFJointTrajectoryPoint : RosMsg
     {
         public geometry_msgs.Transform[] transforms

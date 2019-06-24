@@ -1,6 +1,12 @@
 namespace Roslin.Msg.people_msgs
 {
-    [MsgInfo("people_msgs/PositionMeasurementArray", "59c860d40aa739ec920eb3ad24ae019e", "Header          header\n\n# All of the people found\npeople_msgs/PositionMeasurement[] people\n\n# The co-occurrence matrix between people\nfloat32[] cooccurrence")]
+    [MsgInfo("people_msgs/PositionMeasurementArray", "59c860d40aa739ec920eb3ad24ae019e", @"Header          header
+
+# All of the people found
+people_msgs/PositionMeasurement[] people
+
+# The co-occurrence matrix between people
+float32[] cooccurrence")]
     public partial class PositionMeasurementArray : RosMsg
     {
         public std_msgs.Header header

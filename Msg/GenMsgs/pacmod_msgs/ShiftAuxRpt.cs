@@ -1,6 +1,16 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/ShiftAuxRpt", "c389a0ae75f88ff27518bbc4dcdfb56a", "Header header\n\nbool between_gears\nbool between_gears_is_valid\nbool stay_in_neutral_mode\nbool stay_in_neutral_mode_is_valid\nbool brake_interlock_active\nbool brake_interlock_active_is_valid\nbool speed_interlock_active\nbool speed_interlock_active_is_valid\n")]
+    [MsgInfo("pacmod_msgs/ShiftAuxRpt", "c389a0ae75f88ff27518bbc4dcdfb56a", @"Header header
+
+bool between_gears
+bool between_gears_is_valid
+bool stay_in_neutral_mode
+bool stay_in_neutral_mode_is_valid
+bool brake_interlock_active
+bool brake_interlock_active_is_valid
+bool speed_interlock_active
+bool speed_interlock_active_is_valid
+")]
     public partial class ShiftAuxRpt : RosMsg
     {
         public std_msgs.Header header

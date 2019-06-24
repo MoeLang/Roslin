@@ -1,6 +1,7 @@
 namespace Roslin.Msg.sensor_msgs
 {
-    [MsgInfo("sensor_msgs/JoyFeedbackArray", "cde5730a895b1fc4dee6f91b754b213d", "# This message publishes values for multiple feedback at once. \nJoyFeedback[] array")]
+    [MsgInfo("sensor_msgs/JoyFeedbackArray", "cde5730a895b1fc4dee6f91b754b213d", @"# This message publishes values for multiple feedback at once. 
+JoyFeedback[] array")]
     public partial class JoyFeedbackArray : RosMsg
     {
         public JoyFeedback[] array

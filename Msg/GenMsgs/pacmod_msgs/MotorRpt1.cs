@@ -1,6 +1,10 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/MotorRpt1", "bc762724eccc08e26b60b6284460fe26", "Header header\n\nfloat64 current         # Motor current in Ampres\nfloat64 position        # Motor position in Radians\n")]
+    [MsgInfo("pacmod_msgs/MotorRpt1", "bc762724eccc08e26b60b6284460fe26", @"Header header
+
+float64 current         # Motor current in Ampres
+float64 position        # Motor position in Radians
+")]
     public partial class MotorRpt1 : RosMsg
     {
         public std_msgs.Header header

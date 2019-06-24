@@ -1,6 +1,11 @@
 namespace Roslin.Msg.velodyne_msgs
 {
-    [MsgInfo("velodyne_msgs/VelodynePacket", "ae4f90a23256f44e82baa08dd45c3456", "# Raw Velodyne LIDAR packet.\n\ntime stamp              # packet timestamp\nuint8[1206] data        # packet contents\n\n")]
+    [MsgInfo("velodyne_msgs/VelodynePacket", "ae4f90a23256f44e82baa08dd45c3456", @"# Raw Velodyne LIDAR packet.
+
+time stamp              # packet timestamp
+uint8[1206] data        # packet contents
+
+")]
     public partial class VelodynePacket : RosMsg
     {
         public System.DateTime stamp

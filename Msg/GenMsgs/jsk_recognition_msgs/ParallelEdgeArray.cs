@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/ParallelEdgeArray", "7c8ef4f5976c55fb32293ceaa19a1189", "Header header\nParallelEdge[] edge_groups\n")]
+    [MsgInfo("jsk_recognition_msgs/ParallelEdgeArray", "7c8ef4f5976c55fb32293ceaa19a1189", @"Header header
+ParallelEdge[] edge_groups
+")]
     public partial class ParallelEdgeArray : RosMsg
     {
         public std_msgs.Header header

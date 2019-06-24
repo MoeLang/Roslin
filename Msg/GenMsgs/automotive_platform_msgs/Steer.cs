@@ -1,6 +1,17 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/Steer", "707dbbe00e6de0f2a6ed7a28a1389dc7", "# Steering Control Message\n# Contains steering commands\n\nstd_msgs/Header header\n\nstring module_name # module name of the source node of this message\n\nfloat32 curvature           # Desired steering curvature (1/m)\nfloat32 max_curvature_rate  # Max rate of change for curvature (1/m/sec)\n\n\n")]
+    [MsgInfo("automotive_platform_msgs/Steer", "707dbbe00e6de0f2a6ed7a28a1389dc7", @"# Steering Control Message
+# Contains steering commands
+
+std_msgs/Header header
+
+string module_name # module name of the source node of this message
+
+float32 curvature           # Desired steering curvature (1/m)
+float32 max_curvature_rate  # Max rate of change for curvature (1/m/sec)
+
+
+")]
     public partial class Steer : RosMsg
     {
         public std_msgs.Header header

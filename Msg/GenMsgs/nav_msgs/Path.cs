@@ -1,6 +1,9 @@
 namespace Roslin.Msg.nav_msgs
 {
-    [MsgInfo("nav_msgs/Path", "6227e2b7e9cce15051f669a5e197bbf7", "#An array of poses that represents a Path for a robot to follow\nHeader header\ngeometry_msgs/PoseStamped[] poses\n")]
+    [MsgInfo("nav_msgs/Path", "6227e2b7e9cce15051f669a5e197bbf7", @"#An array of poses that represents a Path for a robot to follow
+Header header
+geometry_msgs/PoseStamped[] poses
+")]
     public partial class Path : RosMsg
     {
         public std_msgs.Header header

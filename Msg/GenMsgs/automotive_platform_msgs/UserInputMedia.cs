@@ -1,6 +1,22 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/UserInputMedia", "cc8e2078d79a82d9d486b8f55a126c7f", "# User input (e.g. button presses) related to media controls\nHeader header\n\nbool btn_vol_up\nbool btn_vol_down\nbool btn_mute\nbool btn_next\nbool btn_prev\nbool btn_next_hang_up\nbool btn_prev_answer\nbool btn_hang_up\nbool btn_answer\nbool btn_play\nbool btn_pause\nbool btn_play_pause\nbool btn_mode\n")]
+    [MsgInfo("automotive_platform_msgs/UserInputMedia", "cc8e2078d79a82d9d486b8f55a126c7f", @"# User input (e.g. button presses) related to media controls
+Header header
+
+bool btn_vol_up
+bool btn_vol_down
+bool btn_mute
+bool btn_next
+bool btn_prev
+bool btn_next_hang_up
+bool btn_prev_answer
+bool btn_hang_up
+bool btn_answer
+bool btn_play
+bool btn_pause
+bool btn_play_pause
+bool btn_mode
+")]
     public partial class UserInputMedia : RosMsg
     {
         public std_msgs.Header header

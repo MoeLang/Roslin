@@ -1,6 +1,8 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/Polygon", "cd60a26494a087f577976f0329fa120e", "#A specification of a polygon where the first and last points are assumed to be connected\nPoint32[] points\n")]
+    [MsgInfo("geometry_msgs/Polygon", "cd60a26494a087f577976f0329fa120e", @"#A specification of a polygon where the first and last points are assumed to be connected
+Point32[] points
+")]
     public partial class Polygon : RosMsg
     {
         public Point32[] points

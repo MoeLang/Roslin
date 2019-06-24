@@ -1,6 +1,14 @@
 namespace Roslin.Msg.jsk_gui_msgs
 {
-    [MsgInfo("jsk_gui_msgs/DeviceSensor", "d3861ba768b988b4c249337d4dc6552d", "float64 temperature\nfloat64 relative_humidity\nfloat64 light\nfloat64 pressure\nfloat64 proximity\n\n\n\n")]
+    [MsgInfo("jsk_gui_msgs/DeviceSensor", "d3861ba768b988b4c249337d4dc6552d", @"float64 temperature
+float64 relative_humidity
+float64 light
+float64 pressure
+float64 proximity
+
+
+
+")]
     public partial class DeviceSensor : RosMsg
     {
         public System.Double temperature

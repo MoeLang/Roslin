@@ -1,6 +1,12 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/SimpleOccupancyGrid", "25fb4ce5a31aab052ba1250fcdda9da7", "Header header\n# plane coefficients\nfloat32[4] coefficients\n# cells\nfloat32 resolution\ngeometry_msgs/Point[] cells\n")]
+    [MsgInfo("jsk_recognition_msgs/SimpleOccupancyGrid", "25fb4ce5a31aab052ba1250fcdda9da7", @"Header header
+# plane coefficients
+float32[4] coefficients
+# cells
+float32 resolution
+geometry_msgs/Point[] cells
+")]
     public partial class SimpleOccupancyGrid : RosMsg
     {
         public std_msgs.Header header

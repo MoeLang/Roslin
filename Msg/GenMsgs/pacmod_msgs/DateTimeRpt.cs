@@ -1,6 +1,15 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/DateTimeRpt", "2af1288975789a90586fd2529643798a", "Header header\n\nint32 year\nuint8 month\nuint8 day\nuint8 hour\nuint8 minute\nuint8 second\n\n")]
+    [MsgInfo("pacmod_msgs/DateTimeRpt", "2af1288975789a90586fd2529643798a", @"Header header
+
+int32 year
+uint8 month
+uint8 day
+uint8 hour
+uint8 minute
+uint8 second
+
+")]
     public partial class DateTimeRpt : RosMsg
     {
         public std_msgs.Header header

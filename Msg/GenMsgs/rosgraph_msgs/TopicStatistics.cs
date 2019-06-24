@@ -1,6 +1,38 @@
 namespace Roslin.Msg.rosgraph_msgs
 {
-    [MsgInfo("rosgraph_msgs/TopicStatistics", "10152ed868c5097a5e2e4a89d7daa710", "# name of the topic\nstring topic\n\n# node id of the publisher\nstring node_pub\n\n# node id of the subscriber\nstring node_sub\n\n# the statistics apply to this time window\ntime window_start\ntime window_stop\n\n# number of messages delivered during the window\nint32 delivered_msgs\n# numbers of messages dropped during the window\nint32 dropped_msgs\n\n# traffic during the window, in bytes\nint32 traffic\n\n# mean/stddev/max period between two messages\nduration period_mean\nduration period_stddev\nduration period_max\n\n# mean/stddev/max age of the message based on the\n# timestamp in the message header. In case the\n# message does not have a header, it will be 0.\nduration stamp_age_mean\nduration stamp_age_stddev\nduration stamp_age_max\n")]
+    [MsgInfo("rosgraph_msgs/TopicStatistics", "10152ed868c5097a5e2e4a89d7daa710", @"# name of the topic
+string topic
+
+# node id of the publisher
+string node_pub
+
+# node id of the subscriber
+string node_sub
+
+# the statistics apply to this time window
+time window_start
+time window_stop
+
+# number of messages delivered during the window
+int32 delivered_msgs
+# numbers of messages dropped during the window
+int32 dropped_msgs
+
+# traffic during the window, in bytes
+int32 traffic
+
+# mean/stddev/max period between two messages
+duration period_mean
+duration period_stddev
+duration period_max
+
+# mean/stddev/max age of the message based on the
+# timestamp in the message header. In case the
+# message does not have a header, it will be 0.
+duration stamp_age_mean
+duration stamp_age_stddev
+duration stamp_age_max
+")]
     public partial class TopicStatistics : RosMsg
     {
         public System.String topic

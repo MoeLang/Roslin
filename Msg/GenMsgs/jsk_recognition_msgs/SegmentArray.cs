@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/SegmentArray", "672a84c8545e1a65663c5497ab1a917c", "Header header\nSegment[] segments\n")]
+    [MsgInfo("jsk_recognition_msgs/SegmentArray", "672a84c8545e1a65663c5497ab1a917c", @"Header header
+Segment[] segments
+")]
     public partial class SegmentArray : RosMsg
     {
         public std_msgs.Header header

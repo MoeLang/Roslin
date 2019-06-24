@@ -1,6 +1,11 @@
 namespace Roslin.Msg.nav_msgs
 {
-    [MsgInfo("nav_msgs/GridCells", "b9e4f5df6d28e272ebde00a3994830f5", "#an array of cells in a 2D grid\nHeader header\nfloat32 cell_width\nfloat32 cell_height\ngeometry_msgs/Point[] cells\n")]
+    [MsgInfo("nav_msgs/GridCells", "b9e4f5df6d28e272ebde00a3994830f5", @"#an array of cells in a 2D grid
+Header header
+float32 cell_width
+float32 cell_height
+geometry_msgs/Point[] cells
+")]
     public partial class GridCells : RosMsg
     {
         public std_msgs.Header header

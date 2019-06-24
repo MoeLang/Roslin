@@ -1,6 +1,26 @@
 namespace Roslin.Msg.nmea_msgs
 {
-    [MsgInfo("nmea_msgs/Gprmc", "02533bac67f17457b2e3538525ba1aae", "# Message from GPRMC NMEA String\nHeader header\n\nstring message_id\n\nfloat64 utc_seconds\nstring position_status\n\nfloat64 lat\nfloat64 lon\n\nstring lat_dir\nstring lon_dir\n\nfloat32 speed\nfloat32 track\nstring date\nfloat32 mag_var\nstring mag_var_direction\nstring mode_indicator\n")]
+    [MsgInfo("nmea_msgs/Gprmc", "02533bac67f17457b2e3538525ba1aae", @"# Message from GPRMC NMEA String
+Header header
+
+string message_id
+
+float64 utc_seconds
+string position_status
+
+float64 lat
+float64 lon
+
+string lat_dir
+string lon_dir
+
+float32 speed
+float32 track
+string date
+float32 mag_var
+string mag_var_direction
+string mode_indicator
+")]
     public partial class Gprmc : RosMsg
     {
         public std_msgs.Header header

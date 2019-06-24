@@ -1,6 +1,11 @@
 namespace Roslin.Msg.automotive_navigation_msgs
 {
-    [MsgInfo("automotive_navigation_msgs/LaneBoundaryArray", "e9f7b0fe081428eb62b95139882c4d89", "# Lane Boundary Array Message\n# Contains an array of lane boundaries contained in a section or segment of road\n\nautomotive_navigation_msgs/LaneBoundary[] boundaries\n\n")]
+    [MsgInfo("automotive_navigation_msgs/LaneBoundaryArray", "e9f7b0fe081428eb62b95139882c4d89", @"# Lane Boundary Array Message
+# Contains an array of lane boundaries contained in a section or segment of road
+
+automotive_navigation_msgs/LaneBoundary[] boundaries
+
+")]
     public partial class LaneBoundaryArray : RosMsg
     {
         public automotive_navigation_msgs.LaneBoundary[] boundaries

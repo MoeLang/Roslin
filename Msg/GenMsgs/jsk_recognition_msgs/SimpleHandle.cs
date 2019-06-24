@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/SimpleHandle", "3a87e21f72b9ed7090c46a47617b0740", "Header header\ngeometry_msgs/Pose pose\nfloat64 handle_width\n")]
+    [MsgInfo("jsk_recognition_msgs/SimpleHandle", "3a87e21f72b9ed7090c46a47617b0740", @"Header header
+geometry_msgs/Pose pose
+float64 handle_width
+")]
     public partial class SimpleHandle : RosMsg
     {
         public std_msgs.Header header

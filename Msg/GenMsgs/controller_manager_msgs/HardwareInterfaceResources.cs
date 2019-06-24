@@ -1,6 +1,10 @@
 namespace Roslin.Msg.controller_manager_msgs
 {
-    [MsgInfo("controller_manager_msgs/HardwareInterfaceResources", "f25b55cbf1d1f76e82e5ec9e83f76258", "# Type of hardware interface\nstring hardware_interface\n# List of resources belonging to the hardware interface\nstring[] resources\n")]
+    [MsgInfo("controller_manager_msgs/HardwareInterfaceResources", "f25b55cbf1d1f76e82e5ec9e83f76258", @"# Type of hardware interface
+string hardware_interface
+# List of resources belonging to the hardware interface
+string[] resources
+")]
     public partial class HardwareInterfaceResources : RosMsg
     {
         public System.String hardware_interface

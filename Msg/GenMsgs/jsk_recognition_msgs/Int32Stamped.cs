@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/Int32Stamped", "e7344a45486eefa24d2f337265df37ce", "Header header\nint32 data\n")]
+    [MsgInfo("jsk_recognition_msgs/Int32Stamped", "e7344a45486eefa24d2f337265df37ce", @"Header header
+int32 data
+")]
     public partial class Int32Stamped : RosMsg
     {
         public std_msgs.Header header

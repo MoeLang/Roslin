@@ -1,6 +1,18 @@
 namespace Roslin.Msg.control_msgs
 {
-    [MsgInfo("control_msgs/JointControllerState", "987ad85e4756f3aef7f1e5e7fe0595d1", "Header header\nfloat64 set_point\nfloat64 process_value\nfloat64 process_value_dot\nfloat64 error\nfloat64 time_step\nfloat64 command\nfloat64 p\nfloat64 i\nfloat64 d\nfloat64 i_clamp\nbool antiwindup\n")]
+    [MsgInfo("control_msgs/JointControllerState", "987ad85e4756f3aef7f1e5e7fe0595d1", @"Header header
+float64 set_point
+float64 process_value
+float64 process_value_dot
+float64 error
+float64 time_step
+float64 command
+float64 p
+float64 i
+float64 d
+float64 i_clamp
+bool antiwindup
+")]
     public partial class JointControllerState : RosMsg
     {
         public std_msgs.Header header

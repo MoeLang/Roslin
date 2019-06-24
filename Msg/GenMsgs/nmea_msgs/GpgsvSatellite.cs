@@ -1,6 +1,22 @@
 namespace Roslin.Msg.nmea_msgs
 {
-    [MsgInfo("nmea_msgs/GpgsvSatellite", "d862f2ce05a26a83264a8add99c7b668", "# Satellite data structure used in GPGSV messages\n\n# PRN number of the satellite\n# GPS = 1..32\n# SBAS = 33..64\n# GLO = 65..96\nuint8 prn\n\n# Elevation, degrees. Maximum 90\nuint8 elevation\n\n# Azimuth, True North degrees. [0, 359]\nuint16 azimuth\n\n# Signal to noise ratio, 0-99 dB. -1 when null in NMEA sentence (not tracking)\nint8 snr\n")]
+    [MsgInfo("nmea_msgs/GpgsvSatellite", "d862f2ce05a26a83264a8add99c7b668", @"# Satellite data structure used in GPGSV messages
+
+# PRN number of the satellite
+# GPS = 1..32
+# SBAS = 33..64
+# GLO = 65..96
+uint8 prn
+
+# Elevation, degrees. Maximum 90
+uint8 elevation
+
+# Azimuth, True North degrees. [0, 359]
+uint16 azimuth
+
+# Signal to noise ratio, 0-99 dB. -1 when null in NMEA sentence (not tracking)
+int8 snr
+")]
     public partial class GpgsvSatellite : RosMsg
     {
         public System.Byte prn

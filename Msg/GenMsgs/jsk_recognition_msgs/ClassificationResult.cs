@@ -1,6 +1,18 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/ClassificationResult", "cce1f8edabff85a20e9cc013e319497c", "# information about frame and timestamp\nHeader header\n\n# prediction results\nuint32[] labels          # numerical labels\nstring[] label_names     # non-numerical labels\nfloat64[] label_proba    # probabilities of labels\nfloat64[] probabilities  # probabilities about each classification for all target_names\n\n# information about classifier\nstring classifier        # name of classifier\nstring[] target_names    # set in which label_names should be\n")]
+    [MsgInfo("jsk_recognition_msgs/ClassificationResult", "cce1f8edabff85a20e9cc013e319497c", @"# information about frame and timestamp
+Header header
+
+# prediction results
+uint32[] labels          # numerical labels
+string[] label_names     # non-numerical labels
+float64[] label_proba    # probabilities of labels
+float64[] probabilities  # probabilities about each classification for all target_names
+
+# information about classifier
+string classifier        # name of classifier
+string[] target_names    # set in which label_names should be
+")]
     public partial class ClassificationResult : RosMsg
     {
         public std_msgs.Header header

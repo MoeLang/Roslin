@@ -1,6 +1,10 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/ClusterPointIndices", "d43e94ea5e491effac7685a42b7b9d14", "# ClusterPointIndices is used to represent segmentation result.\n# Simply put, ClusterPointIndices is a list of PointIndices.\nHeader header\npcl_msgs/PointIndices[] cluster_indices\n")]
+    [MsgInfo("jsk_recognition_msgs/ClusterPointIndices", "d43e94ea5e491effac7685a42b7b9d14", @"# ClusterPointIndices is used to represent segmentation result.
+# Simply put, ClusterPointIndices is a list of PointIndices.
+Header header
+pcl_msgs/PointIndices[] cluster_indices
+")]
     public partial class ClusterPointIndices : RosMsg
     {
         public std_msgs.Header header

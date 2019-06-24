@@ -1,6 +1,11 @@
 namespace Roslin.Msg.jsk_hark_msgs
 {
-    [MsgInfo("jsk_hark_msgs/HarkPower", "251c13d7a8be27144a2b24c6f53df705", "Header header\nint32  count\nint32  directions\nint32  data_bytes\nfloat32[] powers\n")]
+    [MsgInfo("jsk_hark_msgs/HarkPower", "251c13d7a8be27144a2b24c6f53df705", @"Header header
+int32  count
+int32  directions
+int32  data_bytes
+float32[] powers
+")]
     public partial class HarkPower : RosMsg
     {
         public std_msgs.Header header

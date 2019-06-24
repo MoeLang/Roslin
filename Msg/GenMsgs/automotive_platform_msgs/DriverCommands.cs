@@ -1,6 +1,21 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/DriverCommands", "612c1e59d97aa5ea3be1c2ad2b26dbc7", "# Driver Commands Message\n# Contains commands from the driver to the autonomy system\n\nuint8 msg_counter   # Increments each time a command is sent\n                    # An acknowledge message should be published with this value\n\nuint16 engage       # Engage auto\nuint16 disengage    # Disengage auto\nuint16 speed_up     # Increase speed set point\nuint16 slow_down    # Decrease speed set point\nuint16 further      # Increase distance set point\nuint16 closer       # Decrease distance set point\nuint16 right_turn   # Right turn signal\nuint16 left_turn    # Left turn signal\n\n")]
+    [MsgInfo("automotive_platform_msgs/DriverCommands", "612c1e59d97aa5ea3be1c2ad2b26dbc7", @"# Driver Commands Message
+# Contains commands from the driver to the autonomy system
+
+uint8 msg_counter   # Increments each time a command is sent
+                    # An acknowledge message should be published with this value
+
+uint16 engage       # Engage auto
+uint16 disengage    # Disengage auto
+uint16 speed_up     # Increase speed set point
+uint16 slow_down    # Decrease speed set point
+uint16 further      # Increase distance set point
+uint16 closer       # Decrease distance set point
+uint16 right_turn   # Right turn signal
+uint16 left_turn    # Left turn signal
+
+")]
     public partial class DriverCommands : RosMsg
     {
         public System.Byte msg_counter

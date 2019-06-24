@@ -1,6 +1,13 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/SteeringFeedback", "f61fd13efbfee4ea479942d1f6acebc4", "# Current Steering Wheel Angle Feedback\n\nstd_msgs/Header header\n\nfloat32 steering_wheel_angle     # Radians\n\n\n")]
+    [MsgInfo("automotive_platform_msgs/SteeringFeedback", "f61fd13efbfee4ea479942d1f6acebc4", @"# Current Steering Wheel Angle Feedback
+
+std_msgs/Header header
+
+float32 steering_wheel_angle     # Radians
+
+
+")]
     public partial class SteeringFeedback : RosMsg
     {
         public std_msgs.Header header

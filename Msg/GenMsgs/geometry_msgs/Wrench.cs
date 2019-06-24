@@ -1,6 +1,10 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/Wrench", "4f539cf138b23283b520fd271b567936", "# This represents force in free space, separated into\n# its linear and angular parts.\nVector3  force\nVector3  torque\n")]
+    [MsgInfo("geometry_msgs/Wrench", "4f539cf138b23283b520fd271b567936", @"# This represents force in free space, separated into
+# its linear and angular parts.
+Vector3  force
+Vector3  torque
+")]
     public partial class Wrench : RosMsg
     {
         public Vector3 force

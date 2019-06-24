@@ -1,6 +1,14 @@
 namespace Roslin.Msg.jsk_gui_msgs
 {
-    [MsgInfo("jsk_gui_msgs/TouchEvent", "f074642ed1ad51ea5afc186cab8aaca1", "byte DOWN=0\nbyte UP=1\nbyte MOVE=2\n\nbyte state\nfloat32 x\nfloat32 y\nfloat32 w\nfloat32 h")]
+    [MsgInfo("jsk_gui_msgs/TouchEvent", "f074642ed1ad51ea5afc186cab8aaca1", @"byte DOWN=0
+byte UP=1
+byte MOVE=2
+
+byte state
+float32 x
+float32 y
+float32 w
+float32 h")]
     public partial class TouchEvent : RosMsg
     {
         public System.Byte DOWN => 0;

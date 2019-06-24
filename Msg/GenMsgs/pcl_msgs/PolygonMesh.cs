@@ -1,6 +1,12 @@
 namespace Roslin.Msg.pcl_msgs
 {
-    [MsgInfo("pcl_msgs/PolygonMesh", "45a5fc6ad2cde8489600a790acc9a38a", "# Separate header for the polygonal surface\nHeader header\n# Vertices of the mesh as a point cloud\nsensor_msgs/PointCloud2 cloud\n# List of polygons\nVertices[] polygons\n")]
+    [MsgInfo("pcl_msgs/PolygonMesh", "45a5fc6ad2cde8489600a790acc9a38a", @"# Separate header for the polygonal surface
+Header header
+# Vertices of the mesh as a point cloud
+sensor_msgs/PointCloud2 cloud
+# List of polygons
+Vertices[] polygons
+")]
     public partial class PolygonMesh : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,37 @@
 namespace Roslin.Msg.controller_manager_msgs
 {
-    [MsgInfo("controller_manager_msgs/ControllerStatistics", "697780c372c8d8597a1436d0e2ad3ba8", "# This message contains the state of one realtime controller\n# that was spawned in the controller manager\n\n# the name of the controller\nstring name\n\n# the type of the controller\nstring type\n\n# the time at which these controller statistics were measured\ntime timestamp\n\n# bool that indicates if the controller is currently\n# in a running or a stopped state\nbool running\n\n# the maximum time the update loop of the controller ever needed to complete\nduration max_time\n\n# the average time the update loop of the controller needs to complete.\n# the average is computed in a sliding time window.\nduration mean_time\n\n# the variance on the time the update loop of the controller needs to complete.\n# the variance applies to a sliding time window.\nduration variance_time\n\n# the number of times this controller broke the realtime loop\nint32 num_control_loop_overruns\n\n# the timestamp of the last time this controller broke the realtime loop\ntime time_last_control_loop_overrun")]
+    [MsgInfo("controller_manager_msgs/ControllerStatistics", "697780c372c8d8597a1436d0e2ad3ba8", @"# This message contains the state of one realtime controller
+# that was spawned in the controller manager
+
+# the name of the controller
+string name
+
+# the type of the controller
+string type
+
+# the time at which these controller statistics were measured
+time timestamp
+
+# bool that indicates if the controller is currently
+# in a running or a stopped state
+bool running
+
+# the maximum time the update loop of the controller ever needed to complete
+duration max_time
+
+# the average time the update loop of the controller needs to complete.
+# the average is computed in a sliding time window.
+duration mean_time
+
+# the variance on the time the update loop of the controller needs to complete.
+# the variance applies to a sliding time window.
+duration variance_time
+
+# the number of times this controller broke the realtime loop
+int32 num_control_loop_overruns
+
+# the timestamp of the last time this controller broke the realtime loop
+time time_last_control_loop_overrun")]
     public partial class ControllerStatistics : RosMsg
     {
         public System.String name

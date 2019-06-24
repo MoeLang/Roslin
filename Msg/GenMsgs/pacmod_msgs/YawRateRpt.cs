@@ -1,6 +1,9 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/YawRateRpt", "8bdabba36ff5a4751eb3ad99f74991ca", "Header header\n\nfloat64 yaw_rate    #In rad/s.\n")]
+    [MsgInfo("pacmod_msgs/YawRateRpt", "8bdabba36ff5a4751eb3ad99f74991ca", @"Header header
+
+float64 yaw_rate    #In rad/s.
+")]
     public partial class YawRateRpt : RosMsg
     {
         public std_msgs.Header header

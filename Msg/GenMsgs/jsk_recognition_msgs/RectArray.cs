@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/RectArray", "e83b38fbaea3a641fa77f009f9bf492e", "Header header\nRect[] rects\n")]
+    [MsgInfo("jsk_recognition_msgs/RectArray", "e83b38fbaea3a641fa77f009f9bf492e", @"Header header
+Rect[] rects
+")]
     public partial class RectArray : RosMsg
     {
         public std_msgs.Header header

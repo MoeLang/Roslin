@@ -1,6 +1,11 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/GearCommand", "a95429508de6e31c2134277c47838158", "# Current Gear Command\n\nstd_msgs/Header header\n\nautomotive_platform_msgs/Gear command\n")]
+    [MsgInfo("automotive_platform_msgs/GearCommand", "a95429508de6e31c2134277c47838158", @"# Current Gear Command
+
+std_msgs/Header header
+
+automotive_platform_msgs/Gear command
+")]
     public partial class GearCommand : RosMsg
     {
         public std_msgs.Header header

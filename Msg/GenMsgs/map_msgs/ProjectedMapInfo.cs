@@ -1,6 +1,12 @@
 namespace Roslin.Msg.map_msgs
 {
-    [MsgInfo("map_msgs/ProjectedMapInfo", "2dc10595ae94de23f22f8a6d2a0eef7a", "string frame_id\nfloat64 x\nfloat64 y\nfloat64 width\nfloat64 height\nfloat64 min_z\nfloat64 max_z")]
+    [MsgInfo("map_msgs/ProjectedMapInfo", "2dc10595ae94de23f22f8a6d2a0eef7a", @"string frame_id
+float64 x
+float64 y
+float64 width
+float64 height
+float64 min_z
+float64 max_z")]
     public partial class ProjectedMapInfo : RosMsg
     {
         public System.String frame_id

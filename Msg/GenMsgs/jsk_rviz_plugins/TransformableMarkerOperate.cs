@@ -1,6 +1,23 @@
 namespace Roslin.Msg.jsk_rviz_plugins
 {
-    [MsgInfo("jsk_rviz_plugins/TransformableMarkerOperate", "3f5042567d7e11634fa94e4b5452169c", "uint8 BOX=0\nuint8 CYLINDER=1\nuint8 TORUS=2\nuint8 MESH_RESOURCE=3\n\nuint8 INSERT=0\nuint8 ERASE=1\nuint8 ERASEALL=2\nuint8 ERASEFOCUS=3\nuint8 COPY=4\n\nint32 type\nint32 action\nstring frame_id\nstring name\nstring description\nstring mesh_resource\nbool mesh_use_embedded_materials")]
+    [MsgInfo("jsk_rviz_plugins/TransformableMarkerOperate", "3f5042567d7e11634fa94e4b5452169c", @"uint8 BOX=0
+uint8 CYLINDER=1
+uint8 TORUS=2
+uint8 MESH_RESOURCE=3
+
+uint8 INSERT=0
+uint8 ERASE=1
+uint8 ERASEALL=2
+uint8 ERASEFOCUS=3
+uint8 COPY=4
+
+int32 type
+int32 action
+string frame_id
+string name
+string description
+string mesh_resource
+bool mesh_use_embedded_materials")]
     public partial class TransformableMarkerOperate : RosMsg
     {
         public System.Byte BOX => 0;

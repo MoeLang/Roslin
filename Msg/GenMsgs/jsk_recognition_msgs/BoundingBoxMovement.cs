@@ -1,6 +1,10 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/BoundingBoxMovement", "60aeb288c030d1b8a67ddeedc91812f0", "Header header\nBoundingBox box\ngeometry_msgs/Pose handle_pose\ngeometry_msgs/PoseStamped destination\n")]
+    [MsgInfo("jsk_recognition_msgs/BoundingBoxMovement", "60aeb288c030d1b8a67ddeedc91812f0", @"Header header
+BoundingBox box
+geometry_msgs/Pose handle_pose
+geometry_msgs/PoseStamped destination
+")]
     public partial class BoundingBoxMovement : RosMsg
     {
         public std_msgs.Header header

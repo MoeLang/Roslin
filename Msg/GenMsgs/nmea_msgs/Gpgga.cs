@@ -1,6 +1,31 @@
 namespace Roslin.Msg.nmea_msgs
 {
-    [MsgInfo("nmea_msgs/Gpgga", "8f51cb504898f39d8ad9f698f0b6f9cd", "# Message from GPGGA NMEA String\nHeader header\n\nstring message_id\n\n# UTC seconds from midnight\nfloat64 utc_seconds\n\nfloat64 lat\nfloat64 lon\n\nstring lat_dir\nstring lon_dir\n\nuint32 gps_qual\n\nuint32 num_sats\nfloat32 hdop \nfloat32 alt\nstring altitude_units\n\nfloat32 undulation\nstring undulation_units\nuint32 diff_age\nstring station_id\n")]
+    [MsgInfo("nmea_msgs/Gpgga", "8f51cb504898f39d8ad9f698f0b6f9cd", @"# Message from GPGGA NMEA String
+Header header
+
+string message_id
+
+# UTC seconds from midnight
+float64 utc_seconds
+
+float64 lat
+float64 lon
+
+string lat_dir
+string lon_dir
+
+uint32 gps_qual
+
+uint32 num_sats
+float32 hdop 
+float32 alt
+string altitude_units
+
+float32 undulation
+string undulation_units
+uint32 diff_age
+string station_id
+")]
     public partial class Gpgga : RosMsg
     {
         public std_msgs.Header header

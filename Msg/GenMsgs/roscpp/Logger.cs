@@ -1,6 +1,8 @@
 namespace Roslin.Msg.roscpp
 {
-    [MsgInfo("roscpp/Logger", "a6069a2ff40db7bd32143dd66e1f408e", "string name\nstring level\n")]
+    [MsgInfo("roscpp/Logger", "a6069a2ff40db7bd32143dd66e1f408e", @"string name
+string level
+")]
     public partial class Logger : RosMsg
     {
         public System.String name

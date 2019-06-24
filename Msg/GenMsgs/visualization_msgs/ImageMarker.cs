@@ -1,6 +1,29 @@
 namespace Roslin.Msg.visualization_msgs
 {
-    [MsgInfo("visualization_msgs/ImageMarker", "1de93c67ec8858b831025a08fbf1b35c", "uint8 CIRCLE=0\nuint8 LINE_STRIP=1\nuint8 LINE_LIST=2\nuint8 POLYGON=3\nuint8 POINTS=4\n\nuint8 ADD=0\nuint8 REMOVE=1\n\nHeader header\nstring ns		# namespace, used with id to form a unique id\nint32 id          	# unique id within the namespace\nint32 type        	# CIRCLE/LINE_STRIP/etc.\nint32 action      	# ADD/REMOVE\ngeometry_msgs/Point position # 2D, in pixel-coords\nfloat32 scale	 	# the diameter for a circle, etc.\nstd_msgs/ColorRGBA outline_color\nuint8 filled		# whether to fill in the shape with color\nstd_msgs/ColorRGBA fill_color # color [0.0-1.0]\nduration lifetime       # How long the object should last before being automatically deleted.  0 means forever\n\n\ngeometry_msgs/Point[] points # used for LINE_STRIP/LINE_LIST/POINTS/etc., 2D in pixel coords\nstd_msgs/ColorRGBA[] outline_colors # a color for each line, point, etc.")]
+    [MsgInfo("visualization_msgs/ImageMarker", "1de93c67ec8858b831025a08fbf1b35c", @"uint8 CIRCLE=0
+uint8 LINE_STRIP=1
+uint8 LINE_LIST=2
+uint8 POLYGON=3
+uint8 POINTS=4
+
+uint8 ADD=0
+uint8 REMOVE=1
+
+Header header
+string ns		# namespace, used with id to form a unique id
+int32 id          	# unique id within the namespace
+int32 type        	# CIRCLE/LINE_STRIP/etc.
+int32 action      	# ADD/REMOVE
+geometry_msgs/Point position # 2D, in pixel-coords
+float32 scale	 	# the diameter for a circle, etc.
+std_msgs/ColorRGBA outline_color
+uint8 filled		# whether to fill in the shape with color
+std_msgs/ColorRGBA fill_color # color [0.0-1.0]
+duration lifetime       # How long the object should last before being automatically deleted.  0 means forever
+
+
+geometry_msgs/Point[] points # used for LINE_STRIP/LINE_LIST/POINTS/etc., 2D in pixel coords
+std_msgs/ColorRGBA[] outline_colors # a color for each line, point, etc.")]
     public partial class ImageMarker : RosMsg
     {
         public System.Byte CIRCLE => 0;

@@ -1,6 +1,7 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/Duration", "3e286caf4241d664e55f3ad380e2ae46", "duration data\n")]
+    [MsgInfo("std_msgs/Duration", "3e286caf4241d664e55f3ad380e2ae46", @"duration data
+")]
     public partial class Duration : RosMsg
     {
         public System.TimeSpan data

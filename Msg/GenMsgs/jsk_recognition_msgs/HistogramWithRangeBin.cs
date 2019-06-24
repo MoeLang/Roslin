@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/HistogramWithRangeBin", "a7fe6c3021fcba2c6357f3db21601551", "float64 min_value\nfloat64 max_value\nuint32 count\n")]
+    [MsgInfo("jsk_recognition_msgs/HistogramWithRangeBin", "a7fe6c3021fcba2c6357f3db21601551", @"float64 min_value
+float64 max_value
+uint32 count
+")]
     public partial class HistogramWithRangeBin : RosMsg
     {
         public System.Double min_value

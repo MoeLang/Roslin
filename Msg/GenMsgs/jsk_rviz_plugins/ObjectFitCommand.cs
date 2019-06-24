@@ -1,6 +1,14 @@
 namespace Roslin.Msg.jsk_rviz_plugins
 {
-    [MsgInfo("jsk_rviz_plugins/ObjectFitCommand", "aaf37eac6a6717d09d438978a4117776", "uint8 FIT=0\nuint8 NEAR=1\nuint8 OTHER=2\nuint8 REVERSE_FIT=3\nuint8 REVERSE_NEAR=4\nuint8 REVERSE_OTHER=5\n\nint8 command\n")]
+    [MsgInfo("jsk_rviz_plugins/ObjectFitCommand", "aaf37eac6a6717d09d438978a4117776", @"uint8 FIT=0
+uint8 NEAR=1
+uint8 OTHER=2
+uint8 REVERSE_FIT=3
+uint8 REVERSE_NEAR=4
+uint8 REVERSE_OTHER=5
+
+int8 command
+")]
     public partial class ObjectFitCommand : RosMsg
     {
         public System.Byte FIT => 0;

@@ -1,6 +1,8 @@
 namespace Roslin.Msg.rospy_tutorials
 {
-    [MsgInfo("rospy_tutorials/HeaderString", "c99a9440709e4d4a9716d55b8270d5e7", "Header header\nstring data\n")]
+    [MsgInfo("rospy_tutorials/HeaderString", "c99a9440709e4d4a9716d55b8270d5e7", @"Header header
+string data
+")]
     public partial class HeaderString : RosMsg
     {
         public std_msgs.Header header

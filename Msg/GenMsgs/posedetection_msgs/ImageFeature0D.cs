@@ -1,6 +1,10 @@
 namespace Roslin.Msg.posedetection_msgs
 {
-    [MsgInfo("posedetection_msgs/ImageFeature0D", "a16c5327c89b15820420449cf843ed75", "# synchronized image and features message\nsensor_msgs/Image image\nsensor_msgs/CameraInfo info\nposedetection_msgs/Feature0D features\n")]
+    [MsgInfo("posedetection_msgs/ImageFeature0D", "a16c5327c89b15820420449cf843ed75", @"# synchronized image and features message
+sensor_msgs/Image image
+sensor_msgs/CameraInfo info
+posedetection_msgs/Feature0D features
+")]
     public partial class ImageFeature0D : RosMsg
     {
         public sensor_msgs.Image image

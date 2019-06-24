@@ -1,6 +1,13 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/BoundingBox", "f4b35de043f6031fe29bcfe43eeb9dca", "# BoundingBox represents a oriented bounding box.\nHeader header\ngeometry_msgs/Pose pose\ngeometry_msgs/Vector3 dimensions  # size of bounding box (x, y, z)\n# You can use this field to hold value such as likelihood\nfloat32 value\nuint32 label\n")]
+    [MsgInfo("jsk_recognition_msgs/BoundingBox", "f4b35de043f6031fe29bcfe43eeb9dca", @"# BoundingBox represents a oriented bounding box.
+Header header
+geometry_msgs/Pose pose
+geometry_msgs/Vector3 dimensions  # size of bounding box (x, y, z)
+# You can use this field to hold value such as likelihood
+float32 value
+uint32 label
+")]
     public partial class BoundingBox : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_gui_msgs
 {
-    [MsgInfo("jsk_gui_msgs/SlackMessage", "b68991d3b722980bd0f3eeeeee52635b", "string channel           # channel to post (ex. @user, #general)\nstring text              # text to post\nsensor_msgs/Image image  # image to upload\n")]
+    [MsgInfo("jsk_gui_msgs/SlackMessage", "b68991d3b722980bd0f3eeeeee52635b", @"string channel           # channel to post (ex. @user, #general)
+string text              # text to post
+sensor_msgs/Image image  # image to upload
+")]
     public partial class SlackMessage : RosMsg
     {
         public System.String channel

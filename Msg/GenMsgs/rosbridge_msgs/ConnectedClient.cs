@@ -1,6 +1,8 @@
 namespace Roslin.Msg.rosbridge_msgs
 {
-    [MsgInfo("rosbridge_msgs/ConnectedClient", "7f2187ce389b39b2b3bb2a3957e54c04", "string ip_address\ntime connection_time\n")]
+    [MsgInfo("rosbridge_msgs/ConnectedClient", "7f2187ce389b39b2b3bb2a3957e54c04", @"string ip_address
+time connection_time
+")]
     public partial class ConnectedClient : RosMsg
     {
         public System.String ip_address

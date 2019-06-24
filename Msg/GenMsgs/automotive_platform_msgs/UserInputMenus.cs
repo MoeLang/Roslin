@@ -1,6 +1,26 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/UserInputMenus", "fe6ad02b305fbde3a33fc030612b13da", "# Inputs (e.g. button presses) for in-vehicle menus\nHeader header\n\nbool str_whl_left_btn_left\nbool str_whl_left_btn_down\nbool str_whl_left_btn_right\nbool str_whl_left_btn_up\nbool str_whl_left_btn_ok\n\nbool str_whl_right_btn_left\nbool str_whl_right_btn_down\nbool str_whl_right_btn_right\nbool str_whl_right_btn_up\nbool str_whl_right_btn_ok\n\nbool cntr_cons_btn_left\nbool cntr_cons_btn_down\nbool cntr_cons_btn_right\nbool cntr_cons_btn_up\nbool cntr_cons_btn_ok\n")]
+    [MsgInfo("automotive_platform_msgs/UserInputMenus", "fe6ad02b305fbde3a33fc030612b13da", @"# Inputs (e.g. button presses) for in-vehicle menus
+Header header
+
+bool str_whl_left_btn_left
+bool str_whl_left_btn_down
+bool str_whl_left_btn_right
+bool str_whl_left_btn_up
+bool str_whl_left_btn_ok
+
+bool str_whl_right_btn_left
+bool str_whl_right_btn_down
+bool str_whl_right_btn_right
+bool str_whl_right_btn_up
+bool str_whl_right_btn_ok
+
+bool cntr_cons_btn_left
+bool cntr_cons_btn_down
+bool cntr_cons_btn_right
+bool cntr_cons_btn_up
+bool cntr_cons_btn_ok
+")]
     public partial class UserInputMenus : RosMsg
     {
         public std_msgs.Header header

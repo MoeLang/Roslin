@@ -1,6 +1,25 @@
 namespace Roslin.Msg.nmea_msgs
 {
-    [MsgInfo("nmea_msgs/Gpgsv", "6f34bebc32fe085313c942a96fd39c77", "# Total number of satellites in view and data about satellites\n# Because the NMEA sentence is limited to 4 satellites per message, several\n# of these messages may need to be synthesized to get data about all visible\n# satellites.\n\nHeader header\n\nstring message_id\n\n# Number of messages in this sequence\nuint8 n_msgs\n# This messages number in its sequence. The first message is number 1.\nuint8 msg_number\n\n# Number of satellites currently visible\nuint8 n_satellites\n\n# Up to 4 satellites are described in each message\nGpgsvSatellite[] satellites\n")]
+    [MsgInfo("nmea_msgs/Gpgsv", "6f34bebc32fe085313c942a96fd39c77", @"# Total number of satellites in view and data about satellites
+# Because the NMEA sentence is limited to 4 satellites per message, several
+# of these messages may need to be synthesized to get data about all visible
+# satellites.
+
+Header header
+
+string message_id
+
+# Number of messages in this sequence
+uint8 n_msgs
+# This messages number in its sequence. The first message is number 1.
+uint8 msg_number
+
+# Number of satellites currently visible
+uint8 n_satellites
+
+# Up to 4 satellites are described in each message
+GpgsvSatellite[] satellites
+")]
     public partial class Gpgsv : RosMsg
     {
         public std_msgs.Header header

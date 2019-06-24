@@ -1,6 +1,15 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/TwistWithCovariance", "1fe8a28e6890a4cc3ae4c3ca5c7d82e6", "# This expresses velocity in free space with uncertainty.\n\nTwist twist\n\n# Row-major representation of the 6x6 covariance matrix\n# The orientation parameters use a fixed-axis representation.\n# In order, the parameters are:\n# (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)\nfloat64[36] covariance\n")]
+    [MsgInfo("geometry_msgs/TwistWithCovariance", "1fe8a28e6890a4cc3ae4c3ca5c7d82e6", @"# This expresses velocity in free space with uncertainty.
+
+Twist twist
+
+# Row-major representation of the 6x6 covariance matrix
+# The orientation parameters use a fixed-axis representation.
+# In order, the parameters are:
+# (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)
+float64[36] covariance
+")]
     public partial class TwistWithCovariance : RosMsg
     {
         public Twist twist

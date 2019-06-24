@@ -1,6 +1,20 @@
 namespace Roslin.Msg.visualization_msgs
 {
-    [MsgInfo("visualization_msgs/InteractiveMarkerInit", "d5f2c5045a72456d228676ab91048734", "# Identifying string. Must be unique in the topic namespace\n# that this server works on.\nstring server_id\n\n# Sequence number.\n# The client will use this to detect if it has missed a subsequent\n# update.  Every update message will have the same sequence number as\n# an init message.  Clients will likely want to unsubscribe from the\n# init topic after a successful initialization to avoid receiving\n# duplicate data.\nuint64 seq_num\n\n# All markers.\nInteractiveMarker[] markers\n")]
+    [MsgInfo("visualization_msgs/InteractiveMarkerInit", "d5f2c5045a72456d228676ab91048734", @"# Identifying string. Must be unique in the topic namespace
+# that this server works on.
+string server_id
+
+# Sequence number.
+# The client will use this to detect if it has missed a subsequent
+# update.  Every update message will have the same sequence number as
+# an init message.  Clients will likely want to unsubscribe from the
+# init topic after a successful initialization to avoid receiving
+# duplicate data.
+uint64 seq_num
+
+# All markers.
+InteractiveMarker[] markers
+")]
     public partial class InteractiveMarkerInit : RosMsg
     {
         public System.String server_id

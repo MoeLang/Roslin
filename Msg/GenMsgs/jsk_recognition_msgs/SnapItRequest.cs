@@ -1,6 +1,20 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/SnapItRequest", "5733f480694296678d81cff0483b399b", "Header header\nuint8 MODEL_PLANE=0\nuint8 MODEL_CYLINDER=1\nuint8 model_type\n\ngeometry_msgs/PolygonStamped target_plane\n\ngeometry_msgs/PointStamped center\ngeometry_msgs/Vector3Stamped direction\nfloat64 radius\nfloat64 height\n# parameters, 0 means \nfloat64 max_distance\nfloat64 eps_angle\n")]
+    [MsgInfo("jsk_recognition_msgs/SnapItRequest", "5733f480694296678d81cff0483b399b", @"Header header
+uint8 MODEL_PLANE=0
+uint8 MODEL_CYLINDER=1
+uint8 model_type
+
+geometry_msgs/PolygonStamped target_plane
+
+geometry_msgs/PointStamped center
+geometry_msgs/Vector3Stamped direction
+float64 radius
+float64 height
+# parameters, 0 means 
+float64 max_distance
+float64 eps_angle
+")]
     public partial class SnapItRequest : RosMsg
     {
         public System.Byte MODEL_PLANE => 0;

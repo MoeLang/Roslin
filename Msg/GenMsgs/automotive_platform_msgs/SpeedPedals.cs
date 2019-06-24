@@ -1,6 +1,16 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/SpeedPedals", "85ba8dc36f9790f861deedfe03109b15", "# Speed Pedals Control Message with Mode\n# Contains throttle and brake commands and desired autonomy active mode flag\n\nstd_msgs/Header header\n\nuint16 mode # Is 1 if autonomy mode should be active\n\nfloat32 throttle       # 0 to 1 percent\nfloat32 brake          # 0 to 1 percent\n\n")]
+    [MsgInfo("automotive_platform_msgs/SpeedPedals", "85ba8dc36f9790f861deedfe03109b15", @"# Speed Pedals Control Message with Mode
+# Contains throttle and brake commands and desired autonomy active mode flag
+
+std_msgs/Header header
+
+uint16 mode # Is 1 if autonomy mode should be active
+
+float32 throttle       # 0 to 1 percent
+float32 brake          # 0 to 1 percent
+
+")]
     public partial class SpeedPedals : RosMsg
     {
         public std_msgs.Header header

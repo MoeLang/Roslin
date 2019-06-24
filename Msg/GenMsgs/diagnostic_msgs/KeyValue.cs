@@ -1,6 +1,8 @@
 namespace Roslin.Msg.diagnostic_msgs
 {
-    [MsgInfo("diagnostic_msgs/KeyValue", "cf57fdc6617a881a88c16e768132149c", "string key # what to label this value when viewing\nstring value # a value to track over time\n")]
+    [MsgInfo("diagnostic_msgs/KeyValue", "cf57fdc6617a881a88c16e768132149c", @"string key # what to label this value when viewing
+string value # a value to track over time
+")]
     public partial class KeyValue : RosMsg
     {
         public System.String key

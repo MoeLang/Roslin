@@ -1,6 +1,6 @@
 namespace Roslin.Msg.jsk_gui_msgs
 {
-    [MsgInfo("jsk_gui_msgs/Gravity", "86facaf836997cbbc4faee170616f59e", "geometry_msgs/Vector3 gravity")]
+    [MsgInfo("jsk_gui_msgs/Gravity", "86facaf836997cbbc4faee170616f59e", @"geometry_msgs/Vector3 gravity")]
     public partial class Gravity : RosMsg
     {
         public geometry_msgs.Vector3 gravity

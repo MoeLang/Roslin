@@ -1,6 +1,11 @@
 namespace Roslin.Msg.rosapi
 {
-    [MsgInfo("rosapi/TypeDef", "bd8529b0edb168fde8dd58032743f1f7", "string type\nstring[] fieldnames\nstring[] fieldtypes\nint32[] fieldarraylen\nstring[] examples\n")]
+    [MsgInfo("rosapi/TypeDef", "bd8529b0edb168fde8dd58032743f1f7", @"string type
+string[] fieldnames
+string[] fieldtypes
+int32[] fieldarraylen
+string[] examples
+")]
     public partial class TypeDef : RosMsg
     {
         public System.String type

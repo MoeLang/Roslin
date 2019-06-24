@@ -1,6 +1,6 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/Float64", "fdb28210bfa9d7c91146260178d9a584", "float64 data")]
+    [MsgInfo("std_msgs/Float64", "fdb28210bfa9d7c91146260178d9a584", @"float64 data")]
     public partial class Float64 : RosMsg
     {
         public System.Double data

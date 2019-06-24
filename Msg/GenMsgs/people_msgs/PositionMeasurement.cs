@@ -1,6 +1,12 @@
 namespace Roslin.Msg.people_msgs
 {
-    [MsgInfo("people_msgs/PositionMeasurement", "54fa938b4ec28728e01575b79eb0ec7c", "Header          header\nstring          name\nstring          object_id\ngeometry_msgs/Point pos\nfloat64         reliability\nfloat64[9] 	covariance\nbyte            initialization")]
+    [MsgInfo("people_msgs/PositionMeasurement", "54fa938b4ec28728e01575b79eb0ec7c", @"Header          header
+string          name
+string          object_id
+geometry_msgs/Point pos
+float64         reliability
+float64[9] 	covariance
+byte            initialization")]
     public partial class PositionMeasurement : RosMsg
     {
         public std_msgs.Header header

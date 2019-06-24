@@ -1,6 +1,14 @@
 namespace Roslin.Msg.posedetection_msgs
 {
-    [MsgInfo("posedetection_msgs/Object6DPose", "68aad97d55c4f9555772eee1814bb3c7", "# 6D pose of object\ngeometry_msgs/Pose pose\n# reliability\nfloat32 reliability\n\n# type of object, usually contains the filename of the object that allows the receiving side to visualize it\n# can also be used as a unique type id\nstring type \n")]
+    [MsgInfo("posedetection_msgs/Object6DPose", "68aad97d55c4f9555772eee1814bb3c7", @"# 6D pose of object
+geometry_msgs/Pose pose
+# reliability
+float32 reliability
+
+# type of object, usually contains the filename of the object that allows the receiving side to visualize it
+# can also be used as a unique type id
+string type 
+")]
     public partial class Object6DPose : RosMsg
     {
         public geometry_msgs.Pose pose

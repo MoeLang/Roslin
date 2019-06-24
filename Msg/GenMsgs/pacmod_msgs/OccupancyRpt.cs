@@ -1,6 +1,20 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/OccupancyRpt", "0721e1bb580b55ac7fd96411e39adf3e", "Header header\n\nbool driver_seat_occupied\nbool driver_seat_occupied_is_valid\nbool passenger_seat_occupied\nbool passenger_seat_occupied_is_valid\nbool rear_seat_occupied\nbool rear_seat_occupied_is_valid\nbool driver_seatbelt_buckled\nbool driver_seatbelt_buckled_is_valid\nbool passenger_seatbelt_buckled\nbool passenger_seatbelt_buckled_is_valid\nbool rear_seatbelt_buckled\nbool rear_seatbelt_buckled_is_valid\n")]
+    [MsgInfo("pacmod_msgs/OccupancyRpt", "0721e1bb580b55ac7fd96411e39adf3e", @"Header header
+
+bool driver_seat_occupied
+bool driver_seat_occupied_is_valid
+bool passenger_seat_occupied
+bool passenger_seat_occupied_is_valid
+bool rear_seat_occupied
+bool rear_seat_occupied_is_valid
+bool driver_seatbelt_buckled
+bool driver_seatbelt_buckled_is_valid
+bool passenger_seatbelt_buckled
+bool passenger_seatbelt_buckled_is_valid
+bool rear_seatbelt_buckled
+bool rear_seatbelt_buckled_is_valid
+")]
     public partial class OccupancyRpt : RosMsg
     {
         public std_msgs.Header header

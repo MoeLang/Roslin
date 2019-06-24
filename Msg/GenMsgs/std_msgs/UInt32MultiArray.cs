@@ -1,6 +1,12 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/UInt32MultiArray", "4d6a180abc9be191b96a7eda6c8a233d", "# Please look at the MultiArrayLayout message definition for\n# documentation on all multiarrays.\n\nMultiArrayLayout  layout        # specification of data layout\nuint32[]          data          # array of data\n\n")]
+    [MsgInfo("std_msgs/UInt32MultiArray", "4d6a180abc9be191b96a7eda6c8a233d", @"# Please look at the MultiArrayLayout message definition for
+# documentation on all multiarrays.
+
+MultiArrayLayout  layout        # specification of data layout
+uint32[]          data          # array of data
+
+")]
     public partial class UInt32MultiArray : RosMsg
     {
         public MultiArrayLayout layout

@@ -1,6 +1,7 @@
 namespace Roslin.Msg.tf2_msgs
 {
-    [MsgInfo("tf2_msgs/TFMessage", "94810edda583a504dfda3829e70d7eec", "geometry_msgs/TransformStamped[] transforms\n")]
+    [MsgInfo("tf2_msgs/TFMessage", "94810edda583a504dfda3829e70d7eec", @"geometry_msgs/TransformStamped[] transforms
+")]
     public partial class TFMessage : RosMsg
     {
         public geometry_msgs.TransformStamped[] transforms

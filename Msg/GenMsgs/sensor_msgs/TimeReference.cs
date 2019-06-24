@@ -1,6 +1,13 @@
 namespace Roslin.Msg.sensor_msgs
 {
-    [MsgInfo("sensor_msgs/TimeReference", "fded64a0265108ba86c3d38fb11c0c16", "# Measurement from an external time source not actively synchronized with the system clock.\n\nHeader header    # stamp is system time for which measurement was valid\n                 # frame_id is not used \n\ntime   time_ref  # corresponding time from this external source\nstring source    # (optional) name of time source\n")]
+    [MsgInfo("sensor_msgs/TimeReference", "fded64a0265108ba86c3d38fb11c0c16", @"# Measurement from an external time source not actively synchronized with the system clock.
+
+Header header    # stamp is system time for which measurement was valid
+                 # frame_id is not used 
+
+time   time_ref  # corresponding time from this external source
+string source    # (optional) name of time source
+")]
     public partial class TimeReference : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,11 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/RotatedRect", "e970c93bbd35a570f7d9acc8228e9280", "float64 x\nfloat64 y\nfloat64 width\nfloat64 height\nfloat64 angle # degree\n")]
+    [MsgInfo("jsk_recognition_msgs/RotatedRect", "e970c93bbd35a570f7d9acc8228e9280", @"float64 x
+float64 y
+float64 width
+float64 height
+float64 angle # degree
+")]
     public partial class RotatedRect : RosMsg
     {
         public System.Double x

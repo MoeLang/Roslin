@@ -1,6 +1,12 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/Quaternion", "a779879fadf0160734f906b8c19c7004", "# This represents an orientation in free space in quaternion form.\n\nfloat64 x\nfloat64 y\nfloat64 z\nfloat64 w\n")]
+    [MsgInfo("geometry_msgs/Quaternion", "a779879fadf0160734f906b8c19c7004", @"# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+")]
     public partial class Quaternion : RosMsg
     {
         public System.Double x

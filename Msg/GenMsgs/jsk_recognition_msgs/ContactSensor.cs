@@ -1,6 +1,13 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/ContactSensor", "364b2b952a51d85dfa877e334264e361", "# Header\nHeader header\n\n# Whether sensor detects contact or not\nbool contact\n\nstring link_name\n")]
+    [MsgInfo("jsk_recognition_msgs/ContactSensor", "364b2b952a51d85dfa877e334264e361", @"# Header
+Header header
+
+# Whether sensor detects contact or not
+bool contact
+
+string link_name
+")]
     public partial class ContactSensor : RosMsg
     {
         public std_msgs.Header header

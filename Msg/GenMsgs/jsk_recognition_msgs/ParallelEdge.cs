@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/ParallelEdge", "3a550d5b6275fe0a1580ebf8a62dd336", "Header header\npcl_msgs/PointIndices[] cluster_indices\npcl_msgs/ModelCoefficients[] coefficients\n")]
+    [MsgInfo("jsk_recognition_msgs/ParallelEdge", "3a550d5b6275fe0a1580ebf8a62dd336", @"Header header
+pcl_msgs/PointIndices[] cluster_indices
+pcl_msgs/ModelCoefficients[] coefficients
+")]
     public partial class ParallelEdge : RosMsg
     {
         public std_msgs.Header header

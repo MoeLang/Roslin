@@ -1,6 +1,35 @@
 namespace Roslin.Msg.stereo_msgs
 {
-    [MsgInfo("stereo_msgs/DisparityImage", "04a177815f75271039fa21f16acad8c9", "# Separate header for compatibility with current TimeSynchronizer.\n# Likely to be removed in a later release, use image.header instead.\nHeader header\n\n# Floating point disparity image. The disparities are pre-adjusted for any\n# x-offset between the principal points of the two cameras (in the case\n# that they are verged). That is: d = x_l - x_r - (cx_l - cx_r)\nsensor_msgs/Image image\n\n# Stereo geometry. For disparity d, the depth from the camera is Z = fT/d.\nfloat32 f # Focal length, pixels\nfloat32 T # Baseline, world units\n\n# Subwindow of (potentially) valid disparity values.\nsensor_msgs/RegionOfInterest valid_window\n\n# The range of disparities searched.\n# In the disparity image, any disparity less than min_disparity is invalid.\n# The disparity search range defines the horopter, or 3D volume that the\n# stereo algorithm can \"see\". Points with Z outside of:\n#     Z_min = fT / max_disparity\n#     Z_max = fT / min_disparity\n# could not be found.\nfloat32 min_disparity\nfloat32 max_disparity\n\n# Smallest allowed disparity increment. The smallest achievable depth range\n# resolution is delta_Z = (Z^2/fT)*delta_d.\nfloat32 delta_d\n")]
+    [MsgInfo("stereo_msgs/DisparityImage", "04a177815f75271039fa21f16acad8c9", @"# Separate header for compatibility with current TimeSynchronizer.
+# Likely to be removed in a later release, use image.header instead.
+Header header
+
+# Floating point disparity image. The disparities are pre-adjusted for any
+# x-offset between the principal points of the two cameras (in the case
+# that they are verged). That is: d = x_l - x_r - (cx_l - cx_r)
+sensor_msgs/Image image
+
+# Stereo geometry. For disparity d, the depth from the camera is Z = fT/d.
+float32 f # Focal length, pixels
+float32 T # Baseline, world units
+
+# Subwindow of (potentially) valid disparity values.
+sensor_msgs/RegionOfInterest valid_window
+
+# The range of disparities searched.
+# In the disparity image, any disparity less than min_disparity is invalid.
+# The disparity search range defines the horopter, or 3D volume that the
+# stereo algorithm can ""see"". Points with Z outside of:
+#     Z_min = fT / max_disparity
+#     Z_max = fT / min_disparity
+# could not be found.
+float32 min_disparity
+float32 max_disparity
+
+# Smallest allowed disparity increment. The smallest achievable depth range
+# resolution is delta_Z = (Z^2/fT)*delta_d.
+float32 delta_d
+")]
     public partial class DisparityImage : RosMsg
     {
         public std_msgs.Header header

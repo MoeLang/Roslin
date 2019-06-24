@@ -1,6 +1,8 @@
 namespace Roslin.Msg.dynamic_reconfigure
 {
-    [MsgInfo("dynamic_reconfigure/DoubleParameter", "d8512f27253c0f65f928a67c329cd658", "string name\nfloat64 value\n")]
+    [MsgInfo("dynamic_reconfigure/DoubleParameter", "d8512f27253c0f65f928a67c329cd658", @"string name
+float64 value
+")]
     public partial class DoubleParameter : RosMsg
     {
         public System.String name

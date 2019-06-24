@@ -1,6 +1,11 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/VehicleDynamicsRpt", "76c5ee0fb5b1065da372a973e2ffdd31", "Header header\n\nfloat64 brake_torque       # Measured brake torque\nuint8 g_forces             # Measured g forces\n\n")]
+    [MsgInfo("pacmod_msgs/VehicleDynamicsRpt", "76c5ee0fb5b1065da372a973e2ffdd31", @"Header header
+
+float64 brake_torque       # Measured brake torque
+uint8 g_forces             # Measured g forces
+
+")]
     public partial class VehicleDynamicsRpt : RosMsg
     {
         public std_msgs.Header header

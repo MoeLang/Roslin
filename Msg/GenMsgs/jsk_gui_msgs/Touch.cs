@@ -1,6 +1,13 @@
 namespace Roslin.Msg.jsk_gui_msgs
 {
-    [MsgInfo("jsk_gui_msgs/Touch", "d96a284d39fcc410f375ac68fd380177", "# finger_id\nint64 finger_id\n# touch point(screen point)\nfloat64 x\nfloat64 y\n# based image size (usually not needed)\nint64 image_width\nint64 image_height")]
+    [MsgInfo("jsk_gui_msgs/Touch", "d96a284d39fcc410f375ac68fd380177", @"# finger_id
+int64 finger_id
+# touch point(screen point)
+float64 x
+float64 y
+# based image size (usually not needed)
+int64 image_width
+int64 image_height")]
     public partial class Touch : RosMsg
     {
         public System.Int64 finger_id

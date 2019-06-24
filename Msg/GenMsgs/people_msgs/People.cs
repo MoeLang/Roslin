@@ -1,6 +1,8 @@
 namespace Roslin.Msg.people_msgs
 {
-    [MsgInfo("people_msgs/People", "18722f4b8db20cc2369740732357847b", "Header header\npeople_msgs/Person[] people\n")]
+    [MsgInfo("people_msgs/People", "18722f4b8db20cc2369740732357847b", @"Header header
+people_msgs/Person[] people
+")]
     public partial class People : RosMsg
     {
         public std_msgs.Header header

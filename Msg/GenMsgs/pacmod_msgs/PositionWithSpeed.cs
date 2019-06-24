@@ -1,6 +1,10 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/PositionWithSpeed", "7e96a8c8cbc8234d4d2c87880ddb7cfe", "Header header\n\nfloat64 angular_position                # The desired rotational position of the motor shaft about it's z axis in Radians\nfloat64 angular_velocity_limit          # The desired speed limit to acheive the desired position in Radians/second (z axis)\n")]
+    [MsgInfo("pacmod_msgs/PositionWithSpeed", "7e96a8c8cbc8234d4d2c87880ddb7cfe", @"Header header
+
+float64 angular_position                # The desired rotational position of the motor shaft about it's z axis in Radians
+float64 angular_velocity_limit          # The desired speed limit to acheive the desired position in Radians/second (z axis)
+")]
     public partial class PositionWithSpeed : RosMsg
     {
         public std_msgs.Header header

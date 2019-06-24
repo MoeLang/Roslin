@@ -1,6 +1,14 @@
 namespace Roslin.Msg.shape_msgs
 {
-    [MsgInfo("shape_msgs/Plane", "2c1b92ed8f31492f8e73f6a4a44ca796", "# Representation of a plane, using the plane equation ax + by + cz + d = 0\n\n# a := coef[0]\n# b := coef[1]\n# c := coef[2]\n# d := coef[3]\n\nfloat64[4] coef\n")]
+    [MsgInfo("shape_msgs/Plane", "2c1b92ed8f31492f8e73f6a4a44ca796", @"# Representation of a plane, using the plane equation ax + by + cz + d = 0
+
+# a := coef[0]
+# b := coef[1]
+# c := coef[2]
+# d := coef[3]
+
+float64[4] coef
+")]
     public partial class Plane : RosMsg
     {
         public System.Double[] coef

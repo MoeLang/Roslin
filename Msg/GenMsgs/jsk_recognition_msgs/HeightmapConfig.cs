@@ -1,6 +1,10 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/HeightmapConfig", "f2f90f6dd5aeedef48b062e1a4aabb89", "float32 min_x\nfloat32 max_x\nfloat32 min_y\nfloat32 max_y\n")]
+    [MsgInfo("jsk_recognition_msgs/HeightmapConfig", "f2f90f6dd5aeedef48b062e1a4aabb89", @"float32 min_x
+float32 max_x
+float32 min_y
+float32 max_y
+")]
     public partial class HeightmapConfig : RosMsg
     {
         public System.Single min_x

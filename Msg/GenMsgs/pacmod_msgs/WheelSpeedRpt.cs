@@ -1,6 +1,13 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/WheelSpeedRpt", "0ade552ffaaff87eca01c4d9b49bb8ae", "Header header\n\nfloat64 front_left_wheel_speed\nfloat64 front_right_wheel_speed\nfloat64 rear_left_wheel_speed\nfloat64 rear_right_wheel_speed\n\n")]
+    [MsgInfo("pacmod_msgs/WheelSpeedRpt", "0ade552ffaaff87eca01c4d9b49bb8ae", @"Header header
+
+float64 front_left_wheel_speed
+float64 front_right_wheel_speed
+float64 rear_left_wheel_speed
+float64 rear_right_wheel_speed
+
+")]
     public partial class WheelSpeedRpt : RosMsg
     {
         public std_msgs.Header header

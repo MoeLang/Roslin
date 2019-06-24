@@ -1,6 +1,8 @@
 namespace Roslin.Msg.control_msgs
 {
-    [MsgInfo("control_msgs/GripperCommand", "680acaff79486f017132a7f198d40f08", "float64 position\nfloat64 max_effort\n")]
+    [MsgInfo("control_msgs/GripperCommand", "680acaff79486f017132a7f198d40f08", @"float64 position
+float64 max_effort
+")]
     public partial class GripperCommand : RosMsg
     {
         public System.Double position

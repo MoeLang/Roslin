@@ -1,6 +1,19 @@
 namespace Roslin.Msg.automotive_navigation_msgs
 {
-    [MsgInfo("automotive_navigation_msgs/DesiredDestination", "ebb7b7743d8a0ce286cd377c24111c3c", "# Desired Destination Message\n# Contains the location of a desired destination\n\nHeader header\n\nuint8 msg_counter   # Increments each time a command is sent\n                    # An acknowledge message should be published with this value\n\nuint16 valid        # 1 if location should be used, 0 to cancel out previous location\n\nfloat64 latitude    # Latitude of destination (rad)\nfloat64 longitude   # Longitude of destination (rad)\n\n")]
+    [MsgInfo("automotive_navigation_msgs/DesiredDestination", "ebb7b7743d8a0ce286cd377c24111c3c", @"# Desired Destination Message
+# Contains the location of a desired destination
+
+Header header
+
+uint8 msg_counter   # Increments each time a command is sent
+                    # An acknowledge message should be published with this value
+
+uint16 valid        # 1 if location should be used, 0 to cancel out previous location
+
+float64 latitude    # Latitude of destination (rad)
+float64 longitude   # Longitude of destination (rad)
+
+")]
     public partial class DesiredDestination : RosMsg
     {
         public std_msgs.Header header

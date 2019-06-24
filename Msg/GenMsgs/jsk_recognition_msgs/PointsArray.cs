@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/PointsArray", "0aa7e57c9da77fc1a0d8277bba5672b1", "Header header\nsensor_msgs/PointCloud2[] cloud_list\n")]
+    [MsgInfo("jsk_recognition_msgs/PointsArray", "0aa7e57c9da77fc1a0d8277bba5672b1", @"Header header
+sensor_msgs/PointCloud2[] cloud_list
+")]
     public partial class PointsArray : RosMsg
     {
         public std_msgs.Header header

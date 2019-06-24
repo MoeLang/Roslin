@@ -1,6 +1,11 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/AllSystemStatuses", "c02f347061ed74b0bef510eb7368d90a", "Header header\n\nKeyValuePair[] enabled_status\nKeyValuePair[] overridden_status\nKeyValuePair[] fault_status\n")]
+    [MsgInfo("pacmod_msgs/AllSystemStatuses", "c02f347061ed74b0bef510eb7368d90a", @"Header header
+
+KeyValuePair[] enabled_status
+KeyValuePair[] overridden_status
+KeyValuePair[] fault_status
+")]
     public partial class AllSystemStatuses : RosMsg
     {
         public std_msgs.Header header

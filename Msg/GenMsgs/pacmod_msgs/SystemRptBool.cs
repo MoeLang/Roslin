@@ -1,6 +1,19 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/SystemRptBool", "843d7a149b32373c9508d0ea0544b94a", "Header header\n\nbool enabled\nbool override_active\nbool command_output_fault\nbool input_output_fault\nbool output_reported_fault\nbool pacmod_fault\nbool vehicle_fault\n\nbool manual_input\nbool command\nbool output\n")]
+    [MsgInfo("pacmod_msgs/SystemRptBool", "843d7a149b32373c9508d0ea0544b94a", @"Header header
+
+bool enabled
+bool override_active
+bool command_output_fault
+bool input_output_fault
+bool output_reported_fault
+bool pacmod_fault
+bool vehicle_fault
+
+bool manual_input
+bool command
+bool output
+")]
     public partial class SystemRptBool : RosMsg
     {
         public std_msgs.Header header

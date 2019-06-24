@@ -1,6 +1,21 @@
 namespace Roslin.Msg.diagnostic_msgs
 {
-    [MsgInfo("diagnostic_msgs/DiagnosticStatus", "d0ce08bc6e5ba34c7754f563a9cabaf1", "# This message holds the status of an individual component of the robot.\n# \n\n# Possible levels of operations\nbyte OK=0\nbyte WARN=1\nbyte ERROR=2\nbyte STALE=3\n\nbyte level # level of operation enumerated above \nstring name # a description of the test/component reporting\nstring message # a description of the status\nstring hardware_id # a hardware unique string\nKeyValue[] values # an array of values associated with the status\n\n")]
+    [MsgInfo("diagnostic_msgs/DiagnosticStatus", "d0ce08bc6e5ba34c7754f563a9cabaf1", @"# This message holds the status of an individual component of the robot.
+# 
+
+# Possible levels of operations
+byte OK=0
+byte WARN=1
+byte ERROR=2
+byte STALE=3
+
+byte level # level of operation enumerated above 
+string name # a description of the test/component reporting
+string message # a description of the status
+string hardware_id # a hardware unique string
+KeyValue[] values # an array of values associated with the status
+
+")]
     public partial class DiagnosticStatus : RosMsg
     {
         public System.Byte OK => 0;

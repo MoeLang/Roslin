@@ -1,6 +1,21 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/HeadlightAuxRpt", "512cf6494650979b84da331a515edaf9", "Header header\n\nbool headlights_on\nbool headlights_on_is_valid\nbool headlights_on_bright\nbool headlights_on_bright_is_valid\nbool fog_lights_on\nbool fog_lights_on_is_valid\nuint8 headlights_mode\nbool headlights_mode_is_valid\n\nuint8 HEADLIGHTS_OFF = 0\nuint8 HEADLIGHTS_PARKING = 1\nuint8 HEADLIGHTS_MANUAL = 2\nuint8 HEADLIGHTS_AUTO = 3\n")]
+    [MsgInfo("pacmod_msgs/HeadlightAuxRpt", "512cf6494650979b84da331a515edaf9", @"Header header
+
+bool headlights_on
+bool headlights_on_is_valid
+bool headlights_on_bright
+bool headlights_on_bright_is_valid
+bool fog_lights_on
+bool fog_lights_on_is_valid
+uint8 headlights_mode
+bool headlights_mode_is_valid
+
+uint8 HEADLIGHTS_OFF = 0
+uint8 HEADLIGHTS_PARKING = 1
+uint8 HEADLIGHTS_MANUAL = 2
+uint8 HEADLIGHTS_AUTO = 3
+")]
     public partial class HeadlightAuxRpt : RosMsg
     {
         public System.Byte HEADLIGHTS_OFF => 0;

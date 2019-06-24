@@ -1,6 +1,11 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/DetectedObjectRpt", "bc712b16be2ea6767f3e682c00a854bc", "Header header\n\nfloat64 front_object_distance_low_res         # Measured distance to nearest front object\nfloat64 front_object_distance_high_res        # Measured distance to nearest front object (high res)\n\n")]
+    [MsgInfo("pacmod_msgs/DetectedObjectRpt", "bc712b16be2ea6767f3e682c00a854bc", @"Header header
+
+float64 front_object_distance_low_res         # Measured distance to nearest front object
+float64 front_object_distance_high_res        # Measured distance to nearest front object (high res)
+
+")]
     public partial class DetectedObjectRpt : RosMsg
     {
         public std_msgs.Header header

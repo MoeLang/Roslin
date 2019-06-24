@@ -1,6 +1,22 @@
 namespace Roslin.Msg.smach_msgs
 {
-    [MsgInfo("smach_msgs/SmachContainerStructure", "3d3d1e0d0f99779ee9e58101a5dcf7ea", "Header header\n\n# The path to this node in the server\nstring path\n\n# The children of this node\nstring[] children\n\n# The outcome edges\n# Each index across these arrays denote one edge\nstring[] internal_outcomes\nstring[] outcomes_from\nstring[] outcomes_to\n\n# The potential outcomes from this container\nstring[] container_outcomes\n")]
+    [MsgInfo("smach_msgs/SmachContainerStructure", "3d3d1e0d0f99779ee9e58101a5dcf7ea", @"Header header
+
+# The path to this node in the server
+string path
+
+# The children of this node
+string[] children
+
+# The outcome edges
+# Each index across these arrays denote one edge
+string[] internal_outcomes
+string[] outcomes_from
+string[] outcomes_to
+
+# The potential outcomes from this container
+string[] container_outcomes
+")]
     public partial class SmachContainerStructure : RosMsg
     {
         public std_msgs.Header header

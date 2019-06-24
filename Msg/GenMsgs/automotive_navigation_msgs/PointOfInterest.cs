@@ -1,6 +1,16 @@
 namespace Roslin.Msg.automotive_navigation_msgs
 {
-    [MsgInfo("automotive_navigation_msgs/PointOfInterest", "e13bf4b872a022336936c4b575654650", "# Point of Interest Message\n# Contains the guid, latitude, longitude, and other information for a point of interest\n\nuint64 guid        # Unique Id for this point\n\nfloat64 latitude   # Latitude (degrees)\nfloat64 longitude  # Longitude (degrees)\n\nstring params      # List of parameter:value pairs\n\n")]
+    [MsgInfo("automotive_navigation_msgs/PointOfInterest", "e13bf4b872a022336936c4b575654650", @"# Point of Interest Message
+# Contains the guid, latitude, longitude, and other information for a point of interest
+
+uint64 guid        # Unique Id for this point
+
+float64 latitude   # Latitude (degrees)
+float64 longitude  # Longitude (degrees)
+
+string params      # List of parameter:value pairs
+
+")]
     public partial class PointOfInterest : RosMsg
     {
         public System.UInt64 guid

@@ -1,6 +1,16 @@
 namespace Roslin.Msg.automotive_navigation_msgs
 {
-    [MsgInfo("automotive_navigation_msgs/DistanceToDestination", "5900bd7ec809d5e8d6ec47b8ddef8d1b", "# Distance To Destination Message\n# Contains the distance to the desired destination\n\nHeader header\n\nuint8 msg_counter   # Increments each time a command is sent\n                    # An acknowledge message should be published with this value\n\nfloat32 distance    # Distance to destination (m)\n\n")]
+    [MsgInfo("automotive_navigation_msgs/DistanceToDestination", "5900bd7ec809d5e8d6ec47b8ddef8d1b", @"# Distance To Destination Message
+# Contains the distance to the desired destination
+
+Header header
+
+uint8 msg_counter   # Increments each time a command is sent
+                    # An acknowledge message should be published with this value
+
+float32 distance    # Distance to destination (m)
+
+")]
     public partial class DistanceToDestination : RosMsg
     {
         public std_msgs.Header header

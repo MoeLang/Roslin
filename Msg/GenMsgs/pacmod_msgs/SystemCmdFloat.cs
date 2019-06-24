@@ -1,6 +1,14 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/SystemCmdFloat", "3e4a9706b544ec6ea9f1a4b7da1269e4", "Header header\n\nbool enable\nbool ignore_overrides\nbool clear_override\nbool clear_faults\n\nfloat64 command\n")]
+    [MsgInfo("pacmod_msgs/SystemCmdFloat", "3e4a9706b544ec6ea9f1a4b7da1269e4", @"Header header
+
+bool enable
+bool ignore_overrides
+bool clear_override
+bool clear_faults
+
+float64 command
+")]
     public partial class SystemCmdFloat : RosMsg
     {
         public std_msgs.Header header

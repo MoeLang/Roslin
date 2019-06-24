@@ -1,6 +1,16 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/SteerAuxRpt", "64ab1937ad919cdc25271e7f81c721e2", "Header header\n\nfloat64 raw_position\nbool raw_position_is_valid\nfloat64 raw_torque\nbool raw_torque_is_valid\nfloat64 rotation_rate\nbool rotation_rate_is_valid\nbool user_interaction\nbool user_interaction_is_valid\n")]
+    [MsgInfo("pacmod_msgs/SteerAuxRpt", "64ab1937ad919cdc25271e7f81c721e2", @"Header header
+
+float64 raw_position
+bool raw_position_is_valid
+float64 raw_torque
+bool raw_torque_is_valid
+float64 rotation_rate
+bool rotation_rate_is_valid
+bool user_interaction
+bool user_interaction_is_valid
+")]
     public partial class SteerAuxRpt : RosMsg
     {
         public std_msgs.Header header

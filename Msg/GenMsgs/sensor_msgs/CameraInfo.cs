@@ -1,6 +1,137 @@
 namespace Roslin.Msg.sensor_msgs
 {
-    [MsgInfo("sensor_msgs/CameraInfo", "c9a58c1b0b154e0e6da7578cb991d214", "# This message defines meta information for a camera. It should be in a\n# camera namespace on topic \"camera_info\" and accompanied by up to five\n# image topics named:\n#\n#   image_raw - raw data from the camera driver, possibly Bayer encoded\n#   image            - monochrome, distorted\n#   image_color      - color, distorted\n#   image_rect       - monochrome, rectified\n#   image_rect_color - color, rectified\n#\n# The image_pipeline contains packages (image_proc, stereo_image_proc)\n# for producing the four processed image topics from image_raw and\n# camera_info. The meaning of the camera parameters are described in\n# detail at http://www.ros.org/wiki/image_pipeline/CameraInfo.\n#\n# The image_geometry package provides a user-friendly interface to\n# common operations using this meta information. If you want to, e.g.,\n# project a 3d point into image coordinates, we strongly recommend\n# using image_geometry.\n#\n# If the camera is uncalibrated, the matrices D, K, R, P should be left\n# zeroed out. In particular, clients may assume that K[0] == 0.0\n# indicates an uncalibrated camera.\n\n#######################################################################\n#                     Image acquisition info                          #\n#######################################################################\n\n# Time of image acquisition, camera coordinate frame ID\nHeader header    # Header timestamp should be acquisition time of image\n                 # Header frame_id should be optical frame of camera\n                 # origin of frame should be optical center of camera\n                 # +x should point to the right in the image\n                 # +y should point down in the image\n                 # +z should point into the plane of the image\n\n\n#######################################################################\n#                      Calibration Parameters                         #\n#######################################################################\n# These are fixed during camera calibration. Their values will be the #\n# same in all messages until the camera is recalibrated. Note that    #\n# self-calibrating systems may \"recalibrate\" frequently.              #\n#                                                                     #\n# The internal parameters can be used to warp a raw (distorted) image #\n# to:                                                                 #\n#   1. An undistorted image (requires D and K)                        #\n#   2. A rectified image (requires D, K, R)                           #\n# The projection matrix P projects 3D points into the rectified image.#\n#######################################################################\n\n# The image dimensions with which the camera was calibrated. Normally\n# this will be the full camera resolution in pixels.\nuint32 height\nuint32 width\n\n# The distortion model used. Supported models are listed in\n# sensor_msgs/distortion_models.h. For most cameras, \"plumb_bob\" - a\n# simple model of radial and tangential distortion - is sufficient.\nstring distortion_model\n\n# The distortion parameters, size depending on the distortion model.\n# For \"plumb_bob\", the 5 parameters are: (k1, k2, t1, t2, k3).\nfloat64[] D\n\n# Intrinsic camera matrix for the raw (distorted) images.\n#     [fx  0 cx]\n# K = [ 0 fy cy]\n#     [ 0  0  1]\n# Projects 3D points in the camera coordinate frame to 2D pixel\n# coordinates using the focal lengths (fx, fy) and principal point\n# (cx, cy).\nfloat64[9]  K # 3x3 row-major matrix\n\n# Rectification matrix (stereo cameras only)\n# A rotation matrix aligning the camera coordinate system to the ideal\n# stereo image plane so that epipolar lines in both stereo images are\n# parallel.\nfloat64[9]  R # 3x3 row-major matrix\n\n# Projection/camera matrix\n#     [fx'  0  cx' Tx]\n# P = [ 0  fy' cy' Ty]\n#     [ 0   0   1   0]\n# By convention, this matrix specifies the intrinsic (camera) matrix\n#  of the processed (rectified) image. That is, the left 3x3 portion\n#  is the normal camera intrinsic matrix for the rectified image.\n# It projects 3D points in the camera coordinate frame to 2D pixel\n#  coordinates using the focal lengths (fx', fy') and principal point\n#  (cx', cy') - these may differ from the values in K.\n# For monocular cameras, Tx = Ty = 0. Normally, monocular cameras will\n#  also have R = the identity and P[1:3,1:3] = K.\n# For a stereo pair, the fourth column [Tx Ty 0]' is related to the\n#  position of the optical center of the second camera in the first\n#  camera's frame. We assume Tz = 0 so both cameras are in the same\n#  stereo image plane. The first camera always has Tx = Ty = 0. For\n#  the right (second) camera of a horizontal stereo pair, Ty = 0 and\n#  Tx = -fx' * B, where B is the baseline between the cameras.\n# Given a 3D point [X Y Z]', the projection (x, y) of the point onto\n#  the rectified image is given by:\n#  [u v w]' = P * [X Y Z 1]'\n#         x = u / w\n#         y = v / w\n#  This holds for both images of a stereo pair.\nfloat64[12] P # 3x4 row-major matrix\n\n\n#######################################################################\n#                      Operational Parameters                         #\n#######################################################################\n# These define the image region actually captured by the camera       #\n# driver. Although they affect the geometry of the output image, they #\n# may be changed freely without recalibrating the camera.             #\n#######################################################################\n\n# Binning refers here to any camera setting which combines rectangular\n#  neighborhoods of pixels into larger \"super-pixels.\" It reduces the\n#  resolution of the output image to\n#  (width / binning_x) x (height / binning_y).\n# The default values binning_x = binning_y = 0 is considered the same\n#  as binning_x = binning_y = 1 (no subsampling).\nuint32 binning_x\nuint32 binning_y\n\n# Region of interest (subwindow of full camera resolution), given in\n#  full resolution (unbinned) image coordinates. A particular ROI\n#  always denotes the same window of pixels on the camera sensor,\n#  regardless of binning settings.\n# The default setting of roi (all values 0) is considered the same as\n#  full resolution (roi.width = width, roi.height = height).\nRegionOfInterest roi\n")]
+    [MsgInfo("sensor_msgs/CameraInfo", "c9a58c1b0b154e0e6da7578cb991d214", @"# This message defines meta information for a camera. It should be in a
+# camera namespace on topic ""camera_info"" and accompanied by up to five
+# image topics named:
+#
+#   image_raw - raw data from the camera driver, possibly Bayer encoded
+#   image            - monochrome, distorted
+#   image_color      - color, distorted
+#   image_rect       - monochrome, rectified
+#   image_rect_color - color, rectified
+#
+# The image_pipeline contains packages (image_proc, stereo_image_proc)
+# for producing the four processed image topics from image_raw and
+# camera_info. The meaning of the camera parameters are described in
+# detail at http://www.ros.org/wiki/image_pipeline/CameraInfo.
+#
+# The image_geometry package provides a user-friendly interface to
+# common operations using this meta information. If you want to, e.g.,
+# project a 3d point into image coordinates, we strongly recommend
+# using image_geometry.
+#
+# If the camera is uncalibrated, the matrices D, K, R, P should be left
+# zeroed out. In particular, clients may assume that K[0] == 0.0
+# indicates an uncalibrated camera.
+
+#######################################################################
+#                     Image acquisition info                          #
+#######################################################################
+
+# Time of image acquisition, camera coordinate frame ID
+Header header    # Header timestamp should be acquisition time of image
+                 # Header frame_id should be optical frame of camera
+                 # origin of frame should be optical center of camera
+                 # +x should point to the right in the image
+                 # +y should point down in the image
+                 # +z should point into the plane of the image
+
+
+#######################################################################
+#                      Calibration Parameters                         #
+#######################################################################
+# These are fixed during camera calibration. Their values will be the #
+# same in all messages until the camera is recalibrated. Note that    #
+# self-calibrating systems may ""recalibrate"" frequently.              #
+#                                                                     #
+# The internal parameters can be used to warp a raw (distorted) image #
+# to:                                                                 #
+#   1. An undistorted image (requires D and K)                        #
+#   2. A rectified image (requires D, K, R)                           #
+# The projection matrix P projects 3D points into the rectified image.#
+#######################################################################
+
+# The image dimensions with which the camera was calibrated. Normally
+# this will be the full camera resolution in pixels.
+uint32 height
+uint32 width
+
+# The distortion model used. Supported models are listed in
+# sensor_msgs/distortion_models.h. For most cameras, ""plumb_bob"" - a
+# simple model of radial and tangential distortion - is sufficient.
+string distortion_model
+
+# The distortion parameters, size depending on the distortion model.
+# For ""plumb_bob"", the 5 parameters are: (k1, k2, t1, t2, k3).
+float64[] D
+
+# Intrinsic camera matrix for the raw (distorted) images.
+#     [fx  0 cx]
+# K = [ 0 fy cy]
+#     [ 0  0  1]
+# Projects 3D points in the camera coordinate frame to 2D pixel
+# coordinates using the focal lengths (fx, fy) and principal point
+# (cx, cy).
+float64[9]  K # 3x3 row-major matrix
+
+# Rectification matrix (stereo cameras only)
+# A rotation matrix aligning the camera coordinate system to the ideal
+# stereo image plane so that epipolar lines in both stereo images are
+# parallel.
+float64[9]  R # 3x3 row-major matrix
+
+# Projection/camera matrix
+#     [fx'  0  cx' Tx]
+# P = [ 0  fy' cy' Ty]
+#     [ 0   0   1   0]
+# By convention, this matrix specifies the intrinsic (camera) matrix
+#  of the processed (rectified) image. That is, the left 3x3 portion
+#  is the normal camera intrinsic matrix for the rectified image.
+# It projects 3D points in the camera coordinate frame to 2D pixel
+#  coordinates using the focal lengths (fx', fy') and principal point
+#  (cx', cy') - these may differ from the values in K.
+# For monocular cameras, Tx = Ty = 0. Normally, monocular cameras will
+#  also have R = the identity and P[1:3,1:3] = K.
+# For a stereo pair, the fourth column [Tx Ty 0]' is related to the
+#  position of the optical center of the second camera in the first
+#  camera's frame. We assume Tz = 0 so both cameras are in the same
+#  stereo image plane. The first camera always has Tx = Ty = 0. For
+#  the right (second) camera of a horizontal stereo pair, Ty = 0 and
+#  Tx = -fx' * B, where B is the baseline between the cameras.
+# Given a 3D point [X Y Z]', the projection (x, y) of the point onto
+#  the rectified image is given by:
+#  [u v w]' = P * [X Y Z 1]'
+#         x = u / w
+#         y = v / w
+#  This holds for both images of a stereo pair.
+float64[12] P # 3x4 row-major matrix
+
+
+#######################################################################
+#                      Operational Parameters                         #
+#######################################################################
+# These define the image region actually captured by the camera       #
+# driver. Although they affect the geometry of the output image, they #
+# may be changed freely without recalibrating the camera.             #
+#######################################################################
+
+# Binning refers here to any camera setting which combines rectangular
+#  neighborhoods of pixels into larger ""super-pixels."" It reduces the
+#  resolution of the output image to
+#  (width / binning_x) x (height / binning_y).
+# The default values binning_x = binning_y = 0 is considered the same
+#  as binning_x = binning_y = 1 (no subsampling).
+uint32 binning_x
+uint32 binning_y
+
+# Region of interest (subwindow of full camera resolution), given in
+#  full resolution (unbinned) image coordinates. A particular ROI
+#  always denotes the same window of pixels on the camera sensor,
+#  regardless of binning settings.
+# The default setting of roi (all values 0) is considered the same as
+#  full resolution (roi.width = width, roi.height = height).
+RegionOfInterest roi
+")]
     public partial class CameraInfo : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,9 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/PolygonStamped", "c6be8f7dc3bee7fe9e8d296070f53340", "# This represents a Polygon with reference coordinate frame and timestamp\nHeader header\nPolygon polygon\n")]
+    [MsgInfo("geometry_msgs/PolygonStamped", "c6be8f7dc3bee7fe9e8d296070f53340", @"# This represents a Polygon with reference coordinate frame and timestamp
+Header header
+Polygon polygon
+")]
     public partial class PolygonStamped : RosMsg
     {
         public std_msgs.Header header

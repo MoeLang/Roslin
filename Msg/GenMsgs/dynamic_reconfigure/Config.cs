@@ -1,6 +1,11 @@
 namespace Roslin.Msg.dynamic_reconfigure
 {
-    [MsgInfo("dynamic_reconfigure/Config", "958f16a05573709014982821e6822580", "BoolParameter[] bools\nIntParameter[] ints\nStrParameter[] strs\nDoubleParameter[] doubles\nGroupState[] groups\n")]
+    [MsgInfo("dynamic_reconfigure/Config", "958f16a05573709014982821e6822580", @"BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+")]
     public partial class Config : RosMsg
     {
         public BoolParameter[] bools

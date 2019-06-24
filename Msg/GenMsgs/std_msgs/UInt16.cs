@@ -1,6 +1,7 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/UInt16", "1df79edf208b629fe6b81923a544552d", "uint16 data\n")]
+    [MsgInfo("std_msgs/UInt16", "1df79edf208b629fe6b81923a544552d", @"uint16 data
+")]
     public partial class UInt16 : RosMsg
     {
         public System.UInt16 data

@@ -1,6 +1,10 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/Rect", "4425f1067abc7ec2e487d28194eccff4", "int32 x\nint32 y\nint32 width\nint32 height\n")]
+    [MsgInfo("jsk_recognition_msgs/Rect", "4425f1067abc7ec2e487d28194eccff4", @"int32 x
+int32 y
+int32 width
+int32 height
+")]
     public partial class Rect : RosMsg
     {
         public System.Int32 x

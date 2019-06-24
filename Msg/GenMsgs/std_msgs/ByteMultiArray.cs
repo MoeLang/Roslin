@@ -1,6 +1,12 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/ByteMultiArray", "70ea476cbcfd65ac2f68f3cda1e891fe", "# Please look at the MultiArrayLayout message definition for\n# documentation on all multiarrays.\n\nMultiArrayLayout  layout        # specification of data layout\nbyte[]            data          # array of data\n\n")]
+    [MsgInfo("std_msgs/ByteMultiArray", "70ea476cbcfd65ac2f68f3cda1e891fe", @"# Please look at the MultiArrayLayout message definition for
+# documentation on all multiarrays.
+
+MultiArrayLayout  layout        # specification of data layout
+byte[]            data          # array of data
+
+")]
     public partial class ByteMultiArray : RosMsg
     {
         public MultiArrayLayout layout

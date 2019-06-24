@@ -1,6 +1,11 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/PoseArray", "916c28c5764443f268b296bb671b9d97", "# An array of poses with a header for global reference.\n\nHeader header\n\nPose[] poses\n")]
+    [MsgInfo("geometry_msgs/PoseArray", "916c28c5764443f268b296bb671b9d97", @"# An array of poses with a header for global reference.
+
+Header header
+
+Pose[] poses
+")]
     public partial class PoseArray : RosMsg
     {
         public std_msgs.Header header

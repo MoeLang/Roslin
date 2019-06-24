@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/Segment", "0125c553546d7123dccaeab992a9e29e", "geometry_msgs/Point start_point\ngeometry_msgs/Point end_point\n")]
+    [MsgInfo("jsk_recognition_msgs/Segment", "0125c553546d7123dccaeab992a9e29e", @"geometry_msgs/Point start_point
+geometry_msgs/Point end_point
+")]
     public partial class Segment : RosMsg
     {
         public geometry_msgs.Point start_point

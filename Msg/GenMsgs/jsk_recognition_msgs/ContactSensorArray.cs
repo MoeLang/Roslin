@@ -1,6 +1,7 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/ContactSensorArray", "c65f16fb3a523c0b77d7e31330b214da", "std_msgs/Header header\njsk_recognition_msgs/ContactSensor[] datas")]
+    [MsgInfo("jsk_recognition_msgs/ContactSensorArray", "c65f16fb3a523c0b77d7e31330b214da", @"std_msgs/Header header
+jsk_recognition_msgs/ContactSensor[] datas")]
     public partial class ContactSensorArray : RosMsg
     {
         public std_msgs.Header header

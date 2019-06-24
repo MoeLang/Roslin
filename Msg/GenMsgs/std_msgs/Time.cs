@@ -1,6 +1,7 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/Time", "cd7166c74c552c311fbcc2fe5a7bc289", "time data\n")]
+    [MsgInfo("std_msgs/Time", "cd7166c74c552c311fbcc2fe5a7bc289", @"time data
+")]
     public partial class Time : RosMsg
     {
         public System.DateTime data

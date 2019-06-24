@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/TorusArray", "81d0dbf46016b5714fa4ea9eca5485e0", "Header header\nTorus[] toruses\n")]
+    [MsgInfo("jsk_recognition_msgs/TorusArray", "81d0dbf46016b5714fa4ea9eca5485e0", @"Header header
+Torus[] toruses
+")]
     public partial class TorusArray : RosMsg
     {
         public std_msgs.Header header

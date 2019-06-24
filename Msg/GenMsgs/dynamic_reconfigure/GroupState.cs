@@ -1,6 +1,10 @@
 namespace Roslin.Msg.dynamic_reconfigure
 {
-    [MsgInfo("dynamic_reconfigure/GroupState", "a2d87f51dc22930325041a2f8b1571f8", "string name\nbool state\nint32 id\nint32 parent\n")]
+    [MsgInfo("dynamic_reconfigure/GroupState", "a2d87f51dc22930325041a2f8b1571f8", @"string name
+bool state
+int32 id
+int32 parent
+")]
     public partial class GroupState : RosMsg
     {
         public System.String name

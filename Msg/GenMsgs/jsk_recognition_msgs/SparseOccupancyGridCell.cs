@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/SparseOccupancyGridCell", "a5179e922852f82ee6322db1f097ab64", "int32 row_index\nfloat32 value\n")]
+    [MsgInfo("jsk_recognition_msgs/SparseOccupancyGridCell", "a5179e922852f82ee6322db1f097ab64", @"int32 row_index
+float32 value
+")]
     public partial class SparseOccupancyGridCell : RosMsg
     {
         public System.Int32 row_index

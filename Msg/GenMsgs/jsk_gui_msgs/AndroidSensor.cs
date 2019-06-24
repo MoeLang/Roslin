@@ -1,6 +1,15 @@
 namespace Roslin.Msg.jsk_gui_msgs
 {
-    [MsgInfo("jsk_gui_msgs/AndroidSensor", "d832dbe3be7e7f061d963f2188f1a407", "# sonsor for Tablet\nfloat64 accel_x\nfloat64 accel_y\nfloat64 accel_z\nfloat64 orientation_x\nfloat64 orientation_y\nfloat64 orientation_z\n\n\n")]
+    [MsgInfo("jsk_gui_msgs/AndroidSensor", "d832dbe3be7e7f061d963f2188f1a407", @"# sonsor for Tablet
+float64 accel_x
+float64 accel_y
+float64 accel_z
+float64 orientation_x
+float64 orientation_y
+float64 orientation_z
+
+
+")]
     public partial class AndroidSensor : RosMsg
     {
         public System.Double accel_x

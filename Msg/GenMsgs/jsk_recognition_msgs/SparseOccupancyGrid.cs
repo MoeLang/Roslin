@@ -1,6 +1,11 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/SparseOccupancyGrid", "497269ddab6058d0d4860f25dc49448f", "Header header\ngeometry_msgs/Pose origin_pose\nfloat32 resolution\n\nSparseOccupancyGridColumn[] columns\n")]
+    [MsgInfo("jsk_recognition_msgs/SparseOccupancyGrid", "497269ddab6058d0d4860f25dc49448f", @"Header header
+geometry_msgs/Pose origin_pose
+float32 resolution
+
+SparseOccupancyGridColumn[] columns
+")]
     public partial class SparseOccupancyGrid : RosMsg
     {
         public std_msgs.Header header

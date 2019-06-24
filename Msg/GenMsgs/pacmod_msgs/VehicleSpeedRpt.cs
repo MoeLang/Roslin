@@ -1,6 +1,12 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/VehicleSpeedRpt", "33c26f1bbea2c9136f0821ddc90cd049", "Header header\n\nfloat64 vehicle_speed         # Measured vehicle speed\nbool vehicle_speed_valid      # Flag indicating if measured vehicle speed is valid\nuint8[2] vehicle_speed_raw    # Raw bytes from vehicle CAN bus                \n\n")]
+    [MsgInfo("pacmod_msgs/VehicleSpeedRpt", "33c26f1bbea2c9136f0821ddc90cd049", @"Header header
+
+float64 vehicle_speed         # Measured vehicle speed
+bool vehicle_speed_valid      # Flag indicating if measured vehicle speed is valid
+uint8[2] vehicle_speed_raw    # Raw bytes from vehicle CAN bus                
+
+")]
     public partial class VehicleSpeedRpt : RosMsg
     {
         public std_msgs.Header header

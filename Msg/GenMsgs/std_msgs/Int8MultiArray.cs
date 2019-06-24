@@ -1,6 +1,12 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/Int8MultiArray", "d7c1af35a1b4781bbe79e03dd94b7c13", "# Please look at the MultiArrayLayout message definition for\n# documentation on all multiarrays.\n\nMultiArrayLayout  layout        # specification of data layout\nint8[]            data          # array of data\n\n")]
+    [MsgInfo("std_msgs/Int8MultiArray", "d7c1af35a1b4781bbe79e03dd94b7c13", @"# Please look at the MultiArrayLayout message definition for
+# documentation on all multiarrays.
+
+MultiArrayLayout  layout        # specification of data layout
+int8[]            data          # array of data
+
+")]
     public partial class Int8MultiArray : RosMsg
     {
         public MultiArrayLayout layout

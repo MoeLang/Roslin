@@ -1,6 +1,16 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/PlotData", "abc388ba2207b305f8695ad025452af4", "uint32 SCATTER=1\nuint32 LINE=2\n\nHeader header\nfloat32[] xs\nfloat32[] ys\nuint32 type                     #SCATTER or LINE\nstring label\nbool fit_line\nbool fit_line_ransac\n")]
+    [MsgInfo("jsk_recognition_msgs/PlotData", "abc388ba2207b305f8695ad025452af4", @"uint32 SCATTER=1
+uint32 LINE=2
+
+Header header
+float32[] xs
+float32[] ys
+uint32 type                     #SCATTER or LINE
+string label
+bool fit_line
+bool fit_line_ransac
+")]
     public partial class PlotData : RosMsg
     {
         public System.UInt32 SCATTER => 1;

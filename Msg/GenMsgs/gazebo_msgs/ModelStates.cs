@@ -1,6 +1,10 @@
 namespace Roslin.Msg.gazebo_msgs
 {
-    [MsgInfo("gazebo_msgs/ModelStates", "48c080191eb15c41858319b4d8a609c2", "# broadcast all model states in world frame\nstring[] name                 # model names\ngeometry_msgs/Pose[] pose     # desired pose in world frame\ngeometry_msgs/Twist[] twist   # desired twist in world frame\n")]
+    [MsgInfo("gazebo_msgs/ModelStates", "48c080191eb15c41858319b4d8a609c2", @"# broadcast all model states in world frame
+string[] name                 # model names
+geometry_msgs/Pose[] pose     # desired pose in world frame
+geometry_msgs/Twist[] twist   # desired twist in world frame
+")]
     public partial class ModelStates : RosMsg
     {
         public System.String[] name

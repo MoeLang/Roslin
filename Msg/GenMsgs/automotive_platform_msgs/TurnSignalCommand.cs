@@ -1,6 +1,19 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/TurnSignalCommand", "dfcc072c40d13a25c7a88dcc60473ed5", "# Turn Signal Command with Mode\n# Contains turn signal command and desired autonomy active mode flag\n\nstd_msgs/Header header\n\nuint16 mode             # Is 1 if autonomy mode should be active\n\nuint8 NONE=0\nuint8 LEFT=1\nuint8 RIGHT=2\nuint8 turn_signal       # Desired turn signal on\n\n\n")]
+    [MsgInfo("automotive_platform_msgs/TurnSignalCommand", "dfcc072c40d13a25c7a88dcc60473ed5", @"# Turn Signal Command with Mode
+# Contains turn signal command and desired autonomy active mode flag
+
+std_msgs/Header header
+
+uint16 mode             # Is 1 if autonomy mode should be active
+
+uint8 NONE=0
+uint8 LEFT=1
+uint8 RIGHT=2
+uint8 turn_signal       # Desired turn signal on
+
+
+")]
     public partial class TurnSignalCommand : RosMsg
     {
         public System.Byte NONE => 0;

@@ -1,6 +1,12 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/Float32MultiArray", "6a40e0ffa6a17a503ac3f8616991b1f6", "# Please look at the MultiArrayLayout message definition for\n# documentation on all multiarrays.\n\nMultiArrayLayout  layout        # specification of data layout\nfloat32[]         data          # array of data\n\n")]
+    [MsgInfo("std_msgs/Float32MultiArray", "6a40e0ffa6a17a503ac3f8616991b1f6", @"# Please look at the MultiArrayLayout message definition for
+# documentation on all multiarrays.
+
+MultiArrayLayout  layout        # specification of data layout
+float32[]         data          # array of data
+
+")]
     public partial class Float32MultiArray : RosMsg
     {
         public MultiArrayLayout layout

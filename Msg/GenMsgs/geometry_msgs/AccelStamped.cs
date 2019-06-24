@@ -1,6 +1,9 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/AccelStamped", "d8a98a5d81351b6eb0578c78557e7659", "# An accel with reference coordinate frame and timestamp\nHeader header\nAccel accel\n")]
+    [MsgInfo("geometry_msgs/AccelStamped", "d8a98a5d81351b6eb0578c78557e7659", @"# An accel with reference coordinate frame and timestamp
+Header header
+Accel accel
+")]
     public partial class AccelStamped : RosMsg
     {
         public std_msgs.Header header

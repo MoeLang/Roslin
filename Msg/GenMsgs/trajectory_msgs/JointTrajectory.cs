@@ -1,6 +1,8 @@
 namespace Roslin.Msg.trajectory_msgs
 {
-    [MsgInfo("trajectory_msgs/JointTrajectory", "65b4f94a94d1ed67169da35a02f33d3f", "Header header\nstring[] joint_names\nJointTrajectoryPoint[] points")]
+    [MsgInfo("trajectory_msgs/JointTrajectory", "65b4f94a94d1ed67169da35a02f33d3f", @"Header header
+string[] joint_names
+JointTrajectoryPoint[] points")]
     public partial class JointTrajectory : RosMsg
     {
         public std_msgs.Header header

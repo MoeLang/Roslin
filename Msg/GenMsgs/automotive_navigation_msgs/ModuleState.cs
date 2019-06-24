@@ -1,6 +1,17 @@
 namespace Roslin.Msg.automotive_navigation_msgs
 {
-    [MsgInfo("automotive_navigation_msgs/ModuleState", "88626a2a97afc94b31bcdaefcc4271ef", "# Module State Message\n# Contains the state of a module\n\nstd_msgs/Header header\n\nstring name     # Module's name of the source node of this message\n\nstring state    # Current state\n\nstring info     # Information on current state\n\n")]
+    [MsgInfo("automotive_navigation_msgs/ModuleState", "88626a2a97afc94b31bcdaefcc4271ef", @"# Module State Message
+# Contains the state of a module
+
+std_msgs/Header header
+
+string name     # Module's name of the source node of this message
+
+string state    # Current state
+
+string info     # Information on current state
+
+")]
     public partial class ModuleState : RosMsg
     {
         public std_msgs.Header header

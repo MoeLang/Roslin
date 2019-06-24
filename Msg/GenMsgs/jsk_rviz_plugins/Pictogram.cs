@@ -1,6 +1,26 @@
 namespace Roslin.Msg.jsk_rviz_plugins
 {
-    [MsgInfo("jsk_rviz_plugins/Pictogram", "29667e5652a8cfdc9c87d2ed97aa7bbc", "Header header\ngeometry_msgs/Pose pose\nuint8 ADD=0\nuint8 DELETE=1\nuint8 ROTATE_Z=2\nuint8 ROTATE_Y=3\nuint8 ROTATE_X=4\nuint8 JUMP=5\nuint8 JUMP_ONCE=6\nuint8 action\n\nuint8 PICTOGRAM_MODE=0 \nuint8 STRING_MODE=1\n\nuint8 mode\nstring character\nfloat64 size\nfloat64 ttl\nfloat64 speed\nstd_msgs/ColorRGBA color\n")]
+    [MsgInfo("jsk_rviz_plugins/Pictogram", "29667e5652a8cfdc9c87d2ed97aa7bbc", @"Header header
+geometry_msgs/Pose pose
+uint8 ADD=0
+uint8 DELETE=1
+uint8 ROTATE_Z=2
+uint8 ROTATE_Y=3
+uint8 ROTATE_X=4
+uint8 JUMP=5
+uint8 JUMP_ONCE=6
+uint8 action
+
+uint8 PICTOGRAM_MODE=0 
+uint8 STRING_MODE=1
+
+uint8 mode
+string character
+float64 size
+float64 ttl
+float64 speed
+std_msgs/ColorRGBA color
+")]
     public partial class Pictogram : RosMsg
     {
         public System.Byte ADD => 0;

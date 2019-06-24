@@ -1,6 +1,14 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/CurvatureFeedback", "5c011af0547a17c89a2ebf5e6e57bd57", "# Current Curvature Feedback\n# Curvature based on steering sensor feedback\n\nstd_msgs/Header header\n\nfloat32 curvature           # Measured steering curvature (1/m)\n\n\n")]
+    [MsgInfo("automotive_platform_msgs/CurvatureFeedback", "5c011af0547a17c89a2ebf5e6e57bd57", @"# Current Curvature Feedback
+# Curvature based on steering sensor feedback
+
+std_msgs/Header header
+
+float32 curvature           # Measured steering curvature (1/m)
+
+
+")]
     public partial class CurvatureFeedback : RosMsg
     {
         public std_msgs.Header header

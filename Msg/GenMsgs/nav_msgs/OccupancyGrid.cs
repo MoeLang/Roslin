@@ -1,6 +1,17 @@
 namespace Roslin.Msg.nav_msgs
 {
-    [MsgInfo("nav_msgs/OccupancyGrid", "3381f2d731d4076ec5c71b0759edbe4e", "# This represents a 2-D grid map, in which each cell represents the probability of\n# occupancy.\n\nHeader header \n\n#MetaData for the map\nMapMetaData info\n\n# The map data, in row-major order, starting with (0,0).  Occupancy\n# probabilities are in the range [0,100].  Unknown is -1.\nint8[] data\n")]
+    [MsgInfo("nav_msgs/OccupancyGrid", "3381f2d731d4076ec5c71b0759edbe4e", @"# This represents a 2-D grid map, in which each cell represents the probability of
+# occupancy.
+
+Header header 
+
+#MetaData for the map
+MapMetaData info
+
+# The map data, in row-major order, starting with (0,0).  Occupancy
+# probabilities are in the range [0,100].  Unknown is -1.
+int8[] data
+")]
     public partial class OccupancyGrid : RosMsg
     {
         public std_msgs.Header header

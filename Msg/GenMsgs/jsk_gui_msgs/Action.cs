@@ -1,6 +1,37 @@
 namespace Roslin.Msg.jsk_gui_msgs
 {
-    [MsgInfo("jsk_gui_msgs/Action", "d81dc8475ff89ce7097d2e73ebfc2591", "byte RARMID=0\nbyte LARMID=1\n\n# task: push, pick, open, slide, MoveNeck, MoveBase\nstring task_name\n\n# selection: button names\n# string selection_name\n\n# arm: :rarm, :lsrm\nint64 arm_id\n\n# state of touch: touch, pick, pinch, sweep\n# for debugging\nstring state\n# value of state\nfloat64 state_value\n\n# direction: up, down, left, right\nstring direction\n# value of direction, degree\nfloat64 direction_value\n\nint64 touch_x\nint64 touch_y\n\n# Example\n#  push: touches[0].x, touches[0].y, task_name, arm_id\n#  open: touches[0 1 2].x, touches[0 1 2].y, task_name, arm_id\n#  slide: touches[0 1 2].x, touches[0 1 2].y, task_name, arm_id\n#  move_neck: task_name, direction, direction_value\n#  move_base: task_name, direction, direction_value")]
+    [MsgInfo("jsk_gui_msgs/Action", "d81dc8475ff89ce7097d2e73ebfc2591", @"byte RARMID=0
+byte LARMID=1
+
+# task: push, pick, open, slide, MoveNeck, MoveBase
+string task_name
+
+# selection: button names
+# string selection_name
+
+# arm: :rarm, :lsrm
+int64 arm_id
+
+# state of touch: touch, pick, pinch, sweep
+# for debugging
+string state
+# value of state
+float64 state_value
+
+# direction: up, down, left, right
+string direction
+# value of direction, degree
+float64 direction_value
+
+int64 touch_x
+int64 touch_y
+
+# Example
+#  push: touches[0].x, touches[0].y, task_name, arm_id
+#  open: touches[0 1 2].x, touches[0 1 2].y, task_name, arm_id
+#  slide: touches[0 1 2].x, touches[0 1 2].y, task_name, arm_id
+#  move_neck: task_name, direction, direction_value
+#  move_base: task_name, direction, direction_value")]
     public partial class Action : RosMsg
     {
         public System.Byte RARMID => 0;

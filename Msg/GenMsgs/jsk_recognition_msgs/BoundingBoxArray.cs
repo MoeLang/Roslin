@@ -1,6 +1,10 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/BoundingBoxArray", "c8f4a8bb1acd18ce778d183912bb472d", "# BoundingBoxArray is a list of BoundingBox.\n# You can use jsk_rviz_plugins to visualize BoungingBoxArray on rviz.\nHeader header\nBoundingBox[] boxes\n")]
+    [MsgInfo("jsk_recognition_msgs/BoundingBoxArray", "c8f4a8bb1acd18ce778d183912bb472d", @"# BoundingBoxArray is a list of BoundingBox.
+# You can use jsk_rviz_plugins to visualize BoungingBoxArray on rviz.
+Header header
+BoundingBox[] boxes
+")]
     public partial class BoundingBoxArray : RosMsg
     {
         public std_msgs.Header header

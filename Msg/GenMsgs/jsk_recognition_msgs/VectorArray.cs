@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/VectorArray", "5755776409eb8318e94c95cd52de2b69", "Header header\nint32 vector_dim\nfloat64[] data\n")]
+    [MsgInfo("jsk_recognition_msgs/VectorArray", "5755776409eb8318e94c95cd52de2b69", @"Header header
+int32 vector_dim
+float64[] data
+")]
     public partial class VectorArray : RosMsg
     {
         public std_msgs.Header header

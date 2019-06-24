@@ -1,6 +1,10 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/VehicleSpecificRpt1", "e61481747bb1386c6b9f8ef5c5adad62", "Header header\n\nuint8 shift_pos_1\nuint8 shift_pos_2\n")]
+    [MsgInfo("pacmod_msgs/VehicleSpecificRpt1", "e61481747bb1386c6b9f8ef5c5adad62", @"Header header
+
+uint8 shift_pos_1
+uint8 shift_pos_2
+")]
     public partial class VehicleSpecificRpt1 : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,8 @@
 namespace Roslin.Msg.dynamic_reconfigure
 {
-    [MsgInfo("dynamic_reconfigure/IntParameter", "65fedc7a0cbfb8db035e46194a350bf1", "string name\nint32 value\n")]
+    [MsgInfo("dynamic_reconfigure/IntParameter", "65fedc7a0cbfb8db035e46194a350bf1", @"string name
+int32 value
+")]
     public partial class IntParameter : RosMsg
     {
         public System.String name

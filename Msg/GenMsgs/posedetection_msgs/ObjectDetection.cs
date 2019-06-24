@@ -1,6 +1,9 @@
 namespace Roslin.Msg.posedetection_msgs
 {
-    [MsgInfo("posedetection_msgs/ObjectDetection", "450ee77eda8a92543774df0b858b3605", "Header header\nObject6DPose[] objects\n# unique image id these objects were taken from\n")]
+    [MsgInfo("posedetection_msgs/ObjectDetection", "450ee77eda8a92543774df0b858b3605", @"Header header
+Object6DPose[] objects
+# unique image id these objects were taken from
+")]
     public partial class ObjectDetection : RosMsg
     {
         public std_msgs.Header header

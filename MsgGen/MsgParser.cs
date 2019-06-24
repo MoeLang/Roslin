@@ -426,6 +426,7 @@ namespace Roslin.MsgGen
             switch (name)
             {
                 case "params":
+                case "override":
                     return "@" + name;
                 default:
                     return name;

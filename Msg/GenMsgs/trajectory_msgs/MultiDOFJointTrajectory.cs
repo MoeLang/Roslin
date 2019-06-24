@@ -1,6 +1,16 @@
 namespace Roslin.Msg.trajectory_msgs
 {
-    [MsgInfo("trajectory_msgs/MultiDOFJointTrajectory", "ef145a45a5f47b77b7f5cdde4b16c942", "# The header is used to specify the coordinate frame and the reference time for the trajectory durations\nHeader header\n\n# A representation of a multi-dof joint trajectory (each point is a transformation)\n# Each point along the trajectory will include an array of positions/velocities/accelerations\n# that has the same length as the array of joint names, and has the same order of joints as \n# the joint names array.\n\nstring[] joint_names\nMultiDOFJointTrajectoryPoint[] points\n")]
+    [MsgInfo("trajectory_msgs/MultiDOFJointTrajectory", "ef145a45a5f47b77b7f5cdde4b16c942", @"# The header is used to specify the coordinate frame and the reference time for the trajectory durations
+Header header
+
+# A representation of a multi-dof joint trajectory (each point is a transformation)
+# Each point along the trajectory will include an array of positions/velocities/accelerations
+# that has the same length as the array of joint names, and has the same order of joints as 
+# the joint names array.
+
+string[] joint_names
+MultiDOFJointTrajectoryPoint[] points
+")]
     public partial class MultiDOFJointTrajectory : RosMsg
     {
         public std_msgs.Header header

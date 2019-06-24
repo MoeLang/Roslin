@@ -1,6 +1,32 @@
 namespace Roslin.Msg.visualization_msgs
 {
-    [MsgInfo("visualization_msgs/InteractiveMarker", "dd86d22909d5a3364b384492e35c10af", "# Time/frame info.\n# If header.time is set to 0, the marker will be retransformed into\n# its frame on each timestep. You will receive the pose feedback\n# in the same frame.\n# Otherwise, you might receive feedback in a different frame.\n# For rviz, this will be the current 'fixed frame' set by the user.\nHeader header\n\n# Initial pose. Also, defines the pivot point for rotations.\ngeometry_msgs/Pose pose\n\n# Identifying string. Must be globally unique in\n# the topic that this message is sent through.\nstring name\n\n# Short description (< 40 characters).\nstring description\n\n# Scale to be used for default controls (default=1).\nfloat32 scale\n\n# All menu and submenu entries associated with this marker.\nMenuEntry[] menu_entries\n\n# List of controls displayed for this marker.\nInteractiveMarkerControl[] controls\n")]
+    [MsgInfo("visualization_msgs/InteractiveMarker", "dd86d22909d5a3364b384492e35c10af", @"# Time/frame info.
+# If header.time is set to 0, the marker will be retransformed into
+# its frame on each timestep. You will receive the pose feedback
+# in the same frame.
+# Otherwise, you might receive feedback in a different frame.
+# For rviz, this will be the current 'fixed frame' set by the user.
+Header header
+
+# Initial pose. Also, defines the pivot point for rotations.
+geometry_msgs/Pose pose
+
+# Identifying string. Must be globally unique in
+# the topic that this message is sent through.
+string name
+
+# Short description (< 40 characters).
+string description
+
+# Scale to be used for default controls (default=1).
+float32 scale
+
+# All menu and submenu entries associated with this marker.
+MenuEntry[] menu_entries
+
+# List of controls displayed for this marker.
+InteractiveMarkerControl[] controls
+")]
     public partial class InteractiveMarker : RosMsg
     {
         public std_msgs.Header header

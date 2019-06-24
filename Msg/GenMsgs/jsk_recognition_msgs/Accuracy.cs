@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/Accuracy", "198da9dc2684aac2aa03a85a3344f5ef", "Header header\nfloat32 accuracy\n")]
+    [MsgInfo("jsk_recognition_msgs/Accuracy", "198da9dc2684aac2aa03a85a3344f5ef", @"Header header
+float32 accuracy
+")]
     public partial class Accuracy : RosMsg
     {
         public std_msgs.Header header

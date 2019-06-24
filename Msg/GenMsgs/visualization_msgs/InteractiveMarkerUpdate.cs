@@ -1,6 +1,37 @@
 namespace Roslin.Msg.visualization_msgs
 {
-    [MsgInfo("visualization_msgs/InteractiveMarkerUpdate", "710d308d0a9276d65945e92dd30b3946", "# Identifying string. Must be unique in the topic namespace\n# that this server works on.\nstring server_id\n\n# Sequence number.\n# The client will use this to detect if it has missed an update.\nuint64 seq_num\n\n# Type holds the purpose of this message.  It must be one of UPDATE or KEEP_ALIVE.\n# UPDATE: Incremental update to previous state. \n#         The sequence number must be 1 higher than for\n#         the previous update.\n# KEEP_ALIVE: Indicates the that the server is still living.\n#             The sequence number does not increase.\n#             No payload data should be filled out (markers, poses, or erases).\nuint8 KEEP_ALIVE = 0\nuint8 UPDATE = 1\n\nuint8 type\n\n#Note: No guarantees on the order of processing.\n#      Contents must be kept consistent by sender.\n\n#Markers to be added or updated\nInteractiveMarker[] markers\n\n#Poses of markers that should be moved\nInteractiveMarkerPose[] poses\n\n#Names of markers to be erased\nstring[] erases\n")]
+    [MsgInfo("visualization_msgs/InteractiveMarkerUpdate", "710d308d0a9276d65945e92dd30b3946", @"# Identifying string. Must be unique in the topic namespace
+# that this server works on.
+string server_id
+
+# Sequence number.
+# The client will use this to detect if it has missed an update.
+uint64 seq_num
+
+# Type holds the purpose of this message.  It must be one of UPDATE or KEEP_ALIVE.
+# UPDATE: Incremental update to previous state. 
+#         The sequence number must be 1 higher than for
+#         the previous update.
+# KEEP_ALIVE: Indicates the that the server is still living.
+#             The sequence number does not increase.
+#             No payload data should be filled out (markers, poses, or erases).
+uint8 KEEP_ALIVE = 0
+uint8 UPDATE = 1
+
+uint8 type
+
+#Note: No guarantees on the order of processing.
+#      Contents must be kept consistent by sender.
+
+#Markers to be added or updated
+InteractiveMarker[] markers
+
+#Poses of markers that should be moved
+InteractiveMarkerPose[] poses
+
+#Names of markers to be erased
+string[] erases
+")]
     public partial class InteractiveMarkerUpdate : RosMsg
     {
         public System.Byte KEEP_ALIVE => 0;

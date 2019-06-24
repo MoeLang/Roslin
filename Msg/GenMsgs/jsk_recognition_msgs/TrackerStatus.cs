@@ -1,6 +1,11 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/TrackerStatus", "78e8f06a6b728df052dd181bfcf6c26e", "Header header\n# if true, it means the tracker is trying to track object,\n# else, the tracker think scene is stable and no need to track\n# to save computational resource.\nbool is_tracking\n")]
+    [MsgInfo("jsk_recognition_msgs/TrackerStatus", "78e8f06a6b728df052dd181bfcf6c26e", @"Header header
+# if true, it means the tracker is trying to track object,
+# else, the tracker think scene is stable and no need to track
+# to save computational resource.
+bool is_tracking
+")]
     public partial class TrackerStatus : RosMsg
     {
         public std_msgs.Header header

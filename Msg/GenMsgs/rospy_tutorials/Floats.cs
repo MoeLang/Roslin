@@ -1,6 +1,7 @@
 namespace Roslin.Msg.rospy_tutorials
 {
-    [MsgInfo("rospy_tutorials/Floats", "420cd38b6b071cd49f2970c3e2cee511", "float32[] data\n")]
+    [MsgInfo("rospy_tutorials/Floats", "420cd38b6b071cd49f2970c3e2cee511", @"float32[] data
+")]
     public partial class Floats : RosMsg
     {
         public System.Single[] data

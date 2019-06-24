@@ -1,6 +1,14 @@
 namespace Roslin.Msg.automotive_navigation_msgs
 {
-    [MsgInfo("automotive_navigation_msgs/Direction", "be51359feea72effac0609673308da52", "# Simple vehicle direction\nHeader header\n\nint8 BACKWARD=-1\nint8 ZERO=0\nint8 FORWARD=1\n\nint8 direction\n")]
+    [MsgInfo("automotive_navigation_msgs/Direction", "be51359feea72effac0609673308da52", @"# Simple vehicle direction
+Header header
+
+int8 BACKWARD=-1
+int8 ZERO=0
+int8 FORWARD=1
+
+int8 direction
+")]
     public partial class Direction : RosMsg
     {
         public System.SByte BACKWARD => -1;

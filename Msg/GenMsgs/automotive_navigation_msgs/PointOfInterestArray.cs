@@ -1,6 +1,13 @@
 namespace Roslin.Msg.automotive_navigation_msgs
 {
-    [MsgInfo("automotive_navigation_msgs/PointOfInterestArray", "23d123c6723540d685425f0f725601ab", "# Point of Interest List Message\n# Contains an array of points of interest\n# update_num is incremented each time a new list is sent\n\nstd_msgs/Header header\nuint16 update_num\nautomotive_navigation_msgs/PointOfInterest[] point_list\n")]
+    [MsgInfo("automotive_navigation_msgs/PointOfInterestArray", "23d123c6723540d685425f0f725601ab", @"# Point of Interest List Message
+# Contains an array of points of interest
+# update_num is incremented each time a new list is sent
+
+std_msgs/Header header
+uint16 update_num
+automotive_navigation_msgs/PointOfInterest[] point_list
+")]
     public partial class PointOfInterestArray : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,11 @@
 namespace Roslin.Msg.posedetection_msgs
 {
-    [MsgInfo("posedetection_msgs/Feature1D", "4568f21f2dd0840ca2d658d4d1710f33", "Header header\nCurve1D[] lines # N, 0-indexed\nfloat32[] descriptors # N*descriptor_dim\nfloat32[] confidences # optional\nint32 descriptor_dim\n")]
+    [MsgInfo("posedetection_msgs/Feature1D", "4568f21f2dd0840ca2d658d4d1710f33", @"Header header
+Curve1D[] lines # N, 0-indexed
+float32[] descriptors # N*descriptor_dim
+float32[] confidences # optional
+int32 descriptor_dim
+")]
     public partial class Feature1D : RosMsg
     {
         public std_msgs.Header header

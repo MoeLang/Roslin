@@ -1,6 +1,10 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/PoseWithCovarianceStamped", "953b798c0f514ff060a53a3498ce6246", "# This expresses an estimated pose with a reference coordinate frame and timestamp\n\nHeader header\nPoseWithCovariance pose\n")]
+    [MsgInfo("geometry_msgs/PoseWithCovarianceStamped", "953b798c0f514ff060a53a3498ce6246", @"# This expresses an estimated pose with a reference coordinate frame and timestamp
+
+Header header
+PoseWithCovariance pose
+")]
     public partial class PoseWithCovarianceStamped : RosMsg
     {
         public std_msgs.Header header

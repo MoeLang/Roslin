@@ -1,6 +1,13 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/VinRpt", "9adca84caaa097b32fc7b71a0ca8da36", "Header header\n\nstring mfg_code\nstring mfg\nstring model_year_code\nuint32 model_year\nuint32 serial\n")]
+    [MsgInfo("pacmod_msgs/VinRpt", "9adca84caaa097b32fc7b71a0ca8da36", @"Header header
+
+string mfg_code
+string mfg
+string model_year_code
+uint32 model_year
+uint32 serial
+")]
     public partial class VinRpt : RosMsg
     {
         public std_msgs.Header header

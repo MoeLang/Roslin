@@ -1,6 +1,14 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/SystemCmdBool", "ebee3259c3c8f34dec0d921f3c0fa804", "Header header\n\nbool enable\nbool ignore_overrides\nbool clear_override\nbool clear_faults\n\nbool command\n")]
+    [MsgInfo("pacmod_msgs/SystemCmdBool", "ebee3259c3c8f34dec0d921f3c0fa804", @"Header header
+
+bool enable
+bool ignore_overrides
+bool clear_override
+bool clear_faults
+
+bool command
+")]
     public partial class SystemCmdBool : RosMsg
     {
         public std_msgs.Header header

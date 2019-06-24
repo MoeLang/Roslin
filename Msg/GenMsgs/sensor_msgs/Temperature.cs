@@ -1,6 +1,13 @@
 namespace Roslin.Msg.sensor_msgs
 {
-    [MsgInfo("sensor_msgs/Temperature", "ff71b307acdbe7c871a5a6d7ed359100", " # Single temperature reading.\n\n Header header           # timestamp is the time the temperature was measured\n                         # frame_id is the location of the temperature reading\n\n float64 temperature     # Measurement of the Temperature in Degrees Celsius\n\n float64 variance        # 0 is interpreted as variance unknown")]
+    [MsgInfo("sensor_msgs/Temperature", "ff71b307acdbe7c871a5a6d7ed359100", @" # Single temperature reading.
+
+ Header header           # timestamp is the time the temperature was measured
+                         # frame_id is the location of the temperature reading
+
+ float64 temperature     # Measurement of the Temperature in Degrees Celsius
+
+ float64 variance        # 0 is interpreted as variance unknown")]
     public partial class Temperature : RosMsg
     {
         public std_msgs.Header header

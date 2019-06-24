@@ -1,6 +1,22 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/Inertia", "1d26e4bb6c83ff141c5cf0d883c2b0fe", "# Mass [kg]\nfloat64 m\n\n# Center of mass [m]\ngeometry_msgs/Vector3 com\n\n# Inertia Tensor [kg-m^2]\n#     | ixx ixy ixz |\n# I = | ixy iyy iyz |\n#     | ixz iyz izz |\nfloat64 ixx\nfloat64 ixy\nfloat64 ixz\nfloat64 iyy\nfloat64 iyz\nfloat64 izz\n")]
+    [MsgInfo("geometry_msgs/Inertia", "1d26e4bb6c83ff141c5cf0d883c2b0fe", @"# Mass [kg]
+float64 m
+
+# Center of mass [m]
+geometry_msgs/Vector3 com
+
+# Inertia Tensor [kg-m^2]
+#     | ixx ixy ixz |
+# I = | ixy iyy iyz |
+#     | ixz iyz izz |
+float64 ixx
+float64 ixy
+float64 ixz
+float64 iyy
+float64 iyz
+float64 izz
+")]
     public partial class Inertia : RosMsg
     {
         public System.Double m

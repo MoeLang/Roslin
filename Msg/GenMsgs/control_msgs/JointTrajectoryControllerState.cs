@@ -1,6 +1,11 @@
 namespace Roslin.Msg.control_msgs
 {
-    [MsgInfo("control_msgs/JointTrajectoryControllerState", "10817c60c2486ef6b33e97dcd87f4474", "Header header\nstring[] joint_names\ntrajectory_msgs/JointTrajectoryPoint desired\ntrajectory_msgs/JointTrajectoryPoint actual\ntrajectory_msgs/JointTrajectoryPoint error  # Redundant, but useful\n")]
+    [MsgInfo("control_msgs/JointTrajectoryControllerState", "10817c60c2486ef6b33e97dcd87f4474", @"Header header
+string[] joint_names
+trajectory_msgs/JointTrajectoryPoint desired
+trajectory_msgs/JointTrajectoryPoint actual
+trajectory_msgs/JointTrajectoryPoint error  # Redundant, but useful
+")]
     public partial class JointTrajectoryControllerState : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,9 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/WrenchStamped", "d78d3cb249ce23087ade7e7d0c40cfa7", "# A wrench with reference coordinate frame and timestamp\nHeader header\nWrench wrench\n")]
+    [MsgInfo("geometry_msgs/WrenchStamped", "d78d3cb249ce23087ade7e7d0c40cfa7", @"# A wrench with reference coordinate frame and timestamp
+Header header
+Wrench wrench
+")]
     public partial class WrenchStamped : RosMsg
     {
         public std_msgs.Header header

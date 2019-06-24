@@ -1,6 +1,23 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/AdaptiveCruiseControlCommand", "45cb31c55c795766905c8d3ddf401e18", "# Adaptive Cruise Control Command Message\n# Contains commands to engage/disengage ACC or adjust the set points\n\nHeader header\n\nuint8 msg_counter   # Increments each time a command is sent\n                    # An acknowledge message should be published with this value\n\nfloat32 set_speed   # Speed setpoint (m/sec)\nuint16 set          # Engage ACC at the above speed set point\nuint16 resume       # Resume ACC at previous speed set point\nuint16 cancel       # Disengage ACC\nuint16 speed_up     # Increase speed set point\nuint16 slow_down    # Decrease speed set point\nuint16 further      # Increase distance set point\nuint16 closer       # Decrease distance set point\n\n")]
+    [MsgInfo("automotive_platform_msgs/AdaptiveCruiseControlCommand", "45cb31c55c795766905c8d3ddf401e18", @"# Adaptive Cruise Control Command Message
+# Contains commands to engage/disengage ACC or adjust the set points
+
+Header header
+
+uint8 msg_counter   # Increments each time a command is sent
+                    # An acknowledge message should be published with this value
+
+float32 set_speed   # Speed setpoint (m/sec)
+uint16 set          # Engage ACC at the above speed set point
+uint16 resume       # Resume ACC at previous speed set point
+uint16 cancel       # Disengage ACC
+uint16 speed_up     # Increase speed set point
+uint16 slow_down    # Decrease speed set point
+uint16 further      # Increase distance set point
+uint16 closer       # Decrease distance set point
+
+")]
     public partial class AdaptiveCruiseControlCommand : RosMsg
     {
         public std_msgs.Header header

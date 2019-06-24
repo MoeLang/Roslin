@@ -1,6 +1,10 @@
 namespace Roslin.Msg.image_view2
 {
-    [MsgInfo("image_view2/PointArrayStamped", "2199cac4695ce1fc0f346db535dda30d", "Header header\n\ngeometry_msgs/Point[] points\n\n")]
+    [MsgInfo("image_view2/PointArrayStamped", "2199cac4695ce1fc0f346db535dda30d", @"Header header
+
+geometry_msgs/Point[] points
+
+")]
     public partial class PointArrayStamped : RosMsg
     {
         public std_msgs.Header header

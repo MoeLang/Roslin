@@ -1,6 +1,95 @@
 namespace Roslin.Msg.gps_common
 {
-    [MsgInfo("gps_common/GPSFix", "3db3d0a7bc53054c67c528af84710b70", "# A more complete GPS fix to supplement sensor_msgs/NavSatFix.\nHeader header\n\nGPSStatus status\n\n# Latitude (degrees). Positive is north of equator; negative is south.\nfloat64 latitude\n\n# Longitude (degrees). Positive is east of prime meridian, negative west.\nfloat64 longitude\n\n# Altitude (meters). Positive is above reference (e.g., sea level).\nfloat64 altitude\n\n# Direction (degrees from north)\nfloat64 track\n\n# Ground speed (meters/second)\nfloat64 speed\n\n# Vertical speed (meters/second)\nfloat64 climb\n\n# Device orientation (units in degrees)\nfloat64 pitch\nfloat64 roll\nfloat64 dip\n\n# GPS time\nfloat64 time\n\n## Dilution of precision; Xdop<=0 means the value is unknown\n\n# Total (positional-temporal) dilution of precision\nfloat64 gdop\n\n# Positional (3D) dilution of precision\nfloat64 pdop\n\n# Horizontal dilution of precision\nfloat64 hdop\n\n# Vertical dilution of precision\nfloat64 vdop\n\n# Temporal dilution of precision\nfloat64 tdop\n\n## Uncertainty of measurement, 95% confidence\n\n# Spherical position uncertainty (meters) [epe]\nfloat64 err\n\n# Horizontal position uncertainty (meters) [eph]\nfloat64 err_horz\n\n# Vertical position uncertainty (meters) [epv]\nfloat64 err_vert\n\n# Track uncertainty (degrees) [epd]\nfloat64 err_track\n\n# Ground speed uncertainty (meters/second) [eps]\nfloat64 err_speed\n\n# Vertical speed uncertainty (meters/second) [epc]\nfloat64 err_climb\n\n# Temporal uncertainty [ept]\nfloat64 err_time\n\n# Orientation uncertainty (degrees)\nfloat64 err_pitch\nfloat64 err_roll\nfloat64 err_dip\n\n# Position covariance [m^2] defined relative to a tangential plane\n# through the reported position. The components are East, North, and\n# Up (ENU), in row-major order.\n\nfloat64[9] position_covariance\n\nuint8 COVARIANCE_TYPE_UNKNOWN = 0\nuint8 COVARIANCE_TYPE_APPROXIMATED = 1\nuint8 COVARIANCE_TYPE_DIAGONAL_KNOWN = 2\nuint8 COVARIANCE_TYPE_KNOWN = 3\n\nuint8 position_covariance_type\n\n")]
+    [MsgInfo("gps_common/GPSFix", "3db3d0a7bc53054c67c528af84710b70", @"# A more complete GPS fix to supplement sensor_msgs/NavSatFix.
+Header header
+
+GPSStatus status
+
+# Latitude (degrees). Positive is north of equator; negative is south.
+float64 latitude
+
+# Longitude (degrees). Positive is east of prime meridian, negative west.
+float64 longitude
+
+# Altitude (meters). Positive is above reference (e.g., sea level).
+float64 altitude
+
+# Direction (degrees from north)
+float64 track
+
+# Ground speed (meters/second)
+float64 speed
+
+# Vertical speed (meters/second)
+float64 climb
+
+# Device orientation (units in degrees)
+float64 pitch
+float64 roll
+float64 dip
+
+# GPS time
+float64 time
+
+## Dilution of precision; Xdop<=0 means the value is unknown
+
+# Total (positional-temporal) dilution of precision
+float64 gdop
+
+# Positional (3D) dilution of precision
+float64 pdop
+
+# Horizontal dilution of precision
+float64 hdop
+
+# Vertical dilution of precision
+float64 vdop
+
+# Temporal dilution of precision
+float64 tdop
+
+## Uncertainty of measurement, 95% confidence
+
+# Spherical position uncertainty (meters) [epe]
+float64 err
+
+# Horizontal position uncertainty (meters) [eph]
+float64 err_horz
+
+# Vertical position uncertainty (meters) [epv]
+float64 err_vert
+
+# Track uncertainty (degrees) [epd]
+float64 err_track
+
+# Ground speed uncertainty (meters/second) [eps]
+float64 err_speed
+
+# Vertical speed uncertainty (meters/second) [epc]
+float64 err_climb
+
+# Temporal uncertainty [ept]
+float64 err_time
+
+# Orientation uncertainty (degrees)
+float64 err_pitch
+float64 err_roll
+float64 err_dip
+
+# Position covariance [m^2] defined relative to a tangential plane
+# through the reported position. The components are East, North, and
+# Up (ENU), in row-major order.
+
+float64[9] position_covariance
+
+uint8 COVARIANCE_TYPE_UNKNOWN = 0
+uint8 COVARIANCE_TYPE_APPROXIMATED = 1
+uint8 COVARIANCE_TYPE_DIAGONAL_KNOWN = 2
+uint8 COVARIANCE_TYPE_KNOWN = 3
+
+uint8 position_covariance_type
+
+")]
     public partial class GPSFix : RosMsg
     {
         public System.Byte COVARIANCE_TYPE_UNKNOWN => 0;

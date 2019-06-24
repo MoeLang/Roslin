@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/WeightedPoseArray", "40f180494a75a8797b1c2ba81b2cb4c0", "Header header\nfloat32[] weights\ngeometry_msgs/PoseArray poses\n")]
+    [MsgInfo("jsk_recognition_msgs/WeightedPoseArray", "40f180494a75a8797b1c2ba81b2cb4c0", @"Header header
+float32[] weights
+geometry_msgs/PoseArray poses
+")]
     public partial class WeightedPoseArray : RosMsg
     {
         public std_msgs.Header header

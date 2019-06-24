@@ -1,6 +1,13 @@
 namespace Roslin.Msg.gazebo_msgs
 {
-    [MsgInfo("gazebo_msgs/ModelState", "9330fd35f2fcd82d457e54bd54e10593", "# Set Gazebo Model pose and twist\nstring model_name           # model to set state (pose and twist)\ngeometry_msgs/Pose pose     # desired pose in reference frame\ngeometry_msgs/Twist twist   # desired twist in reference frame\nstring reference_frame      # set pose/twist relative to the frame of this entity (Body/Model)\n                            # leave empty or \"world\" or \"map\" defaults to world-frame\n\n")]
+    [MsgInfo("gazebo_msgs/ModelState", "9330fd35f2fcd82d457e54bd54e10593", @"# Set Gazebo Model pose and twist
+string model_name           # model to set state (pose and twist)
+geometry_msgs/Pose pose     # desired pose in reference frame
+geometry_msgs/Twist twist   # desired twist in reference frame
+string reference_frame      # set pose/twist relative to the frame of this entity (Body/Model)
+                            # leave empty or ""world"" or ""map"" defaults to world-frame
+
+")]
     public partial class ModelState : RosMsg
     {
         public System.String model_name

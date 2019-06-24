@@ -1,6 +1,48 @@
 namespace Roslin.Msg.gazebo_msgs
 {
-    [MsgInfo("gazebo_msgs/WorldState", "de1a9de3ab7ba97ac0e9ec01a4eb481e", "# This is a message that holds data necessary to reconstruct a snapshot of the world\n#\n# = Approach to Message Passing =\n# The state of the world is defined by either\n#   1. Inertial Model pose, twist\n#      * kinematic data - connectivity graph from Model to each Link\n#      * joint angles\n#      * joint velocities\n#      * Applied forces - Body wrench\n#        * relative transform from Body to each collision Geom\n# Or\n#   2. Inertial (absolute) Body pose, twist, wrench\n#      * relative transform from Body to each collision Geom - constant, so not sent over wire\n#      * back compute from canonical body info to get Model pose and twist.\n#\n# Chooing (2.) because it matches most physics engines out there\n#   and is simpler.\n#\n# = Future =\n# Consider impacts on using reduced coordinates / graph (parent/child links) approach\n#   constraint and physics solvers.\n#\n# = Application =\n# This message is used to do the following:\n#   * reconstruct the world and objects for sensor generation\n#   * stop / start simulation - need pose, twist, wrench of each body\n#   * collision detection - need pose of each collision geometry.  velocity/acceleration if\n#\n# = Assumptions =\n# Assuming that each (physics) processor node locally already has\n#   * collision information - Trimesh for Geoms, etc\n#   * relative transforms from Body to Geom - this is assumed to be fixed, do not send oved wire\n#   * inertial information - does not vary in time\n#   * visual information - does not vary in time\n#\n\nHeader header\n\nstring[] name\ngeometry_msgs/Pose[] pose\ngeometry_msgs/Twist[] twist\ngeometry_msgs/Wrench[] wrench\n")]
+    [MsgInfo("gazebo_msgs/WorldState", "de1a9de3ab7ba97ac0e9ec01a4eb481e", @"# This is a message that holds data necessary to reconstruct a snapshot of the world
+#
+# = Approach to Message Passing =
+# The state of the world is defined by either
+#   1. Inertial Model pose, twist
+#      * kinematic data - connectivity graph from Model to each Link
+#      * joint angles
+#      * joint velocities
+#      * Applied forces - Body wrench
+#        * relative transform from Body to each collision Geom
+# Or
+#   2. Inertial (absolute) Body pose, twist, wrench
+#      * relative transform from Body to each collision Geom - constant, so not sent over wire
+#      * back compute from canonical body info to get Model pose and twist.
+#
+# Chooing (2.) because it matches most physics engines out there
+#   and is simpler.
+#
+# = Future =
+# Consider impacts on using reduced coordinates / graph (parent/child links) approach
+#   constraint and physics solvers.
+#
+# = Application =
+# This message is used to do the following:
+#   * reconstruct the world and objects for sensor generation
+#   * stop / start simulation - need pose, twist, wrench of each body
+#   * collision detection - need pose of each collision geometry.  velocity/acceleration if
+#
+# = Assumptions =
+# Assuming that each (physics) processor node locally already has
+#   * collision information - Trimesh for Geoms, etc
+#   * relative transforms from Body to Geom - this is assumed to be fixed, do not send oved wire
+#   * inertial information - does not vary in time
+#   * visual information - does not vary in time
+#
+
+Header header
+
+string[] name
+geometry_msgs/Pose[] pose
+geometry_msgs/Twist[] twist
+geometry_msgs/Wrench[] wrench
+")]
     public partial class WorldState : RosMsg
     {
         public std_msgs.Header header

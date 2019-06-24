@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_topic_tools
 {
-    [MsgInfo("jsk_topic_tools/TopicInfo", "78edf14defd72c2fcd29e4fad0165ea9", "string topic_name\nfloat64 rate\n\n")]
+    [MsgInfo("jsk_topic_tools/TopicInfo", "78edf14defd72c2fcd29e4fad0165ea9", @"string topic_name
+float64 rate
+
+")]
     public partial class TopicInfo : RosMsg
     {
         public System.String topic_name

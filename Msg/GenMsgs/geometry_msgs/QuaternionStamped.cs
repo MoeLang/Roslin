@@ -1,6 +1,10 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/QuaternionStamped", "e57f1e547e0e1fd13504588ffc8334e2", "# This represents an orientation with reference coordinate frame and timestamp.\n\nHeader header\nQuaternion quaternion\n")]
+    [MsgInfo("geometry_msgs/QuaternionStamped", "e57f1e547e0e1fd13504588ffc8334e2", @"# This represents an orientation with reference coordinate frame and timestamp.
+
+Header header
+Quaternion quaternion
+")]
     public partial class QuaternionStamped : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/PeoplePose", "24f6e59dae1b7cbd9d480f0008a5a515", "string[] limb_names\ngeometry_msgs/Pose[] poses\nfloat32[] scores")]
+    [MsgInfo("jsk_recognition_msgs/PeoplePose", "24f6e59dae1b7cbd9d480f0008a5a515", @"string[] limb_names
+geometry_msgs/Pose[] poses
+float32[] scores")]
     public partial class PeoplePose : RosMsg
     {
         public System.String[] limb_names

@@ -1,6 +1,11 @@
 namespace Roslin.Msg.jsk_rviz_plugins
 {
-    [MsgInfo("jsk_rviz_plugins/RecordCommand", "31931c62eab5500089183eef0161c139", "uint8 RECORD=0\nuint8 RECORD_STOP=1\nuint8 PLAY=2\n\nint8 command\nstring target")]
+    [MsgInfo("jsk_rviz_plugins/RecordCommand", "31931c62eab5500089183eef0161c139", @"uint8 RECORD=0
+uint8 RECORD_STOP=1
+uint8 PLAY=2
+
+int8 command
+string target")]
     public partial class RecordCommand : RosMsg
     {
         public System.Byte RECORD => 0;

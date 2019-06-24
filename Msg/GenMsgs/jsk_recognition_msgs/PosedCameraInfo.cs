@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/PosedCameraInfo", "bfcbc4847adb445a428e4af537ed849a", "Header header\nsensor_msgs/CameraInfo camera_info\ngeometry_msgs/Pose offset\n")]
+    [MsgInfo("jsk_recognition_msgs/PosedCameraInfo", "bfcbc4847adb445a428e4af537ed849a", @"Header header
+sensor_msgs/CameraInfo camera_info
+geometry_msgs/Pose offset
+")]
     public partial class PosedCameraInfo : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,19 @@
 namespace Roslin.Msg.nmea_msgs
 {
-    [MsgInfo("nmea_msgs/Gpgsa", "94a6ef4a36d322374b16097a5d03433e", "# Message from GPGSA NMEA String\nHeader header\n\nstring message_id\n\nstring auto_manual_mode\nuint8 fix_mode\n\nuint8[] sv_ids\n\nfloat32 pdop\nfloat32 hdop\nfloat32 vdop\n")]
+    [MsgInfo("nmea_msgs/Gpgsa", "94a6ef4a36d322374b16097a5d03433e", @"# Message from GPGSA NMEA String
+Header header
+
+string message_id
+
+string auto_manual_mode
+uint8 fix_mode
+
+uint8[] sv_ids
+
+float32 pdop
+float32 hdop
+float32 vdop
+")]
     public partial class Gpgsa : RosMsg
     {
         public std_msgs.Header header

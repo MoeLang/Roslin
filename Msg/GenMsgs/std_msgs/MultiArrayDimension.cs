@@ -1,6 +1,8 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/MultiArrayDimension", "4cd0c83a8683deae40ecdac60e53bfa8", "string label   # label of given dimension\nuint32 size    # size of given dimension (in type units)\nuint32 stride  # stride of given dimension")]
+    [MsgInfo("std_msgs/MultiArrayDimension", "4cd0c83a8683deae40ecdac60e53bfa8", @"string label   # label of given dimension
+uint32 size    # size of given dimension (in type units)
+uint32 stride  # stride of given dimension")]
     public partial class MultiArrayDimension : RosMsg
     {
         public System.String label

@@ -1,6 +1,9 @@
 namespace Roslin.Msg.people_msgs
 {
-    [MsgInfo("people_msgs/PersonStamped", "4a352a8b709eb9fec941a4f0f42651e7", "Header header\npeople_msgs/Person person\n\n")]
+    [MsgInfo("people_msgs/PersonStamped", "4a352a8b709eb9fec941a4f0f42651e7", @"Header header
+people_msgs/Person person
+
+")]
     public partial class PersonStamped : RosMsg
     {
         public std_msgs.Header header

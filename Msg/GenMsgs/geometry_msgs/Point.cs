@@ -1,6 +1,10 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/Point", "4a842b65f413084dc2b10fb484ea7f17", "# This contains the position of a point in free space\nfloat64 x\nfloat64 y\nfloat64 z\n")]
+    [MsgInfo("geometry_msgs/Point", "4a842b65f413084dc2b10fb484ea7f17", @"# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+")]
     public partial class Point : RosMsg
     {
         public System.Double x

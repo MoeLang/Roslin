@@ -1,6 +1,12 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/SteeringPIDRpt3", "722f63b47fd2935245656ab58fbec284", "Header header\n\nfloat64 new_torque         \nfloat64 str_angle_desired  \nfloat64 str_angle_actual         \nfloat64 error\n")]
+    [MsgInfo("pacmod_msgs/SteeringPIDRpt3", "722f63b47fd2935245656ab58fbec284", @"Header header
+
+float64 new_torque         
+float64 str_angle_desired  
+float64 str_angle_actual         
+float64 error
+")]
     public partial class SteeringPIDRpt3 : RosMsg
     {
         public std_msgs.Header header

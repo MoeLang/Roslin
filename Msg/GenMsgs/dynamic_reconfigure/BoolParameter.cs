@@ -1,6 +1,8 @@
 namespace Roslin.Msg.dynamic_reconfigure
 {
-    [MsgInfo("dynamic_reconfigure/BoolParameter", "23f05028c1a699fb83e22401228c3a9e", "string name\nbool value\n")]
+    [MsgInfo("dynamic_reconfigure/BoolParameter", "23f05028c1a699fb83e22401228c3a9e", @"string name
+bool value
+")]
     public partial class BoolParameter : RosMsg
     {
         public System.String name

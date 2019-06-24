@@ -1,6 +1,24 @@
 namespace Roslin.Msg.smach_msgs
 {
-    [MsgInfo("smach_msgs/SmachContainerStatus", "5ba2bb79ac19e3842d562a191f2a675b", "Header header\n\n# The path to this node in the server\nstring path\n\n# The initial state description\n# Effects an arc from the top state to each one\nstring[] initial_states\n\n# The current state description\nstring[] active_states\n\n# A pickled user data structure\n# i.e. the UserData's internal dictionary\nstring local_data\n\n# Debugging info string\nstring info\n")]
+    [MsgInfo("smach_msgs/SmachContainerStatus", "5ba2bb79ac19e3842d562a191f2a675b", @"Header header
+
+# The path to this node in the server
+string path
+
+# The initial state description
+# Effects an arc from the top state to each one
+string[] initial_states
+
+# The current state description
+string[] active_states
+
+# A pickled user data structure
+# i.e. the UserData's internal dictionary
+string local_data
+
+# Debugging info string
+string info
+")]
     public partial class SmachContainerStatus : RosMsg
     {
         public std_msgs.Header header

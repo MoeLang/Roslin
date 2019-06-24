@@ -1,6 +1,19 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/Object", "57c53e712043df0244b0482d0447adee", "# object instant info (ex. oreo_cookie)\nint32 id  # object id\nstring name  # object name\n\n# object class info (ex. snack)\nint32 class_id\nstring class_name\n\nstring[] image_resources  # image urls\nstring mesh_resource  # mesh file url\n\nfloat32 weight  # weight [kg]\ngeometry_msgs/Vector3 dimensions  # bounding box [m]\n")]
+    [MsgInfo("jsk_recognition_msgs/Object", "57c53e712043df0244b0482d0447adee", @"# object instant info (ex. oreo_cookie)
+int32 id  # object id
+string name  # object name
+
+# object class info (ex. snack)
+int32 class_id
+string class_name
+
+string[] image_resources  # image urls
+string mesh_resource  # mesh file url
+
+float32 weight  # weight [kg]
+geometry_msgs/Vector3 dimensions  # bounding box [m]
+")]
     public partial class Object : RosMsg
     {
         public System.Int32 id

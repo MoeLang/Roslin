@@ -1,6 +1,19 @@
 namespace Roslin.Msg.control_msgs
 {
-    [MsgInfo("control_msgs/PidState", "b138ec00e886c10e73f27e8712252ea6", "Header header\nduration timestep\nfloat64 error\nfloat64 error_dot\nfloat64 p_error\nfloat64 i_error\nfloat64 d_error\nfloat64 p_term\nfloat64 i_term\nfloat64 d_term\nfloat64 i_max\nfloat64 i_min\nfloat64 output\n")]
+    [MsgInfo("control_msgs/PidState", "b138ec00e886c10e73f27e8712252ea6", @"Header header
+duration timestep
+float64 error
+float64 error_dot
+float64 p_error
+float64 i_error
+float64 d_error
+float64 p_term
+float64 i_term
+float64 d_term
+float64 i_max
+float64 i_min
+float64 output
+")]
     public partial class PidState : RosMsg
     {
         public std_msgs.Header header

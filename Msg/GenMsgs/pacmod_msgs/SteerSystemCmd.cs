@@ -1,6 +1,15 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/SteerSystemCmd", "cfa0df9428e1c56b79ca986e115663f7", "Header header\n\nbool enable\nbool ignore_overrides\nbool clear_override\nbool clear_faults\n\nfloat64 command\nfloat64 rotation_rate\n")]
+    [MsgInfo("pacmod_msgs/SteerSystemCmd", "cfa0df9428e1c56b79ca986e115663f7", @"Header header
+
+bool enable
+bool ignore_overrides
+bool clear_override
+bool clear_faults
+
+float64 command
+float64 rotation_rate
+")]
     public partial class SteerSystemCmd : RosMsg
     {
         public std_msgs.Header header

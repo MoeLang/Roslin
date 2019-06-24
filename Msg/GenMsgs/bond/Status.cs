@@ -1,6 +1,14 @@
 namespace Roslin.Msg.bond
 {
-    [MsgInfo("bond/Status", "eacc84bf5d65b6777d4c50f463dfb9c8", "Header header\nstring id  # ID of the bond\nstring instance_id  # Unique ID for an individual in a bond\nbool active\n\n# Including the timeouts for the bond makes it easier to debug mis-matches\n# between the two sides.\nfloat32 heartbeat_timeout\nfloat32 heartbeat_period")]
+    [MsgInfo("bond/Status", "eacc84bf5d65b6777d4c50f463dfb9c8", @"Header header
+string id  # ID of the bond
+string instance_id  # Unique ID for an individual in a bond
+bool active
+
+# Including the timeouts for the bond makes it easier to debug mis-matches
+# between the two sides.
+float32 heartbeat_timeout
+float32 heartbeat_period")]
     public partial class Status : RosMsg
     {
         public std_msgs.Header header

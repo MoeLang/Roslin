@@ -1,6 +1,9 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/PointStamped", "c63aecb41bfdfd6b7e1fac37c7cbe7bf", "# This represents a Point with reference coordinate frame and timestamp\nHeader header\nPoint point\n")]
+    [MsgInfo("geometry_msgs/PointStamped", "c63aecb41bfdfd6b7e1fac37c7cbe7bf", @"# This represents a Point with reference coordinate frame and timestamp
+Header header
+Point point
+")]
     public partial class PointStamped : RosMsg
     {
         public std_msgs.Header header

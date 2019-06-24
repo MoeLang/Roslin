@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/RotatedRectStamped", "0260299b5425567e14c7b295b58829e9", "Header header\nRotatedRect rect\n")]
+    [MsgInfo("jsk_recognition_msgs/RotatedRectStamped", "0260299b5425567e14c7b295b58829e9", @"Header header
+RotatedRect rect
+")]
     public partial class RotatedRectStamped : RosMsg
     {
         public std_msgs.Header header

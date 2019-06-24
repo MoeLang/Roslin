@@ -1,6 +1,14 @@
 namespace Roslin.Msg.gazebo_msgs
 {
-    [MsgInfo("gazebo_msgs/ContactState", "48c0ffb054b8c444f870cecea1ee50d9", "string info                                   # text info on this contact\nstring collision1_name                        # name of contact collision1\nstring collision2_name                        # name of contact collision2\ngeometry_msgs/Wrench[] wrenches               # list of forces/torques\ngeometry_msgs/Wrench total_wrench             # sum of forces/torques in every DOF\ngeometry_msgs/Vector3[] contact_positions     # list of contact position\ngeometry_msgs/Vector3[] contact_normals       # list of contact normals\nfloat64[] depths                              # list of penetration depths\n")]
+    [MsgInfo("gazebo_msgs/ContactState", "48c0ffb054b8c444f870cecea1ee50d9", @"string info                                   # text info on this contact
+string collision1_name                        # name of contact collision1
+string collision2_name                        # name of contact collision2
+geometry_msgs/Wrench[] wrenches               # list of forces/torques
+geometry_msgs/Wrench total_wrench             # sum of forces/torques in every DOF
+geometry_msgs/Vector3[] contact_positions     # list of contact position
+geometry_msgs/Vector3[] contact_normals       # list of contact normals
+float64[] depths                              # list of penetration depths
+")]
     public partial class ContactState : RosMsg
     {
         public System.String info

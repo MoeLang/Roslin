@@ -1,6 +1,13 @@
 namespace Roslin.Msg.shape_msgs
 {
-    [MsgInfo("shape_msgs/Mesh", "1ffdae9486cd3316a121c578b47a85cc", "# Definition of a mesh\n\n# list of triangles; the index values refer to positions in vertices[]\nMeshTriangle[] triangles\n\n# the actual vertices that make up the mesh\ngeometry_msgs/Point[] vertices\n")]
+    [MsgInfo("shape_msgs/Mesh", "1ffdae9486cd3316a121c578b47a85cc", @"# Definition of a mesh
+
+# list of triangles; the index values refer to positions in vertices[]
+MeshTriangle[] triangles
+
+# the actual vertices that make up the mesh
+geometry_msgs/Point[] vertices
+")]
     public partial class Mesh : RosMsg
     {
         public MeshTriangle[] triangles

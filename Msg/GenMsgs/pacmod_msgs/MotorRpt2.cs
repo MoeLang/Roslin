@@ -1,6 +1,11 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/MotorRpt2", "d757953b36f8ffe8db6389da9ff787a1", "Header header\n\nfloat64 encoder_temp        # Encoder temperature in degrees Celsius\nfloat64 motor_temp          # Internal motor temperature in degrees Celsius\nfloat64 angular_velocity    # Angular velocity of the motor shaft (z axis) in Radians/second\n")]
+    [MsgInfo("pacmod_msgs/MotorRpt2", "d757953b36f8ffe8db6389da9ff787a1", @"Header header
+
+float64 encoder_temp        # Encoder temperature in degrees Celsius
+float64 motor_temp          # Internal motor temperature in degrees Celsius
+float64 angular_velocity    # Angular velocity of the motor shaft (z axis) in Radians/second
+")]
     public partial class MotorRpt2 : RosMsg
     {
         public std_msgs.Header header

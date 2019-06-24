@@ -1,6 +1,11 @@
 namespace Roslin.Msg.actionlib_msgs
 {
-    [MsgInfo("actionlib_msgs/GoalStatusArray", "8b2b82f13216d0a8ea88bd3af735e619", "# Stores the statuses for goals that are currently being tracked\n# by an action server\nHeader header\nGoalStatus[] status_list\n\n")]
+    [MsgInfo("actionlib_msgs/GoalStatusArray", "8b2b82f13216d0a8ea88bd3af735e619", @"# Stores the statuses for goals that are currently being tracked
+# by an action server
+Header header
+GoalStatus[] status_list
+
+")]
     public partial class GoalStatusArray : RosMsg
     {
         public std_msgs.Header header

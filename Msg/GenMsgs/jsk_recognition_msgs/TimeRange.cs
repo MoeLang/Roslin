@@ -1,6 +1,10 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/TimeRange", "a8a69e1e51e3731790c8e4120a725398", "# Represents range of time.\nstd_msgs/Header header\ntime start\ntime end\n")]
+    [MsgInfo("jsk_recognition_msgs/TimeRange", "a8a69e1e51e3731790c8e4120a725398", @"# Represents range of time.
+std_msgs/Header header
+time start
+time end
+")]
     public partial class TimeRange : RosMsg
     {
         public std_msgs.Header header

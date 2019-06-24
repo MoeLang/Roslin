@@ -1,6 +1,10 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/MotorRpt3", "1640bb8a85b4353a76a6e6a5df503313", "Header header\n\nfloat64 torque_output   # Measured torque output of the motor in Newton-Meters\nfloat64 torque_input    # Measured torque input of the motor in Newton-Meters\n")]
+    [MsgInfo("pacmod_msgs/MotorRpt3", "1640bb8a85b4353a76a6e6a5df503313", @"Header header
+
+float64 torque_output   # Measured torque output of the motor in Newton-Meters
+float64 torque_input    # Measured torque input of the motor in Newton-Meters
+")]
     public partial class MotorRpt3 : RosMsg
     {
         public std_msgs.Header header

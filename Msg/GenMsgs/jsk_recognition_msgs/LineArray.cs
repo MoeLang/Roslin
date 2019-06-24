@@ -1,6 +1,9 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/LineArray", "1571346a320fd11e0b7dc11a90a72ddf", "Header header\nLine[] lines\n\n")]
+    [MsgInfo("jsk_recognition_msgs/LineArray", "1571346a320fd11e0b7dc11a90a72ddf", @"Header header
+Line[] lines
+
+")]
     public partial class LineArray : RosMsg
     {
         public std_msgs.Header header

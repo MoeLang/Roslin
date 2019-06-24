@@ -1,6 +1,13 @@
 namespace Roslin.Msg.automotive_navigation_msgs
 {
-    [MsgInfo("automotive_navigation_msgs/RoadNetworkBoundaries", "1401bcf0d0f7367848bb50e6ad210a4b", "# Road Network Boundaries Array Message\n# Contains an array of lane boundary arrays forming a map/road network\n\nstd_msgs/Header header\n\nautomotive_navigation_msgs/LaneBoundaryArray[] road_network_boundaries\n\n")]
+    [MsgInfo("automotive_navigation_msgs/RoadNetworkBoundaries", "1401bcf0d0f7367848bb50e6ad210a4b", @"# Road Network Boundaries Array Message
+# Contains an array of lane boundary arrays forming a map/road network
+
+std_msgs/Header header
+
+automotive_navigation_msgs/LaneBoundaryArray[] road_network_boundaries
+
+")]
     public partial class RoadNetworkBoundaries : RosMsg
     {
         public std_msgs.Header header

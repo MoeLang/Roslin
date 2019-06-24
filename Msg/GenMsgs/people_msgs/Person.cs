@@ -1,6 +1,13 @@
 namespace Roslin.Msg.people_msgs
 {
-    [MsgInfo("people_msgs/Person", "0b7c0818b76476f3863bd13f4d59f8df", "string              name\ngeometry_msgs/Point position\ngeometry_msgs/Point velocity\nfloat64             reliability\nstring[]            tagnames\nstring[]            tags\n\n")]
+    [MsgInfo("people_msgs/Person", "0b7c0818b76476f3863bd13f4d59f8df", @"string              name
+geometry_msgs/Point position
+geometry_msgs/Point velocity
+float64             reliability
+string[]            tagnames
+string[]            tags
+
+")]
     public partial class Person : RosMsg
     {
         public System.String name

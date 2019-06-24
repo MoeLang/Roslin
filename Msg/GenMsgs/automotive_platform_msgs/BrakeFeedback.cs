@@ -1,6 +1,13 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/BrakeFeedback", "2e19ae4283bff8e4baca0a8af4d4961e", "# Current Brake Pedal Position Feedback\n\nstd_msgs/Header header\n\nfloat32 brake_pedal     # 0 to 1.0\n\n\n")]
+    [MsgInfo("automotive_platform_msgs/BrakeFeedback", "2e19ae4283bff8e4baca0a8af4d4961e", @"# Current Brake Pedal Position Feedback
+
+std_msgs/Header header
+
+float32 brake_pedal     # 0 to 1.0
+
+
+")]
     public partial class BrakeFeedback : RosMsg
     {
         public std_msgs.Header header

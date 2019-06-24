@@ -1,6 +1,15 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/PoseWithCovariance", "c23e848cf1b7533a8d7c259073a97e6f", "# This represents a pose in free space with uncertainty.\n\nPose pose\n\n# Row-major representation of the 6x6 covariance matrix\n# The orientation parameters use a fixed-axis representation.\n# In order, the parameters are:\n# (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)\nfloat64[36] covariance\n")]
+    [MsgInfo("geometry_msgs/PoseWithCovariance", "c23e848cf1b7533a8d7c259073a97e6f", @"# This represents a pose in free space with uncertainty.
+
+Pose pose
+
+# Row-major representation of the 6x6 covariance matrix
+# The orientation parameters use a fixed-axis representation.
+# In order, the parameters are:
+# (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)
+float64[36] covariance
+")]
     public partial class PoseWithCovariance : RosMsg
     {
         public Pose pose

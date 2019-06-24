@@ -1,6 +1,6 @@
 namespace Roslin.Msg.jsk_gui_msgs
 {
-    [MsgInfo("jsk_gui_msgs/VoiceMessage", "8d7dcfb3b46640ccf02177a3f0cf9530", "string[] texts")]
+    [MsgInfo("jsk_gui_msgs/VoiceMessage", "8d7dcfb3b46640ccf02177a3f0cf9530", @"string[] texts")]
     public partial class VoiceMessage : RosMsg
     {
         public System.String[] texts

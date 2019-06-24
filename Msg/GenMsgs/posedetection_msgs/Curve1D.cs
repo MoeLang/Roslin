@@ -1,6 +1,7 @@
 namespace Roslin.Msg.posedetection_msgs
 {
-    [MsgInfo("posedetection_msgs/Curve1D", "e5367ca89dc9a58670f8f288e2c52f5d", "float32[] pts # 2xN points in the image\n")]
+    [MsgInfo("posedetection_msgs/Curve1D", "e5367ca89dc9a58670f8f288e2c52f5d", @"float32[] pts # 2xN points in the image
+")]
     public partial class Curve1D : RosMsg
     {
         public System.Single[] pts

@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/PeoplePoseArray", "57d49e8e639421734a0ce15bfde9d80d", "Header header\njsk_recognition_msgs/PeoplePose[] poses\n")]
+    [MsgInfo("jsk_recognition_msgs/PeoplePoseArray", "57d49e8e639421734a0ce15bfde9d80d", @"Header header
+jsk_recognition_msgs/PeoplePose[] poses
+")]
     public partial class PeoplePoseArray : RosMsg
     {
         public std_msgs.Header header

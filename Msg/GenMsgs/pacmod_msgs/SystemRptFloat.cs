@@ -1,6 +1,19 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/SystemRptFloat", "e3af53d7d085bbad777634bcc2681141", "Header header\n\nbool enabled\nbool override_active\nbool command_output_fault\nbool input_output_fault\nbool output_reported_fault\nbool pacmod_fault\nbool vehicle_fault\n\nfloat64 manual_input\nfloat64 command\nfloat64 output\n")]
+    [MsgInfo("pacmod_msgs/SystemRptFloat", "e3af53d7d085bbad777634bcc2681141", @"Header header
+
+bool enabled
+bool override_active
+bool command_output_fault
+bool input_output_fault
+bool output_reported_fault
+bool pacmod_fault
+bool vehicle_fault
+
+float64 manual_input
+float64 command
+float64 output
+")]
     public partial class SystemRptFloat : RosMsg
     {
         public std_msgs.Header header

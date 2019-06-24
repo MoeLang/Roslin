@@ -1,6 +1,9 @@
 namespace Roslin.Msg.pcl_msgs
 {
-    [MsgInfo("pcl_msgs/ModelCoefficients", "ca27dea75e72cb894cd36f9e5005e93e", "Header header\nfloat32[] values\n\n")]
+    [MsgInfo("pcl_msgs/ModelCoefficients", "ca27dea75e72cb894cd36f9e5005e93e", @"Header header
+float32[] values
+
+")]
     public partial class ModelCoefficients : RosMsg
     {
         public std_msgs.Header header

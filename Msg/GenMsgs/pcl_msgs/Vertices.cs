@@ -1,6 +1,8 @@
 namespace Roslin.Msg.pcl_msgs
 {
-    [MsgInfo("pcl_msgs/Vertices", "39bd7b1c23763ddd1b882b97cb7cfe11", "# List of point indices\nuint32[] vertices\n")]
+    [MsgInfo("pcl_msgs/Vertices", "39bd7b1c23763ddd1b882b97cb7cfe11", @"# List of point indices
+uint32[] vertices
+")]
     public partial class Vertices : RosMsg
     {
         public System.UInt32[] vertices

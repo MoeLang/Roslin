@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/SparseOccupancyGridArray", "fa9a1f59b783128c759e159dd0c46731", "Header header\nSparseOccupancyGrid[] grids\n")]
+    [MsgInfo("jsk_recognition_msgs/SparseOccupancyGridArray", "fa9a1f59b783128c759e159dd0c46731", @"Header header
+SparseOccupancyGrid[] grids
+")]
     public partial class SparseOccupancyGridArray : RosMsg
     {
         public std_msgs.Header header

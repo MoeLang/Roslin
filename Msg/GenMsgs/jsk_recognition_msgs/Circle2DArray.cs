@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/Circle2DArray", "7c3f0f08758538a1e02ce600cf99132f", "Header header\nCircle2D[] circles\n")]
+    [MsgInfo("jsk_recognition_msgs/Circle2DArray", "7c3f0f08758538a1e02ce600cf99132f", @"Header header
+Circle2D[] circles
+")]
     public partial class Circle2DArray : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,11 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/Torus", "7172d433485e406ce56f4cf6e9ab1062", "Header header\nbool failure\ngeometry_msgs/Pose pose\nfloat64 large_radius\nfloat64 small_radius\n")]
+    [MsgInfo("jsk_recognition_msgs/Torus", "7172d433485e406ce56f4cf6e9ab1062", @"Header header
+bool failure
+geometry_msgs/Pose pose
+float64 large_radius
+float64 small_radius
+")]
     public partial class Torus : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,9 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/Vector3Stamped", "7b324c7325e683bf02a9b14b01090ec7", "# This represents a Vector3 with reference coordinate frame and timestamp\nHeader header\nVector3 vector\n")]
+    [MsgInfo("geometry_msgs/Vector3Stamped", "7b324c7325e683bf02a9b14b01090ec7", @"# This represents a Vector3 with reference coordinate frame and timestamp
+Header header
+Vector3 vector
+")]
     public partial class Vector3Stamped : RosMsg
     {
         public std_msgs.Header header

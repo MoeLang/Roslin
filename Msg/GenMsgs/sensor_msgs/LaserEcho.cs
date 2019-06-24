@@ -1,6 +1,10 @@
 namespace Roslin.Msg.sensor_msgs
 {
-    [MsgInfo("sensor_msgs/LaserEcho", "8bc5ae449b200fba4d552b4225586696", "# This message is a submessage of MultiEchoLaserScan and is not intended\n# to be used separately.\n\nfloat32[] echoes  # Multiple values of ranges or intensities.\n                  # Each array represents data from the same angle increment.")]
+    [MsgInfo("sensor_msgs/LaserEcho", "8bc5ae449b200fba4d552b4225586696", @"# This message is a submessage of MultiEchoLaserScan and is not intended
+# to be used separately.
+
+float32[] echoes  # Multiple values of ranges or intensities.
+                  # Each array represents data from the same angle increment.")]
     public partial class LaserEcho : RosMsg
     {
         public System.Single[] echoes

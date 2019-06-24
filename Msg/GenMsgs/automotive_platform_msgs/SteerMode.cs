@@ -1,6 +1,17 @@
 namespace Roslin.Msg.automotive_platform_msgs
 {
-    [MsgInfo("automotive_platform_msgs/SteerMode", "33a61f06ffb4d9f43cbb08ac344d667b", "# Steering Control Message with Mode\n# Contains steering commands and desired autonomy active mode flag\n\nstd_msgs/Header header\n\nuint16 mode # Is 1 if autonomy mode should be active\n\nfloat32 curvature           # Desired steering curvature (1/m)\nfloat32 max_curvature_rate  # Max rate of change for curvature (1/m/sec)\n\n\n")]
+    [MsgInfo("automotive_platform_msgs/SteerMode", "33a61f06ffb4d9f43cbb08ac344d667b", @"# Steering Control Message with Mode
+# Contains steering commands and desired autonomy active mode flag
+
+std_msgs/Header header
+
+uint16 mode # Is 1 if autonomy mode should be active
+
+float32 curvature           # Desired steering curvature (1/m)
+float32 max_curvature_rate  # Max rate of change for curvature (1/m/sec)
+
+
+")]
     public partial class SteerMode : RosMsg
     {
         public std_msgs.Header header

@@ -1,6 +1,7 @@
 namespace Roslin.Msg.std_msgs
 {
-    [MsgInfo("std_msgs/Int8", "27ffa0c9c4b8fb8492252bcad9e5c57b", "int8 data\n")]
+    [MsgInfo("std_msgs/Int8", "27ffa0c9c4b8fb8492252bcad9e5c57b", @"int8 data
+")]
     public partial class Int8 : RosMsg
     {
         public System.SByte data

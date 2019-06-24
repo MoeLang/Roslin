@@ -1,6 +1,16 @@
 namespace Roslin.Msg.smach_msgs
 {
-    [MsgInfo("smach_msgs/SmachContainerInitialStatusCmd", "45f8cf31fc29b829db77f23001f788d6", "# The path to the node in the server\nstring path\n\n# The desired initial state(s)\nstring[] initial_states\n\n# Initial values for the local user data of the state machine\n# A pickled user data structure\n# i.e. the UserData's internal dictionary\nstring local_data\n")]
+    [MsgInfo("smach_msgs/SmachContainerInitialStatusCmd", "45f8cf31fc29b829db77f23001f788d6", @"# The path to the node in the server
+string path
+
+# The desired initial state(s)
+string[] initial_states
+
+# Initial values for the local user data of the state machine
+# A pickled user data structure
+# i.e. the UserData's internal dictionary
+string local_data
+")]
     public partial class SmachContainerInitialStatusCmd : RosMsg
     {
         public System.String path

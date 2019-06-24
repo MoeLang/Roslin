@@ -1,6 +1,13 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/DepthErrorResult", "cebbb2d000457fe5d971a29ee02ffb16", "Header header\nuint32 u\nuint32 v\nfloat32 center_u\nfloat32 center_v\nfloat32 true_depth\nfloat32 observed_depth\n")]
+    [MsgInfo("jsk_recognition_msgs/DepthErrorResult", "cebbb2d000457fe5d971a29ee02ffb16", @"Header header
+uint32 u
+uint32 v
+float32 center_u
+float32 center_v
+float32 true_depth
+float32 observed_depth
+")]
     public partial class DepthErrorResult : RosMsg
     {
         public std_msgs.Header header

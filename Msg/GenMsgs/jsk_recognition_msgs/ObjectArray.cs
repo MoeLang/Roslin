@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/ObjectArray", "36314156578f919cf316fea64cc4a616", "Header header\njsk_recognition_msgs/Object[] objects\n")]
+    [MsgInfo("jsk_recognition_msgs/ObjectArray", "36314156578f919cf316fea64cc4a616", @"Header header
+jsk_recognition_msgs/Object[] objects
+")]
     public partial class ObjectArray : RosMsg
     {
         public std_msgs.Header header

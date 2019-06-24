@@ -1,6 +1,12 @@
 namespace Roslin.Msg.jsk_rviz_plugins
 {
-    [MsgInfo("jsk_rviz_plugins/OverlayMenu", "fed3c7e9788f7ee37908107a2597b619", "int32 ACTION_SELECT=0\nint32 ACTION_CLOSE=1\nint32 action\nuint32 current_index\nstring[] menus\nstring title\n")]
+    [MsgInfo("jsk_rviz_plugins/OverlayMenu", "fed3c7e9788f7ee37908107a2597b619", @"int32 ACTION_SELECT=0
+int32 ACTION_CLOSE=1
+int32 action
+uint32 current_index
+string[] menus
+string title
+")]
     public partial class OverlayMenu : RosMsg
     {
         public System.Int32 ACTION_SELECT => 0;

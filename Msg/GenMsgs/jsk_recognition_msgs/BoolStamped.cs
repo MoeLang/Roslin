@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/BoolStamped", "542e22b190dc8e6eb476d50dda88feb7", "Header header\nbool data\n")]
+    [MsgInfo("jsk_recognition_msgs/BoolStamped", "542e22b190dc8e6eb476d50dda88feb7", @"Header header
+bool data
+")]
     public partial class BoolStamped : RosMsg
     {
         public std_msgs.Header header

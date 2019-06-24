@@ -1,6 +1,6 @@
 namespace Roslin.Msg.jsk_gui_msgs
 {
-    [MsgInfo("jsk_gui_msgs/MultiTouch", "9f4a309588ef669e69a71aa5601ea65e", "Touch[] touches")]
+    [MsgInfo("jsk_gui_msgs/MultiTouch", "9f4a309588ef669e69a71aa5601ea65e", @"Touch[] touches")]
     public partial class MultiTouch : RosMsg
     {
         public Touch[] touches

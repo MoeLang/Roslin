@@ -1,6 +1,9 @@
 namespace Roslin.Msg.geometry_msgs
 {
-    [MsgInfo("geometry_msgs/TwistStamped", "98d34b0043a2093cf9d9345ab6eef12e", "# A twist with reference coordinate frame and timestamp\nHeader header\nTwist twist\n")]
+    [MsgInfo("geometry_msgs/TwistStamped", "98d34b0043a2093cf9d9345ab6eef12e", @"# A twist with reference coordinate frame and timestamp
+Header header
+Twist twist
+")]
     public partial class TwistStamped : RosMsg
     {
         public std_msgs.Header header

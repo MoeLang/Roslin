@@ -1,6 +1,12 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/SteeringPIDRpt1", "7d86880faae06366294b6ade0660000a", "Header header\n\nfloat64 dt         # time since last PID iteration\nfloat64 Kp         # proportional gain term\nfloat64 Ki         # integral gain term\nfloat64 Kd         # differential gain term\n")]
+    [MsgInfo("pacmod_msgs/SteeringPIDRpt1", "7d86880faae06366294b6ade0660000a", @"Header header
+
+float64 dt         # time since last PID iteration
+float64 Kp         # proportional gain term
+float64 Ki         # integral gain term
+float64 Kd         # differential gain term
+")]
     public partial class SteeringPIDRpt1 : RosMsg
     {
         public std_msgs.Header header

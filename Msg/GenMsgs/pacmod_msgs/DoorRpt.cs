@@ -1,6 +1,22 @@
 namespace Roslin.Msg.pacmod_msgs
 {
-    [MsgInfo("pacmod_msgs/DoorRpt", "a2ffa235d04f8d5d5e349a5d9caead12", "Header header\n\nbool driver_door_open\nbool driver_door_open_is_valid\nbool passenger_door_open\nbool passenger_door_open_is_valid\nbool rear_driver_door_open\nbool rear_driver_door_open_is_valid\nbool rear_passenger_door_open\nbool rear_passenger_door_open_is_valid\nbool hood_open\nbool hood_open_is_valid\nbool trunk_open\nbool trunk_open_is_valid\nbool fuel_door_open\nbool fuel_door_open_is_valid\n")]
+    [MsgInfo("pacmod_msgs/DoorRpt", "a2ffa235d04f8d5d5e349a5d9caead12", @"Header header
+
+bool driver_door_open
+bool driver_door_open_is_valid
+bool passenger_door_open
+bool passenger_door_open_is_valid
+bool rear_driver_door_open
+bool rear_driver_door_open_is_valid
+bool rear_passenger_door_open
+bool rear_passenger_door_open_is_valid
+bool hood_open
+bool hood_open_is_valid
+bool trunk_open
+bool trunk_open_is_valid
+bool fuel_door_open
+bool fuel_door_open_is_valid
+")]
     public partial class DoorRpt : RosMsg
     {
         public std_msgs.Header header

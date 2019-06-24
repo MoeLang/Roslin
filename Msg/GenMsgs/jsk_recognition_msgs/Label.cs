@@ -1,6 +1,8 @@
 namespace Roslin.Msg.jsk_recognition_msgs
 {
-    [MsgInfo("jsk_recognition_msgs/Label", "8fe5a440459dcada9c353c016dfb49d2", "int32 id\nstring name\n")]
+    [MsgInfo("jsk_recognition_msgs/Label", "8fe5a440459dcada9c353c016dfb49d2", @"int32 id
+string name
+")]
     public partial class Label : RosMsg
     {
         public System.Int32 id

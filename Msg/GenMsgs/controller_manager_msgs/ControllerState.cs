@@ -1,6 +1,10 @@
 namespace Roslin.Msg.controller_manager_msgs
 {
-    [MsgInfo("controller_manager_msgs/ControllerState", "aeb6b261d97793ab74099a3740245272", "string name\nstring state\nstring type\ncontroller_manager_msgs/HardwareInterfaceResources[] claimed_resources\n")]
+    [MsgInfo("controller_manager_msgs/ControllerState", "aeb6b261d97793ab74099a3740245272", @"string name
+string state
+string type
+controller_manager_msgs/HardwareInterfaceResources[] claimed_resources
+")]
     public partial class ControllerState : RosMsg
     {
         public System.String name
