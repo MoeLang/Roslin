@@ -46,6 +46,7 @@ namespace Roslin.XmlRpc
                         ms.ResponseRemoteStream(Callbacks[methodName].Invoke(vs));
                         context.Response.ContentLength64 = ms.Length;
                         ms.WriteTo(context.Response.OutputStream);
+                        context.Response.OutputStream.Close();
                     }
                 }
                 else
