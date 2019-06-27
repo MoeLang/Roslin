@@ -27,7 +27,7 @@ namespace Roslin.Node
             MasterSlaveApi.OnRequestTopic(ROS_NODE_URI, OnRequestTopic);
             TcpListener = new TcpListenerPub(ROS_NODE_URI.Host, Utils.GetFreePort());
             TcpListener.Start();
-            TcpListener.BeginAcceptTcpClient(OnClientConnected, null);
+            TcpListener.BeginAcceptTcpClient(OnClientConnected, TcpListener);
             return (await MasterSlaveApi.RegisterPublisher(this)).Code == 1;
         }
         private void OnClientConnected(IAsyncResult ar)
@@ -36,6 +36,7 @@ namespace Roslin.Node
             if (TcpListener.Active)
             {
                 var client = TcpListener.EndAcceptTcpClient(ar);
+                Thread.Sleep(100);
                 var ns = client.GetStream();
                 if (ns.CanRead && ns.DataAvailable)
                 {
@@ -45,7 +46,6 @@ namespace Roslin.Node
                     {
                         if (ns.CanWrite)
                         {
-                            ns.WriteTimeout = 1000;
                             conn.CallerID = Node;
                             conn.Write(ns);
                             semaphoreList.WaitOne();
@@ -58,7 +58,7 @@ namespace Roslin.Node
                         throw new Exception($"Topic to pub : {Topic}|{Type}|{Md5Sum}\nTopic to sub :{conn.Topic}:{conn.Type}:{conn.Md5Sum}");
                     }
                 }
-                TcpListener.BeginAcceptTcpClient(OnClientConnected, null);
+                TcpListener.BeginAcceptTcpClient(OnClientConnected, TcpListener);
             }
             semaphoreListener.Release();
         }
@@ -88,15 +88,21 @@ namespace Roslin.Node
             {
                 if (!TcpClients[i].Connected)
                 {
-                    TcpClients.Remove(TcpClients[i]);
-                    i--;
+                    TcpClients.Remove(TcpClients[i--]);
                 }
             }
+            semaphoreList.Release();
             using (MemoryStream memoryStream = new MemoryStream())
             {
                 topic.Serilize(new BinaryWriter(memoryStream));
                 foreach (var item in TcpClients)
                 {
+                    Socket socket = item.Client;
+                    if (socket.Poll(1000, SelectMode.SelectRead) && socket.Available == 0)
+                    {
+                        item.Close();
+                        continue;
+                    }
                     NetworkStream networkStream = item.GetStream();
                     if (networkStream.CanWrite)
                     {
@@ -106,11 +112,11 @@ namespace Roslin.Node
                     }
                     else
                     {
+                        networkStream.Close();
                         throw new Exception("tcp client can not write");
                     }
                 }
             }
-            semaphoreList.Release();
         }
     }
 }
