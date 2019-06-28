@@ -3,36 +3,41 @@ using Roslin.Msg;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Roslin.Node
 {
-    public class Publisher<T> : Peer, IMasterApiContainer where T : RosMsg, new()
+    public class Publisher<T> : Port where T : RosMsg, new()
     {
-        public string Type { get; private set; }
-        public string Md5Sum { get; private set; }
+        public override string Type => MsgInfo.MsgType<T>();
+        public string Md5Sum => MsgInfo.MsgMd5<T>();
+        public string MessageDefinition => MsgInfo.MsgDef<T>();
         List<TcpClient> TcpClients { get; set; } = new List<TcpClient>();
         TcpListenerPub TcpListener { get; set; }
-        Semaphore semaphoreList = new Semaphore(1, 1);
-        Semaphore semaphoreListener = new Semaphore(1, 1);
-        public Publisher(Uri master_uri, string topic, string node = null, IPAddress ros_ip = null) : base(master_uri, topic, node, ros_ip) { }
-        public async Task<bool> Register()
+        public Action<bool, Publisher<T>, string> OnRegistered { get; internal set; }
+        internal Publisher(RoslinNode node, string topic) : base(node) => Topic = topic;
+        internal override async Task<bool> Register()
         {
-            SetupUri();
-            Type = MsgInfo.MsgType<T>();
-            Md5Sum = MsgInfo.MsgMd5<T>();
-            MasterSlaveApi.OnRequestTopic(ROS_NODE_URI, OnRequestTopic);
-            TcpListener = new TcpListenerPub(ROS_NODE_URI.Host, Utils.GetFreePort());
+            MasterSlaveApi.OnRequestTopic(RosNodeUri, OnRequestTopic);
+            TcpListener = new TcpListenerPub(RosNodeUri.Host, Utils.GetFreePort());
             TcpListener.Start();
             TcpListener.BeginAcceptTcpClient(OnClientConnected, TcpListener);
-            return (await MasterSlaveApi.RegisterPublisher(this)).Code == 1;
+            var ret = await MasterSlaveApi.RegisterPublisher(this);
+            if (ret.Code == 1)
+            {
+                OnRegistered?.Invoke(true, this, ret.StatusMessage);
+                return true;
+            }
+            else
+            {
+                OnRegistered?.Invoke(false, this, ret.StatusMessage);
+                return false;
+            }
         }
         private void OnClientConnected(IAsyncResult ar)
         {
-            semaphoreListener.WaitOne();
             if (TcpListener.Active)
             {
                 var client = TcpListener.EndAcceptTcpClient(ar);
@@ -46,11 +51,9 @@ namespace Roslin.Node
                     {
                         if (ns.CanWrite)
                         {
-                            conn.CallerID = Node;
+                            conn.CallerID = NodeName;
                             conn.Write(ns);
-                            semaphoreList.WaitOne();
                             TcpClients.Add(client);
-                            semaphoreList.Release();
                         }
                     }
                     else
@@ -60,21 +63,18 @@ namespace Roslin.Node
                 }
                 TcpListener.BeginAcceptTcpClient(OnClientConnected, TcpListener);
             }
-            semaphoreListener.Release();
         }
-        public async Task<bool> Unregister()
+        internal override async Task<bool> UnRegister()
         {
-            semaphoreListener.WaitOne();
             TcpListener.Stop();
-            semaphoreListener.Release();
-            MasterSlaveApi.RemoveListenUri(ROS_NODE_URI);
+            MasterSlaveApi.RemoveListenUri(RosNodeUri);
             return (await MasterSlaveApi.UnregisterPublisher(this)).Code == 1;
         }
         private ResponseRequestTopic OnRequestTopic(RequestRequestTopic request)
         {
             if (request.Topic == Topic)
             {
-                return new ResponseRequestTopic(1, "ok") { Protocol = "TCPROS", Host = ROS_NODE_URI.Host, Port = TcpListener.Port };
+                return new ResponseRequestTopic(1, "ok") { Protocol = "TCPROS", Host = RosNodeUri.Host, Port = TcpListener.Port };
             }
             else
             {
@@ -83,7 +83,6 @@ namespace Roslin.Node
         }
         public async Task PublishTopic(T topic)
         {
-            semaphoreList.WaitOne();
             for (int i = 0; i < TcpClients.Count; i++)
             {
                 if (!TcpClients[i].Connected)
@@ -91,7 +90,6 @@ namespace Roslin.Node
                     TcpClients.Remove(TcpClients[i--]);
                 }
             }
-            semaphoreList.Release();
             using (MemoryStream memoryStream = new MemoryStream())
             {
                 topic.Serilize(new BinaryWriter(memoryStream));
@@ -108,7 +106,8 @@ namespace Roslin.Node
                     {
                         memoryStream.Position = 0;
                         var lenBytes = BitConverter.GetBytes((int)memoryStream.Length);
-                        await networkStream.WriteAsync(lenBytes, 0, lenBytes.Length).ContinueWith(async x => await memoryStream.CopyToAsync(networkStream).ContinueWith(async y => await networkStream.FlushAsync()));
+                        await networkStream.WriteAsync(lenBytes, 0, lenBytes.Length);
+                        await memoryStream.CopyToAsync(networkStream);
                     }
                     else
                     {
