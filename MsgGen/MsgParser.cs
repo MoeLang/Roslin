@@ -427,6 +427,7 @@ namespace Roslin.MsgGen
             {
                 case "params":
                 case "override":
+                case "ref":
                     return "@" + name;
                 default:
                     return name;

@@ -88,17 +88,17 @@ namespace Roslin.Node
                 }
             });
         }
-        public void Dispose()
+        public async void Dispose()
         {
             while (Publishers.Count > 0)
             {
                 var target = Publishers.First();
-                target.Value.UnRegister().ContinueWith(_ => Publishers.Remove(target.Key));
+                await target.Value.UnRegister().ContinueWith(_ => Publishers.Remove(target.Key));
             }
             while (Subscribers.Count > 0)
             {
                 var target = Subscribers.First();
-                target.Value.UnRegister().ContinueWith(_ => Subscribers.Remove(target.Key));
+                await target.Value.UnRegister().ContinueWith(_ => Subscribers.Remove(target.Key));
             }
         }
     }
