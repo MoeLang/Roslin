@@ -16,6 +16,7 @@ namespace Roslin.Node
         public string MessageDefinition => MsgInfo.MsgDef<T>();
         List<TcpClient> TcpClients { get; set; } = new List<TcpClient>();
         TcpListenerPub TcpListener { get; set; }
+        MemoryStream LatchStream { get; set; }
         public Action<bool, Publisher<T>, string> OnRegistered { get; internal set; }
         internal Publisher(RoslinNode node, string topic) : base(node) => Topic = topic;
         internal override async Task<bool> Register()
@@ -36,7 +37,7 @@ namespace Roslin.Node
                 return false;
             }
         }
-        private void OnClientConnected(IAsyncResult ar)
+        private async void OnClientConnected(IAsyncResult ar)
         {
             if (TcpListener.Active)
             {
@@ -54,6 +55,10 @@ namespace Roslin.Node
                             conn.CallerID = NodeName;
                             conn.Write(ns);
                             TcpClients.Add(client);
+                            if (LatchStream != null)
+                            {
+                                await SendStream(client, LatchStream);
+                            }
                         }
                     }
                     else
@@ -81,7 +86,7 @@ namespace Roslin.Node
                 return new ResponseRequestTopic(-1, $"topic {request.Topic} not equals needs {Topic}");
             }
         }
-        public async Task PublishTopic(T topic)
+        public async Task PublishTopic(T topic, bool latch = false)
         {
             for (int i = 0; i < TcpClients.Count; i++)
             {
@@ -90,31 +95,43 @@ namespace Roslin.Node
                     TcpClients.Remove(TcpClients[i--]);
                 }
             }
-            using (MemoryStream memoryStream = new MemoryStream())
+            if (LatchStream != null)
             {
-                topic.Serilize(new BinaryWriter(memoryStream));
-                foreach (var item in TcpClients)
-                {
-                    Socket socket = item.Client;
-                    if (socket.Poll(1000, SelectMode.SelectRead) && socket.Available == 0)
-                    {
-                        item.Close();
-                        continue;
-                    }
-                    NetworkStream networkStream = item.GetStream();
-                    if (networkStream.CanWrite)
-                    {
-                        memoryStream.Position = 0;
-                        var lenBytes = BitConverter.GetBytes((int)memoryStream.Length);
-                        await networkStream.WriteAsync(lenBytes, 0, lenBytes.Length);
-                        await memoryStream.CopyToAsync(networkStream);
-                    }
-                    else
-                    {
-                        networkStream.Close();
-                        throw new Exception("tcp client can not write");
-                    }
-                }
+                LatchStream.Dispose();
+            }
+            LatchStream = new MemoryStream();
+            topic.Serilize(new BinaryWriter(LatchStream));
+            foreach (var item in TcpClients)
+            {
+                await SendStream(item, LatchStream);
+            }
+            if (!latch)
+            {
+                LatchStream.Dispose();
+                LatchStream = null;
+            }
+        }
+
+        private async Task SendStream(TcpClient client, Stream stream)
+        {
+            Socket socket = client.Client;
+            if (socket.Poll(1000, SelectMode.SelectRead) && socket.Available == 0)
+            {
+                client.Close();
+                return;
+            }
+            NetworkStream networkStream = client.GetStream();
+            if (networkStream.CanWrite)
+            {
+                stream.Position = 0;
+                var lenBytes = BitConverter.GetBytes((int)stream.Length);
+                await networkStream.WriteAsync(lenBytes, 0, lenBytes.Length);
+                await stream.CopyToAsync(networkStream);
+            }
+            else
+            {
+                networkStream.Close();
+                throw new Exception("tcp client can not write");
             }
         }
     }
