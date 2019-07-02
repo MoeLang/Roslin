@@ -19,6 +19,7 @@ namespace Roslin.Node
         MemoryStream LatchStream { get; set; }
         public Action<bool, Publisher<T>, string> OnRegistered { get; internal set; }
         internal Publisher(RoslinNode node, string topic) : base(node) => Topic = topic;
+        bool canSend;
         internal override async Task<bool> Register()
         {
             MasterSlaveApi.OnRequestTopic(RosNodeUri, OnRequestTopic);
@@ -59,6 +60,7 @@ namespace Roslin.Node
                             {
                                 await SendStream(client, LatchStream);
                             }
+                            canSend = true;
                         }
                     }
                     else
@@ -95,20 +97,25 @@ namespace Roslin.Node
                     TcpClients.Remove(TcpClients[i--]);
                 }
             }
-            if (LatchStream != null)
+            if (canSend)
             {
-                LatchStream.Dispose();
-            }
-            LatchStream = new MemoryStream();
-            topic.Serilize(new BinaryWriter(LatchStream));
-            foreach (var item in TcpClients)
-            {
-                await SendStream(item, LatchStream);
-            }
-            if (!latch)
-            {
-                LatchStream.Dispose();
-                LatchStream = null;
+                canSend = false;
+                if (LatchStream != null)
+                {
+                    LatchStream.Dispose();
+                }
+                LatchStream = new MemoryStream();
+                topic.Serilize(new BinaryWriter(LatchStream));
+                foreach (var item in TcpClients)
+                {
+                    await SendStream(item, LatchStream);
+                }
+                if (!latch)
+                {
+                    LatchStream.Dispose();
+                    LatchStream = null;
+                }
+                canSend = true;
             }
         }
 
