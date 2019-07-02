@@ -9,6 +9,7 @@ namespace Roslin.Node
         public string NodeName => RoslinNode.NodeName;
         public Uri RosMasterUri => RoslinNode.RosMasterUri;
         public Uri RosNodeUri => RoslinNode.RosNodeUri;
+        public int PortNum { get; protected set; }
         public string Topic { get; protected set; }
         public abstract string Type { get; }
         RoslinNode RoslinNode { get; }

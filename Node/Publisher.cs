@@ -22,8 +22,8 @@ namespace Roslin.Node
         bool canSend;
         internal override async Task<bool> Register()
         {
-            MasterSlaveApi.OnRequestTopic(RosNodeUri, OnRequestTopic);
-            TcpListener = new TcpListenerPub(RosNodeUri.Host, Utils.GetFreePort());
+            PortNum = Utils.GetFreePort();
+            TcpListener = new TcpListenerPub(RosNodeUri.Host, PortNum);
             TcpListener.Start();
             TcpListener.BeginAcceptTcpClient(OnClientConnected, TcpListener);
             var ret = await MasterSlaveApi.RegisterPublisher(this);
@@ -76,17 +76,6 @@ namespace Roslin.Node
             TcpListener.Stop();
             MasterSlaveApi.RemoveListenUri(RosNodeUri);
             return (await MasterSlaveApi.UnregisterPublisher(this)).Code == 1;
-        }
-        private ResponseRequestTopic OnRequestTopic(RequestRequestTopic request)
-        {
-            if (request.Topic == Topic)
-            {
-                return new ResponseRequestTopic(1, "ok") { Protocol = "TCPROS", Host = RosNodeUri.Host, Port = TcpListener.Port };
-            }
-            else
-            {
-                return new ResponseRequestTopic(-1, $"topic {request.Topic} not equals needs {Topic}");
-            }
         }
         public async Task PublishTopic(T topic, bool latch = false)
         {

@@ -1,4 +1,5 @@
-﻿using Roslin.Msg;
+﻿using Roslin.Api;
+using Roslin.Msg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,19 @@ namespace Roslin.Node
             RosIP = ros_ip ?? LocalIPAddress;
             NodeName = node_name ?? ("/" + AppDomain.CurrentDomain.FriendlyName).Replace(' ', '_');
             RosNodeUri = new Uri($"http://{RosIP}:{Utils.GetFreePort()}/");
+            MasterSlaveApi.OnRequestTopic(RosNodeUri, OnRequestTopic);
+        }
+        private ResponseRequestTopic OnRequestTopic(RequestRequestTopic request)
+        {
+            if (Publishers.ContainsKey(request.Topic))
+            {
+                var target = Publishers[request.Topic];
+                return new ResponseRequestTopic(1, "ok") { Protocol = "TCPROS", Host = RosNodeUri.Host, Port = target.PortNum };
+            }
+            else
+            {
+                return new ResponseRequestTopic(-1, $"Can't find topic {request.Topic}");
+            }
         }
         public IPAddress LocalIPAddress
         {
@@ -52,7 +66,8 @@ namespace Roslin.Node
                 Ports.Enqueue(publisher);
                 if (!registering)
                 {
-                    Task.Factory.StartNew(async () => await Register(Ports.Dequeue()));
+                    registering = true;
+                    Task.Factory.StartNew(async () => await RegisterQueue());
                 }
             }
         }
@@ -69,25 +84,24 @@ namespace Roslin.Node
                 Ports.Enqueue(subscriber);
                 if (!registering)
                 {
-                    Task.Factory.StartNew(async () => await Register(Ports.Dequeue()));
+                    registering = true;
+                    Task.Factory.StartNew(async () => await RegisterQueue());
                 }
             }
         }
-        private async Task Register(Port port)
+        private async Task RegisterQueue()
         {
-            registering = true;
-            await port.Register().ContinueWith(async _ =>
+            await Ports.Dequeue().Register();
+            if (Ports.Count > 0)
             {
-                if (Ports.Count > 0)
-                {
-                    await Register(Ports.Dequeue());
-                }
-                else
-                {
-                    registering = false;
-                }
-            });
+                await RegisterQueue();
+            }
+            else
+            {
+                registering = false;
+            }
         }
+
         public async void Dispose()
         {
             while (Publishers.Count > 0)
