@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Sockets;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Roslin.Node
@@ -19,7 +18,7 @@ namespace Roslin.Node
         MemoryStream LatchStream { get; set; }
         public Action<bool, Publisher<T>, string> OnRegistered { get; internal set; }
         internal Publisher(RoslinNode node, string topic) : base(node) => Topic = topic;
-        bool canSend;
+        bool sending;
         internal override async Task<bool> Register()
         {
             PortNum = Utils.GetFreePort();
@@ -38,18 +37,23 @@ namespace Roslin.Node
                 return false;
             }
         }
-        private async void OnClientConnected(IAsyncResult ar)
+        private void OnClientConnected(IAsyncResult ar)
         {
             if (TcpListener.Active)
             {
                 var client = TcpListener.EndAcceptTcpClient(ar);
-                Thread.Sleep(100);
                 var ns = client.GetStream();
                 if (ns.CanRead && ns.DataAvailable)
                 {
                     var conn = new Connection();
                     conn.Read(ns);
-                    if (conn.Type == "*" || (Topic == conn.Topic && Type == conn.Type && Md5Sum == conn.Md5Sum))
+                    if (conn.Type == "*")
+                    {
+                        conn.Type = Type;
+                        conn.Md5Sum = Md5Sum;
+                        conn.MessageDefinition = MessageDefinition;
+                    }
+                    if (Topic == conn.Topic && Type == conn.Type && Md5Sum == conn.Md5Sum)
                     {
                         if (ns.CanWrite)
                         {
@@ -58,9 +62,8 @@ namespace Roslin.Node
                             TcpClients.Add(client);
                             if (LatchStream != null)
                             {
-                                await SendStream(client, LatchStream);
+                                SendStream(client, LatchStream);
                             }
-                            canSend = true;
                         }
                     }
                     else
@@ -77,56 +80,62 @@ namespace Roslin.Node
             MasterSlaveApi.RemoveListenUri(RosNodeUri);
             return (await MasterSlaveApi.UnregisterPublisher(this)).Code == 1;
         }
-        public async Task PublishTopic(T topic, bool latch = false)
+        public void PublishTopic(T topic, bool latch = false)
         {
-            for (int i = 0; i < TcpClients.Count; i++)
+            if (!sending)
             {
-                if (!TcpClients[i].Connected)
+                try
                 {
-                    TcpClients.Remove(TcpClients[i--]);
+                    sending = true;
+                    if (LatchStream != null)
+                    {
+                        LatchStream.Dispose();
+                    }
+                    LatchStream = new MemoryStream();
+                    topic.Serilize(new BinaryWriter(LatchStream));
+                    foreach (var item in TcpClients)
+                    {
+                        SendStream(item, LatchStream);
+                    }
+                    if (!latch)
+                    {
+                        LatchStream.Dispose();
+                        LatchStream = null;
+                    }
                 }
-            }
-            if (canSend)
-            {
-                canSend = false;
-                if (LatchStream != null)
+                catch
                 {
-                    LatchStream.Dispose();
+                    throw;
                 }
-                LatchStream = new MemoryStream();
-                topic.Serilize(new BinaryWriter(LatchStream));
-                foreach (var item in TcpClients)
+                finally
                 {
-                    await SendStream(item, LatchStream);
+                    sending = false;
                 }
-                if (!latch)
-                {
-                    LatchStream.Dispose();
-                    LatchStream = null;
-                }
-                canSend = true;
             }
         }
-
-        private async Task SendStream(TcpClient client, Stream stream)
+        private void SendStream(TcpClient client, Stream stream, int writeTimeout = 100)
         {
-            Socket socket = client.Client;
-            if (socket.Poll(1000, SelectMode.SelectRead) && socket.Available == 0)
-            {
-                client.Close();
-                return;
-            }
+            stream.Position = 0;
             NetworkStream networkStream = client.GetStream();
             if (networkStream.CanWrite)
             {
-                stream.Position = 0;
+                networkStream.WriteTimeout = writeTimeout;
                 var lenBytes = BitConverter.GetBytes((int)stream.Length);
-                await networkStream.WriteAsync(lenBytes, 0, lenBytes.Length);
-                await stream.CopyToAsync(networkStream);
+                try
+                {
+                    networkStream.Write(lenBytes, 0, lenBytes.Length);
+                    stream.CopyTo(networkStream);
+                }
+                catch
+                {
+                    TcpClients.Remove(client);
+                    throw;
+                }
             }
             else
             {
                 networkStream.Close();
+                TcpClients.Remove(client);
                 throw new Exception("tcp client can not write");
             }
         }
