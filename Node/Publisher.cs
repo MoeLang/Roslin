@@ -80,7 +80,7 @@ namespace Roslin.Node
             MasterSlaveApi.RemoveListenUri(RosNodeUri);
             return (await MasterSlaveApi.UnregisterPublisher(this)).Code == 1;
         }
-        public void PublishTopic(T topic, bool latch = false)
+        public void PublishTopic(T topic, bool latch = false, int writeTimeout = 100)
         {
             if (!sending)
             {
@@ -95,7 +95,14 @@ namespace Roslin.Node
                     topic.Serilize(new BinaryWriter(LatchStream));
                     foreach (var item in TcpClients)
                     {
-                        SendStream(item, LatchStream);
+                        SendStream(item, LatchStream, writeTimeout);
+                    }
+                    for (int i = 0; i < TcpClients.Count; i++)
+                    {
+                        if (!TcpClients[i].Connected)
+                        {
+                            TcpClients.Remove(TcpClients[i--]);
+                        }
                     }
                     if (!latch)
                     {
@@ -116,27 +123,13 @@ namespace Roslin.Node
         private void SendStream(TcpClient client, Stream stream, int writeTimeout = 100)
         {
             stream.Position = 0;
-            NetworkStream networkStream = client.GetStream();
-            if (networkStream.CanWrite)
+            if (client.Connected)
             {
+                NetworkStream networkStream = client.GetStream();
                 networkStream.WriteTimeout = writeTimeout;
                 var lenBytes = BitConverter.GetBytes((int)stream.Length);
-                try
-                {
-                    networkStream.Write(lenBytes, 0, lenBytes.Length);
-                    stream.CopyTo(networkStream);
-                }
-                catch
-                {
-                    TcpClients.Remove(client);
-                    throw;
-                }
-            }
-            else
-            {
-                networkStream.Close();
-                TcpClients.Remove(client);
-                throw new Exception("tcp client can not write");
+                networkStream.Write(lenBytes, 0, lenBytes.Length);
+                stream.CopyTo(networkStream);
             }
         }
     }
