@@ -53,7 +53,7 @@ namespace Roslin.Node
         Dictionary<string, Port> Subscribers { get; } = new Dictionary<string, Port>();
         Queue<Port> Ports { get; } = new Queue<Port>();
         bool registering;
-        public void RegisterPublisher<T>(string topic, Action<bool, Publisher<T>, string> onRegistered) where T : RosMsg, new()
+        public void RegisterPublisher<T>(string topic, Action<bool, Publisher<T>, string> onRegistered, int port_offset = 5001) where T : RosMsg, new()
         {
             if (Publishers.ContainsKey(topic))
             {
@@ -67,11 +67,11 @@ namespace Roslin.Node
                 if (!registering)
                 {
                     registering = true;
-                    Task.Factory.StartNew(async () => await RegisterQueue());
+                    Task.Factory.StartNew(async () => await RegisterQueue(port_offset));
                 }
             }
         }
-        public void RegisterSubscriber<T>(string topic, Action<bool, Subscriber<T>, string> onRegistered) where T : RosMsg, new()
+        public void RegisterSubscriber<T>(string topic, Action<bool, Subscriber<T>, string> onRegistered, int port_offset = 5001) where T : RosMsg, new()
         {
             if (Subscribers.ContainsKey(topic))
             {
@@ -85,13 +85,13 @@ namespace Roslin.Node
                 if (!registering)
                 {
                     registering = true;
-                    Task.Factory.StartNew(async () => await RegisterQueue());
+                    Task.Factory.StartNew(async () => await RegisterQueue(port_offset));
                 }
             }
         }
-        private async Task RegisterQueue()
+        private async Task RegisterQueue(int port_offset = 5001)
         {
-            await Ports.Dequeue().Register();
+            await Ports.Dequeue().Register(port_offset);
             if (Ports.Count > 0)
             {
                 await RegisterQueue();

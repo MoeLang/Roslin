@@ -8,9 +8,8 @@ namespace Roslin.Node
     internal static class Utils
     {
         static HashSet<int> usedPorts = new HashSet<int>();
-        public static int GetFreePort()
+        public static int GetFreePort(int port = 5001)
         {
-            int port = 5001;
             HashSet<int> blockedPorts = usedPorts;
             var ipgp = IPGlobalProperties.GetIPGlobalProperties();
             foreach (var item in ipgp.GetActiveTcpConnections().Select(_ => _.LocalEndPoint.Port))

@@ -14,7 +14,7 @@ namespace Roslin.Node
         public abstract string Type { get; }
         RoslinNode RoslinNode { get; }
         public Port(RoslinNode roslinNode) { RoslinNode = roslinNode; }
-        internal abstract Task<bool> Register();
+        internal abstract Task<bool> Register(int port_offset = 5001);
         internal abstract Task<bool> UnRegister();
     }
 }

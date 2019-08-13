@@ -19,9 +19,9 @@ namespace Roslin.Node
         public Action<bool, Publisher<T>, string> OnRegistered { get; internal set; }
         internal Publisher(RoslinNode node, string topic) : base(node) => Topic = topic;
         bool sending;
-        internal override async Task<bool> Register()
+        internal override async Task<bool> Register(int port_offset = 5001)
         {
-            PortNum = Utils.GetFreePort();
+            PortNum = Utils.GetFreePort(port_offset);
             TcpListener = new TcpListenerPub(RosNodeUri.Host, PortNum);
             TcpListener.Start();
             TcpListener.BeginAcceptTcpClient(OnClientConnected, TcpListener);

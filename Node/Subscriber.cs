@@ -16,7 +16,7 @@ namespace Roslin.Node
         Dictionary<Uri, TcpClientSub<T>> Connects { get; set; } = new Dictionary<Uri, TcpClientSub<T>>();
         public Action<bool, Subscriber<T>, string> OnRegistered { get; internal set; }
         internal Subscriber(RoslinNode node, string topic) : base(node) => Topic = topic;
-        internal override async Task<bool> Register()
+        internal override async Task<bool> Register(int port_offset = 5001)
         {
             MasterSlaveApi.OnPublisherUpdate(RosNodeUri, OnPublisherUpdate);
             var ret = await MasterSlaveApi.RegisterSubscriber(this);
