@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Sockets;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Roslin.Node
@@ -16,6 +17,7 @@ namespace Roslin.Node
         List<TcpClient> TcpClients { get; set; } = new List<TcpClient>();
         TcpListenerPub TcpListener { get; set; }
         MemoryStream LatchStream { get; set; }
+        public int SubscriberConnectTimeout { get; set; } = 1000;
         public Action<bool, Publisher<T>, string> OnRegistered { get; internal set; }
         internal Publisher(RoslinNode node, string topic) : base(node) => Topic = topic;
         bool sending;
@@ -24,7 +26,7 @@ namespace Roslin.Node
             PortNum = Utils.GetFreePort(port_offset);
             TcpListener = new TcpListenerPub(RosNodeUri.Host, PortNum);
             TcpListener.Start();
-            TcpListener.BeginAcceptTcpClient(OnClientConnected, TcpListener);
+            TcpListener.BeginAcceptTcpClient(new AsyncCallback(OnClientConnected), TcpListener);
             var ret = await MasterSlaveApi.RegisterPublisher(this);
             if (ret.Code == 1)
             {
@@ -42,36 +44,41 @@ namespace Roslin.Node
             if (TcpListener.Active)
             {
                 var client = TcpListener.EndAcceptTcpClient(ar);
+                TcpListener.BeginAcceptTcpClient(new AsyncCallback(OnClientConnected), TcpListener);
                 var ns = client.GetStream();
-                if (ns.CanRead && ns.DataAvailable)
+                for (int i = 0; i < SubscriberConnectTimeout; i++)
                 {
-                    var conn = new Connection();
-                    conn.Read(ns);
-                    if (conn.Type == "*")
+                    Thread.Sleep(1);
+                    if (ns.CanRead && ns.DataAvailable)
                     {
-                        conn.Type = Type;
-                        conn.Md5Sum = Md5Sum;
-                        conn.MessageDefinition = MessageDefinition;
-                    }
-                    if (Topic == conn.Topic && Type == conn.Type && Md5Sum == conn.Md5Sum)
-                    {
-                        if (ns.CanWrite)
+                        var conn = new Connection();
+                        conn.Read(ns);
+                        if (conn.Type == "*")
                         {
-                            conn.CallerID = NodeName;
-                            conn.Write(ns);
-                            TcpClients.Add(client);
-                            if (LatchStream != null)
+                            conn.Type = Type;
+                            conn.Md5Sum = Md5Sum;
+                            conn.MessageDefinition = MessageDefinition;
+                        }
+                        if (Topic == conn.Topic && Type == conn.Type && Md5Sum == conn.Md5Sum)
+                        {
+                            if (ns.CanWrite)
                             {
-                                SendStream(client, LatchStream);
+                                conn.CallerID = NodeName;
+                                conn.Write(ns);
+                                TcpClients.Add(client);
+                                if (LatchStream != null)
+                                {
+                                    SendStream(client, LatchStream);
+                                }
                             }
                         }
-                    }
-                    else
-                    {
-                        throw new Exception($"Topic to pub : {Topic}|{Type}|{Md5Sum}\nTopic to sub :{conn.Topic}:{conn.Type}:{conn.Md5Sum}");
+                        else
+                        {
+                            throw new Exception($"Topic to pub : {Topic}|{Type}|{Md5Sum}\nTopic to sub :{conn.Topic}:{conn.Type}:{conn.Md5Sum}");
+                        }
+                        break;
                     }
                 }
-                TcpListener.BeginAcceptTcpClient(OnClientConnected, TcpListener);
             }
         }
         internal override async Task<bool> UnRegister()
