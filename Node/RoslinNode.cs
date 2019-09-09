@@ -15,12 +15,12 @@ namespace Roslin.Node
         public IPAddress RosIP { get; }
         public string NodeName { get; }
         public Uri RosNodeUri { get; }
-        public RoslinNode(Uri ros_master_uri, IPAddress ros_ip = null, string node_name = null)
+        public RoslinNode(Uri ros_master_uri, int port_offset = 5001, IPAddress ros_ip = null, string node_name = null)
         {
             RosMasterUri = ros_master_uri;
             RosIP = ros_ip ?? LocalIPAddress;
             NodeName = node_name ?? ("/" + AppDomain.CurrentDomain.FriendlyName).Replace(' ', '_');
-            RosNodeUri = new Uri($"http://{RosIP}:{Utils.GetFreePort()}/");
+            RosNodeUri = new Uri($"http://{RosIP}:{Utils.GetFreePort(port_offset)}/");
             MasterSlaveApi.OnRequestTopic(RosNodeUri, OnRequestTopic);
         }
         private ResponseRequestTopic OnRequestTopic(RequestRequestTopic request)
