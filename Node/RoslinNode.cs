@@ -15,12 +15,14 @@ namespace Roslin.Node
         public IPAddress RosIP { get; }
         public string NodeName { get; }
         public Uri RosNodeUri { get; }
+        public int Port_Offset { get; }
         public RoslinNode(Uri ros_master_uri, int port_offset = 5001, IPAddress ros_ip = null, string node_name = null)
         {
             RosMasterUri = ros_master_uri;
             RosIP = ros_ip ?? LocalIPAddress;
+            Port_Offset = port_offset;
             NodeName = node_name ?? ("/" + AppDomain.CurrentDomain.FriendlyName).Replace(' ', '_');
-            RosNodeUri = new Uri($"http://{RosIP}:{Utils.GetFreePort(port_offset)}/");
+            RosNodeUri = new Uri($"http://{RosIP}:{Utils.GetFreePort(Port_Offset)}/");
             MasterSlaveApi.OnRequestTopic(RosNodeUri, OnRequestTopic);
         }
         private ResponseRequestTopic OnRequestTopic(RequestRequestTopic request)
@@ -53,7 +55,7 @@ namespace Roslin.Node
         Dictionary<string, Port> Subscribers { get; } = new Dictionary<string, Port>();
         Queue<Port> Ports { get; } = new Queue<Port>();
         bool registering;
-        public void RegisterPublisher<T>(string topic, Action<bool, Publisher<T>, string> onRegistered, int port_offset = 5001) where T : RosMsg, new()
+        public void RegisterPublisher<T>(string topic, Action<bool, Publisher<T>, string> onRegistered) where T : RosMsg, new()
         {
             if (Publishers.ContainsKey(topic))
             {
@@ -67,11 +69,11 @@ namespace Roslin.Node
                 if (!registering)
                 {
                     registering = true;
-                    Task.Factory.StartNew(async () => await RegisterQueue(port_offset));
+                    Task.Factory.StartNew(async () => await RegisterQueue());
                 }
             }
         }
-        public void RegisterSubscriber<T>(string topic, Action<bool, Subscriber<T>, string> onRegistered, int port_offset = 5001) where T : RosMsg, new()
+        public void RegisterSubscriber<T>(string topic, Action<bool, Subscriber<T>, string> onRegistered) where T : RosMsg, new()
         {
             if (Subscribers.ContainsKey(topic))
             {
@@ -85,13 +87,13 @@ namespace Roslin.Node
                 if (!registering)
                 {
                     registering = true;
-                    Task.Factory.StartNew(async () => await RegisterQueue(port_offset));
+                    Task.Factory.StartNew(async () => await RegisterQueue());
                 }
             }
         }
-        private async Task RegisterQueue(int port_offset = 5001)
+        private async Task RegisterQueue()
         {
-            await Ports.Dequeue().Register(port_offset);
+            await Ports.Dequeue().Register(Port_Offset);
             if (Ports.Count > 0)
             {
                 await RegisterQueue();
